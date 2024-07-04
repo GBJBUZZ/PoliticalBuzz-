@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat_Alternates, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
+const montserratAlternates = Montserrat_Alternates({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-montserrat-alternates",
+  display: "swap",
+});
+
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-nunito-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${nunitoSans.variable} ${montserratAlternates.variable}`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

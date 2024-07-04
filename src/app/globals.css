@@ -3,31 +3,59 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-clr: #f37021;
+  --primary-txt: #111;
+  --secondary-txt: #696969;
+  --bg-clr: #fff;
+  --btn-txt: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+nav {
+  font-family: var(--font-montserrat-alternates);
+  font-weight: 700;
+}
+
+h1 {
+  font-family: var(--font-montserrat-alternates);
+  @apply text-5xl;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: var(--font-montserrat-alternates);
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: var(--font-nunito-sans);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-family: var(--font-nunito-sans);
+  font-size: 1.25rem;
+}
+
+button,
+.btn {
+  font-family: var(--font-montserrat-alternates);
+  font-family: 1.25rem;
+  font-weight: 600;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--font-nunito-sans);
+  background-color: var(--primary-clr);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.hero-pattern-bg {
+  opacity: 0.8;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff14,
+    #ffffff0c 5px,
+    var(--primary-clr) 5px,
+    var(--primary-clr) 35px
+  );
 }
