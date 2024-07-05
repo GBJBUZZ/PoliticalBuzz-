@@ -49,7 +49,7 @@ const GoogleTranslate = ({ prefLangCookie }: { prefLangCookie: string }) => {
   React.useEffect(() => {
     setLangCookie(localStorage.getItem("RKE_lang") || prefLangCookie);
     window.googleTranslateElementInit = googleTranslateElementInit;
-  }, []);
+  }, [prefLangCookie]);
 
   const onChange = (value: string) => {
     const lang = "/en/" + value;

@@ -1,20 +1,32 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat_Alternates, Nunito_Sans } from "next/font/google";
+import {
+  Inter,
+  Montserrat_Alternates,
+  Nunito_Sans,
+  Rufina,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
-const montserratAlternates = Montserrat_Alternates({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-montserrat-alternates",
-  display: "swap",
-});
+// const inter = Inter({ subsets: ["latin"] });
+// const montserratAlternates = Montserrat_Alternates({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600", "700"],
+//   variable: "--font-montserrat-alternates",
+//   display: "swap",
+// });
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-nunito-sans",
+  display: "swap",
+});
+
+const rufina = Rufina({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-rufina",
   display: "swap",
 });
 
@@ -30,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunitoSans.variable} ${montserratAlternates.variable}`}>
+      <body className={`${nunitoSans.variable} ${rufina.variable}`}>
         <Navbar />
         {children}
       </body>

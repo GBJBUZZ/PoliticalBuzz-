@@ -10,25 +10,32 @@
   --btn-txt: #fff;
 }
 
+.rufina {
+  font-family: var(--font-rufina)
+}
+
 nav {
-  font-family: var(--font-montserrat-alternates);
+  font-family: var(--font-rufina);
   font-weight: 700;
 }
 
 h1 {
-  font-family: var(--font-montserrat-alternates);
+  font-family: var(--font-rufina);
   @apply text-5xl;
   font-weight: 600;
+  color: black;
 }
 
 h2 {
-  font-family: var(--font-montserrat-alternates);
+  font-family: var(--font-rufina);
   font-size: 2rem;
+  font-weight: 600;
+  color: black;
 }
 
 h3 {
   font-family: var(--font-nunito-sans);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.25rem;
 }
 
@@ -37,25 +44,63 @@ h4 {
   font-size: 1.25rem;
 }
 
-button,
 .btn {
-  font-family: var(--font-montserrat-alternates);
-  font-family: 1.25rem;
-  font-weight: 600;
+  font-family: var(--font-rufina);
+  font-size: 1.25rem;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform: translateY(-110%);
+  transition: all 0.3s ease;
+  /* z-index: -1; */
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.btn:hover span {
+  color: #fff;
+}
+
+.btn:hover::before {
+  transform: translateY(0);
 }
 
 body {
   font-family: var(--font-nunito-sans);
-  background-color: var(--primary-clr);
+  color: var(--secondary-txt);
 }
 
 .hero-pattern-bg {
-  opacity: 0.8;
-  background: repeating-linear-gradient(
+  background-image: repeating-linear-gradient(
     45deg,
     #ffffff14,
     #ffffff0c 5px,
     var(--primary-clr) 5px,
     var(--primary-clr) 35px
   );
+}
+
+@media screen and (min-width: 1024px) {
+  .image-slider {
+    width: 80% !important;
+    margin-left: auto;
+  }
+
+  .text-slider {
+    width: 90% !important;
+  }
 }
