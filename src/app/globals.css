@@ -11,7 +11,7 @@
 }
 
 .rufina {
-  font-family: var(--font-rufina)
+  font-family: var(--font-rufina);
 }
 
 nav {
@@ -103,4 +103,17 @@ body {
   .text-slider {
     width: 90% !important;
   }
+}
+
+.pattern1 {
+  background-image: url("/assets/backgrounds/pattern1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.pattern2 {
+  background-image: url("/assets/backgrounds/pattern2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

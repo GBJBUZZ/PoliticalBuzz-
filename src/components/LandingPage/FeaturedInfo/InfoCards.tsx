@@ -14,7 +14,7 @@ export default function InfoCards({
   link: string;
 }) {
   return (
-    <div className="rounded-xl shadow-lg lg:shadow-2xl p-8  text-center relative overflow-hidden group">
+    <div className="rounded-xl shadow-lg p-8  text-center relative overflow-hidden group bg-white">
       <div className="space-y-4 relative z-20">
         <div className="px-4 py-2 bg-[#f8f5f5] rounded-full w-fit aspect-square mx-auto ">
           <Image
