@@ -37,9 +37,9 @@ export default function Vision() {
       link: "/",
     },
     {
-      title: "ENVIRONMENT",
-      image: "/assets/LandingPage/environment.png",
-      text: "He was a steadfast advocate for environmental conservation throughout his life. His dedication to preserving the environment manifested in various impactful ways: He pioneered community-led initiatives to plant thousands of trees, fostering green spaces and combating deforestation.",
+      title: "Healthcare",
+      image: "/assets/LandingPage/healthcare.png",
+      text: "Narendra Bhojraj Bhondekar has worked tirelessly towards upgrading healthcare infrastructure, including the construction and renovation of hospitals, clinics, and primary health centers. His initiatives aimed to ensure that quality medical services were accessible to all, especially in rural and underserved areas. ",
       link: "/",
     },
   ];
@@ -69,7 +69,9 @@ export default function Vision() {
                 activeBlock === index
                   ? "bg-[var(--primary-clr)] text-white"
                   : "bg-white text-[var(--secondary-txt)]"
-              } hover:bg-[var(--primary-clr)] hover:text-white ${index === blocks.length-1 && "rounded-b-xl"}`}
+              } hover:bg-[var(--primary-clr)] hover:text-white ${
+                index === blocks.length - 1 && "rounded-b-xl"
+              }`}
               onClick={() => setActiveBlock(index)}
             >
               <span>{block.title}</span>

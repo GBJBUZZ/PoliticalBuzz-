@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 // const montserratAlternates = Montserrat_Alternates({
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body className={`${nunitoSans.variable} ${rufina.variable}`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
