@@ -93,7 +93,7 @@ function LanguageSelector({ onChange, value }: any) {
   const langCookie = value.split("/")[2];
   return (
     <select
-      className="lang-select"
+      className="lang-select text-[#070707]"
       onChange={(e) => onChange(e.target.value)}
       value={langCookie}
     >
