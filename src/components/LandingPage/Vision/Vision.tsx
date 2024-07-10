@@ -50,7 +50,7 @@ export default function Vision() {
       <div className="text-center">
         <p className="rufina text-xs">Explore Main Information</p>
         <h2 className="w-fit m-auto">
-          My Political Vison
+          Public Services
           <span className="flex w-full mt-2 gap-4 items-center">
             <span className="flex-1 border-b-2 border-[var(--primary-clr)]"></span>
             <FaStar size={16} className="text-[var(--primary-clr)]" />

@@ -121,3 +121,7 @@ body {
 .shadow-custom {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.gradient-bg {
+  background: linear-gradient(-101deg,#ffffff -70.78%, #f36821 100%);
+}

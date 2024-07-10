@@ -6,6 +6,10 @@ import { ImQuotesLeft } from "react-icons/im";
 export default function About() {
   return (
     <section className="px-8 md:px-20 py-20 space-y-8">
+      <h2 className="text-center m-auto w-fit">
+        Biography
+        <span className="mt-2 block w-[80%] mx-auto border-2 rounded-full border-[var(--primary-clr)]"></span>
+      </h2>
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
         <div>
           <div className="pt-6 md:pb-20 md:px-8 relative">
@@ -37,11 +41,13 @@ export default function About() {
               Narendra Bhojraj Bhondekar is a prominent politician and dedicated
               public servant from Bhandara district, Maharashtra. Born on June
               28, 1979, in Bhandara, he has risen to become a significant figure
-              in Maharashtra&apos;s political landscape, known for his unwavering
-              commitment to solving the problems of the common man.
+              in Maharashtra&apos;s political landscape, known for his
+              unwavering commitment to solving the problems of the common man.
             </p>
             <p>
-              <span className="font-[600] text-black">Early Life and Education</span>
+              <span className="font-[600] text-black">
+                Early Life and Education
+              </span>
               <br />
               Narendra Bhondekar was born into a family with a farming
               background. His early life was marked by the values of hard work
@@ -52,6 +58,12 @@ export default function About() {
               endeavors in politics and community service.
             </p>
           </div>
+          <Link
+            href="/contact"
+            className="btn px-6 py-3 bg-[var(--primary-clr)] block w-fit text-[#fff] rounded-xl"
+          >
+            <span>Read More</span>
+          </Link>
         </div>
       </div>
     </section>
