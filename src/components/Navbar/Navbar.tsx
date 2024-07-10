@@ -117,14 +117,14 @@ export default function Navbar() {
         >
           {links.map((link, index) =>
             link.more.length > 0 ? (
-              <button className="text-[var(--primary-txt)] relative z-50 group hover:text-[var(--primary-clr)] text-left">
+              <button key={103232} className="text-[var(--primary-txt)] relative z-50 group hover:text-[var(--primary-clr)] text-left">
                 {link.name}
                 <IoIosArrowDown size={20} className="inline" />
                 <span className="shadow-custom dropdown md:absolute top-full left-0 min-w-full w-fit bg-white p-4 rounded-lg z-50 block md:hidden group-hover:block space-y-2 text-left">
                   {link.more.map((link, index) => {
                     return (
                       <Link
-                        key={index}
+                        key={index+100}
                         href={link.link}
                         className={`block hover:text-[var(--primary-clr)] text-nowrap ${
                           link.link === pathname
