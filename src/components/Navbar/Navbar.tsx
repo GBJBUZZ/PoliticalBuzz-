@@ -117,20 +117,24 @@ export default function Navbar() {
         >
           {links.map((link, index) =>
             link.more.length > 0 ? (
-              <button key={103232} className="text-[var(--primary-txt)] relative z-50 group hover:text-[var(--primary-clr)] text-left">
+              <button
+                key={103232}
+                className="text-[var(--primary-txt)] relative z-50 group hover:text-[var(--primary-clr)] text-left"
+              >
                 {link.name}
                 <IoIosArrowDown size={20} className="inline" />
                 <span className="shadow-custom dropdown md:absolute top-full left-0 min-w-full w-fit bg-white p-4 rounded-lg z-50 block md:hidden group-hover:block space-y-2 text-left">
                   {link.more.map((link, index) => {
                     return (
                       <Link
-                        key={index+100}
+                        key={index + 100}
                         href={link.link}
                         className={`block hover:text-[var(--primary-clr)] text-nowrap ${
                           link.link === pathname
                             ? "text-[var(--primary-clr)]"
                             : "text-[#070707]"
                         }`}
+                        onClick={() => setShowMenu(false)}
                       >
                         {link.name}
                       </Link>
@@ -147,6 +151,7 @@ export default function Navbar() {
                     ? "text-[var(--primary-clr)]"
                     : "text-[#070707]"
                 }`}
+                onClick={() => setShowMenu(false)}
               >
                 {link.name}
               </Link>
@@ -155,25 +160,49 @@ export default function Navbar() {
 
           <GoogleTranslate prefLangCookie={prefLangCookie} />
           <div className="md:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
-            <Link href={""} className="bg-[#F4F4F4] p-3 rounded-lg">
+            <Link
+              href={"https://www.facebook.com/BhandaraShivSena/"}
+              target="_blank"
+              className="bg-[#F4F4F4] p-3 rounded-lg"
+            >
               <TfiFacebook size={20} />
             </Link>
-            <Link href={""} className="bg-[#F4F4F4] p-3 rounded-lg">
+            <Link
+              href={"https://x.com/NBhondekar61"}
+              target="_blank"
+              className="bg-[#F4F4F4] p-3 rounded-lg"
+            >
               <RiTwitterXLine size={20} />
             </Link>
-            <Link href={""} className="bg-[#F4F4F4] p-3 rounded-lg">
+            <Link
+              href={"https://www.instagram.com/narendra_bhondekar/"}
+              target="_blank"
+              className="bg-[#F4F4F4] p-3 rounded-lg"
+            >
               <FaInstagram size={20} />
             </Link>
           </div>
         </div>
         <div className="hidden md:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
-          <Link href={""} className="bg-[#F4F4F4] p-3 rounded-lg">
+          <Link
+            href={"https://www.facebook.com/BhandaraShivSena/"}
+            target="_blank"
+            className="bg-[#F4F4F4] p-3 rounded-lg"
+          >
             <TfiFacebook size={20} />
           </Link>
-          <Link href={""} className="bg-[#F4F4F4] p-3 rounded-lg">
+          <Link
+            href={"https://x.com/NBhondekar61"}
+            target="_blank"
+            className="bg-[#F4F4F4] p-3 rounded-lg"
+          >
             <RiTwitterXLine size={20} />
           </Link>
-          <Link href={""} className="bg-[#F4F4F4] p-3 rounded-lg">
+          <Link
+            href={"https://www.instagram.com/narendra_bhondekar/"}
+            target="_blank"
+            className="bg-[#F4F4F4] p-3 rounded-lg"
+          >
             <FaInstagram size={20} />
           </Link>
         </div>

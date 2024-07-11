@@ -28,7 +28,7 @@ export default function InfoCards({
         <h3>{title}</h3>
         <p>{text}</p>{" "}
         <Link
-          href="/contact"
+          href={link}
           className="btn px-6 py-3 bg-[var(--primary-clr)] block text-[#fff] rounded-xl"
         >
           <span>Read More</span>

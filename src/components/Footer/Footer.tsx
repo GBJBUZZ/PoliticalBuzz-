@@ -11,13 +11,15 @@ export default function Footer() {
   return (
     <section className="px-8 md:px-20 py-20 md:py-40 relative bg-[var(--primary-clr)] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-white gap-4 my-20">
       <div>
-        <Image
-          src={"/logo.svg"}
-          alt="instagram"
-          width={500}
-          height={500}
-          className="max-w-[300px]"
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/logo.svg"}
+            alt="instagram"
+            width={500}
+            height={500}
+            className="max-w-[300px]"
+          />
+        </Link>
         <p className="mt-8">
           Narendra Bhondekar is a politician from Bhandara district,
           Maharashtra. He is current Member of Maharashtra Legislative Assembly
@@ -27,46 +29,40 @@ export default function Footer() {
       <div className="md:pl-8">
         <h5 className="text-2xl my-8 font-[600] rufina">Explore</h5>
         <div className="md:mt-12 space-y-2">
-          <Link href="/about" className="block">
+          <Link href="/biography" className="block">
             Biography
           </Link>
-          <Link href="/about" className="block">
+          <Link href="/political-journey" className="block">
             Political Journey
           </Link>
-          <Link href="/about" className="block">
-            Vision
+          <Link href="/#services" className="block">
+            Services
           </Link>
-          <Link href="/about" className="block">
-            Constituency
+          <Link href="/media-and-coverage" className="block">
+            Media And Coverage
           </Link>
-          <Link href="/about" className="block">
-            Development
-          </Link>
-          <Link href="/about" className="block">
+          <Link href="/gallery" className="block">
             Photo Gallery
-          </Link>
-          <Link href="/about" className="block">
-            Media
           </Link>
         </div>
       </div>
       <div className="">
         <h5 className="text-2xl my-8 font-[600] rufina">Services</h5>
         <div className="md:mt-12 space-y-2">
-          <Link href="/about" className="block">
-            Agriculture
+          <Link href="/services/sports" className="block">
+            Sports
           </Link>
-          <Link href="/about" className="block">
+          <Link href="/services/agriculture" className="block">
             Education
           </Link>
-          <Link href="/about" className="block">
+          <Link href="/services/employment" className="block">
             Employment
           </Link>
-          <Link href="/about" className="block">
+          <Link href="/services/education" className="block">
             Environment
           </Link>
-          <Link href="/about" className="block">
-            Development
+          <Link href="/services/healthcare" className="block">
+            Healthcare
           </Link>
         </div>
       </div>
@@ -94,13 +90,25 @@ export default function Footer() {
           </div>
           <br />
           <div className="flex items-center gap-2 w-fit pr-2 border-r-2 border-[#f4f4f4] text-[var(--primary-txt)]">
-            <Link href={""} className="bg-[#F4F4F4] p-3 rounded-lg">
+            <Link
+              href={"https://www.facebook.com/BhandaraShivSena/"}
+              target="_blank"
+              className="bg-[#F4F4F4] p-3 rounded-lg"
+            >
               <TfiFacebook size={20} />
             </Link>
-            <Link href={""} className="bg-[#F4F4F4] p-3 rounded-lg">
+            <Link
+              href={"https://x.com/NBhondekar61"}
+              target="_blank"
+              className="bg-[#F4F4F4] p-3 rounded-lg"
+            >
               <RiTwitterXLine size={20} />
             </Link>
-            <Link href={""} className="bg-[#F4F4F4] p-3 rounded-lg">
+            <Link
+              href={"https://www.instagram.com/narendra_bhondekar/"}
+              target="_blank"
+              className="bg-[#F4F4F4] p-3 rounded-lg"
+            >
               <FaInstagram size={20} />
             </Link>
           </div>

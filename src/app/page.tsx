@@ -13,7 +13,7 @@ export default function Home() {
     <main className="">
       <Hero />
       <About />
-      <FeaturedInfo />
+      {/* <FeaturedInfo /> */}
       <Video />
       <Facts />
       <Vision />

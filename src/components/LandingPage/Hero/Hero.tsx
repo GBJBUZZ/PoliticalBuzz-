@@ -56,7 +56,7 @@ export default function Hero() {
           />
         </div>
         <Link
-          href="/contact"
+          href="/biography"
           className="btn px-6 py-3 bg-[#fff] block w-fit text-[var(--primary-clr)] rounded-xl"
         >
           <span>Read More</span>
