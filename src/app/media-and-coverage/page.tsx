@@ -1,6 +1,7 @@
 import React from "react";
 import NewsCard from "./NewsCard";
 import { title } from "process";
+import Header from "@/components/Header/Header";
 
 export default function page() {
   const news = [
@@ -50,12 +51,7 @@ export default function page() {
 
   return (
     <main className="space-y-8">
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[url('/assets/Media/media-bg.png')] relative overflow-y-hidden min-h-[80dvh]">
-        <div className="px-8 md:px-20 py-10 md:py-20 space-y-8 place-content-center">
-          {/* <h5 className="text-[2rem] ">Political Journey</h5> */}
-          <h1 className="text-white">Media Coverage</h1>
-        </div>
-      </section>
+      <Header title="Media And Coverage" />
       <section className="px-8 md:px-20 py-20 text-center space-y-20">
         <p>
           Please review the media coverage of{" "}

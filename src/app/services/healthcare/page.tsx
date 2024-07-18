@@ -1,3 +1,4 @@
+import Header from "@/components/Header/Header";
 import Image from "next/image";
 import React from "react";
 
@@ -5,12 +6,7 @@ export default function page() {
   return (
     <main className="space-y-8">
       {" "}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[url('/assets/Healthcare/healthcare-bg.png')] relative overflow-y-hidden min-h-[80dvh]">
-        <div className="px-8 md:px-20 py-10 md:py-20 space-y-8 place-content-center">
-          {/* <h5 className="text-[2rem] ">Political Journey</h5> */}
-          <h1 className="text-white">Healthcare</h1>
-        </div>
-      </section>
+      <Header title={"Healthcare"} />
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 px-8 md:px-20 py-20 text-justify">
         <div className="lg:col-span-2 space-y-4">
           <p className="">

@@ -1,5 +1,6 @@
 "use client";
 
+import Header from "@/components/Header/Header";
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
@@ -12,21 +13,7 @@ export default function Gallery() {
   return (
     <main className="space-y-12">
       {" "}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 gradient-bg">
-        <div className="px-8 md:px-20 py-10 md:py-20 space-y-8 place-content-center">
-          <h5 className="text-[2rem] text-white">Gallery</h5>
-          <h1>Narendra Bhojraj Bhondekar</h1>
-        </div>
-        <div className="">
-          <Image
-            src={"/assets/About/narendra.png"}
-            alt="Narendra Bhojraj Bhondekar"
-            width={1000}
-            height={1000}
-            className="max-w-[300px] md:max-w-[500px] mx-auto"
-          />
-        </div>
-      </section>
+      <Header title="Gallery" />
       <section className="px-8 md:px-20 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
         <div className="text-center w-fit mx-auto">
           <p className="rufina text-xs px-8">Explore Main Information</p>

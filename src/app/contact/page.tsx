@@ -1,3 +1,4 @@
+import Header from "@/components/Header/Header";
 import Link from "next/link";
 import React from "react";
 import {
@@ -14,11 +15,7 @@ export default function page() {
   return (
     <main>
       {" "}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 gradient-bg">
-        <div className="px-8 md:px-20 py-10 md:py-20 space-y-8 place-content-center">
-          <h5 className="text-[2rem] text-white">Contact Us</h5>
-        </div>
-      </section>
+      <Header title="Contact Us" />
       <section className="px-8 md:px-20 py-20 space-y-16">
         <div className="p-0 md:p-4 shadow-custom grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-[var(--primary-clr)] space-y-16 rounded-lg py-8 px-8">

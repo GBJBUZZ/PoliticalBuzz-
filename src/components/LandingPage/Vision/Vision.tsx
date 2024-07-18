@@ -45,67 +45,39 @@ export default function Vision() {
   ];
 
   return (
-    <section
-      className="px-8 md:px-20 py-20 space-y-8 pattern1 bg-[#f3f3f0]"
-      id="services"
-    >
+    <section className=" space-y-8 bg-black" id="services">
       {" "}
-      <div className="text-center">
-        <p className="rufina text-xs">Explore Main Information</p>
-        <h2 className="w-fit m-auto">
-          Public Services
-          <span className="flex w-full mt-2 gap-4 items-center">
-            <span className="flex-1 border-b-2 border-[var(--primary-clr)]"></span>
-            <FaStar size={16} className="text-[var(--primary-clr)]" />
-            <FaStar size={20} className="text-[var(--primary-clr)]" />
-            <FaStar size={16} className="text-[var(--primary-clr)]" />
-            <span className="flex-1 border-b-2 border-[var(--primary-clr)]"></span>
-          </span>
-        </h2>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="rounded-xl overflow-hidden space-y-2">
-          {blocks.map((block, index) => (
-            <button
-              key={index}
-              className={`px-6 py-6  block uppercase w-full ${
-                activeBlock === index
-                  ? "bg-[var(--primary-clr)] text-white"
-                  : "bg-white text-[var(--secondary-txt)]"
-              } hover:bg-[var(--primary-clr)] hover:text-white ${
-                index === blocks.length - 1 && "rounded-b-xl"
-              }`}
-              onClick={() => setActiveBlock(index)}
-            >
-              <span>{block.title}</span>
-            </button>
-          ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className=" space-y-4 pt-10">
+          <h2 className="text-white nanito font-[700] text-center">
+            Public Services
+          </h2>
+          <br />
+          <div>
+            {blocks.map((block, index) => (
+              <Link
+                href={block.link}
+                key={index}
+                className={`px-6 py-8 block text-center uppercase w-full hover:text-white hover:scale-x-105 hover:scale-y-125 origin-bottom-left transition-all duration-200 shadow-custom ${
+                  index % 2 === 0
+                    ? "bg-[var(--primary-clr)] text-white"
+                    : "bg-[#c0581a] text-white"
+                } `}
+                onClick={() => setActiveBlock(index)}
+              >
+                <span>{block.title}</span>
+              </Link>
+            ))}
+          </div>
         </div>
-        <div className="md:col-span-3 w-full h-full bg-white rounded-xl overflow-hidden py-8 px-4 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="w-full h-full bg-gray-300 rounded-xl overflow-hidden relative ">
-            <Image
-              src={blocks[activeBlock].image}
-              alt={blocks[activeBlock].title}
-              width={1000}
-              height={1000}
-              className="w-full h-full object-cover object-center rounded-xl md:absolute top-0 left-0"
-            />
-          </div>
-          <div className="space-y-8">
-            <p className="text-sm font-[700] text-[var(--primary-clr)]">
-              Explore my vision on
-            </p>
-            <p className="text-sm font-[700] uppercase text-[var(--primary-txt)]">
-              {blocks[activeBlock].title}
-            </p>
-            <p>{blocks[activeBlock].text}</p>
-            <Link
-              href={blocks[activeBlock].link}
-              className="btn px-6 py-3 bg-[var(--primary-clr)] block w-fit text-[#fff] rounded-xl"
-            >
-              <span>Read More</span>
-            </Link>
-          </div>
+        <div className="">
+          <Image
+            src={"/assets/LandingPage/narendra-vision.png"}
+            alt="Vision"
+            height={1000}
+            width={1000}
+            className="object-cover max-w-[600px]"
+          />
         </div>
       </div>
     </section>

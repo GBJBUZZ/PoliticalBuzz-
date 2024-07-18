@@ -1,3 +1,4 @@
+import Header from "@/components/Header/Header";
 import Image from "next/image";
 import React from "react";
 
@@ -5,12 +6,7 @@ export default function page() {
   return (
     <main className="space-y-8">
       {" "}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[url('/assets/Sports/sports-header.png')] relative overflow-y-hidden min-h-[80dvh]">
-        <div className="px-8 md:px-20 py-10 md:py-20 space-y-8 place-content-center">
-          {/* <h5 className="text-[2rem] ">Political Journey</h5> */}
-          <h1 className="text-white">Sports</h1>
-        </div>
-      </section>
+      <Header title={"Sports"} />
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 px-8 md:px-20 py-20 text-justify">
         <div className="lg:col-span-2 space-y-4">
           <p>
@@ -33,23 +29,23 @@ export default function page() {
             athletics, promoting a holistic approach to education. His
             commitment to inclusivity meant that he supported not just
             mainstream sports but also niche and emerging ones, broadening
-            students&apos; horizons. Under his leadership, the participation rate in
-            school sports significantly increased, fostering a vibrant and
-            active student community. Narendra&apos;s legacy lives on in the numerous
-            students who have pursued their passion for sports, achieving
-            excellence both on and off the field. His dedication to student
-            sports development has left an indelible mark, creating a culture of
-            support and encouragement that continues to thrive.
+            students&apos; horizons. Under his leadership, the participation
+            rate in school sports significantly increased, fostering a vibrant
+            and active student community. Narendra&apos;s legacy lives on in the
+            numerous students who have pursued their passion for sports,
+            achieving excellence both on and off the field. His dedication to
+            student sports development has left an indelible mark, creating a
+            culture of support and encouragement that continues to thrive.
           </p>
           <p>
-            Narendra&apos;s efforts went beyond just providing resources; he actively
-            engaged with students, understanding their needs and aspirations. He
-            established partnerships with local sports clubs and organizations
-            to offer students additional training opportunities. Narendra
-            believed in recognizing and celebrating achievements, organizing
-            award ceremonies and appreciation events for young athletes. His
-            approach was holistic, focusing on physical fitness, mental
-            well-being, and character building through sports.
+            Narendra&apos;s efforts went beyond just providing resources; he
+            actively engaged with students, understanding their needs and
+            aspirations. He established partnerships with local sports clubs and
+            organizations to offer students additional training opportunities.
+            Narendra believed in recognizing and celebrating achievements,
+            organizing award ceremonies and appreciation events for young
+            athletes. His approach was holistic, focusing on physical fitness,
+            mental well-being, and character building through sports.
           </p>
           <p>
             He also initiated programs to educate parents and the community
@@ -62,8 +58,8 @@ export default function page() {
             interests felt valued and had opportunities to excel.
           </p>
           <p>
-            Narendra&apos;s influence extended to curriculum development, where he
-            advocated for integrating sports and physical education into the
+            Narendra&apos;s influence extended to curriculum development, where
+            he advocated for integrating sports and physical education into the
             academic framework. He collaborated with educators to design
             programs that complemented classroom learning with physical
             activities. This integration aimed to create a balanced and

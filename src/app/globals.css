@@ -10,6 +10,10 @@
   --btn-txt: #fff;
 }
 
+.nanito {
+  font-family: var(--font-nunito-sans);
+}
+
 .rufina {
   font-family: var(--font-rufina);
 }
@@ -123,9 +127,8 @@ body {
 }
 
 .gradient-bg {
-  background: linear-gradient(-101deg,#ffffff -70.78%, #f36821 100%);
+  background: linear-gradient(-101deg, #ffffff -70.78%, #f36821 100%);
 }
-
 
 @media screen and (max-width: 768px) {
   .dropdown {
