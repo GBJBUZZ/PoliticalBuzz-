@@ -2,62 +2,55 @@ import React from "react";
 import NewsCard from "./NewsCard";
 import { title } from "process";
 import Header from "@/components/Header/Header";
+import { useTranslations } from "next-intl";
 
 export default function page() {
+  const t = useTranslations("news");
+
   const news = [
     {
       image: "/assets/Media/news1.png",
       date: "29-06-2024",
-      title:
-        "The beautification work of the pole lake in Bhandara city is underway. Under beautification, a huge 51 feet statue of Lord Shrirama is being built on the bank of the lake.",
+      title: "articles.1.title",
       link: "/",
     },
     {
       image: "/assets/Media/news2.png",
       date: "24-06-2024",
-      title:
-        "Maharashtra's beloved Chief Minister Hon. No. Mr. Bhumipujan ceremony of the first phase of water tourism worth Rs 102 crore in Bhandara assembly constituency was held today by Eknathji Shinde Saheb.",
+      title: "articles.2.title",
       link: "/",
     },
     {
       image: "/assets/Media/news3.png",
       date: "29-06-2024",
-      title:
-        "Workers from various parties in Bhandara district made public entry in Shiv Sena under the initiative of Bhandara Legislative Assembly constituency",
+      title: "articles.3.title",
       link: "/",
     },
     {
       image: "/assets/Media/news4.png",
       date: "29-06-2024",
-      title:
-        "In today. Narendra Bhau met Union Railway Minister Ashwini Vaishnav and requested Rack Point at Bhandara.",
+      title: "articles.4.title",
       link: "/",
     },
     {
       image: "/assets/Media/news5.png",
       date: "30-06-2024",
-      title:
-        "Reviewing the construction of a 100 bed government sub-district hospital building approved at Pawani and instructed to speed up the work.",
+      title: "articles.5.title",
       link: "/",
     },
     {
       image: "/assets/Media/news6.png",
       date: "30-06-2024",
-      title:
-        "Ad in today's tour of Bhandara city. Visited Shri Swami Samarth temple near Prabhat Mishra's house. This time interacted with the citizens of the area and learned about their problems.",
+      title: "articles.6.title",
       link: "/",
     },
   ];
 
   return (
     <main className="space-y-8">
-      <Header title="Media And Coverage" />
+      <Header title="news.title" />
       <section className="px-8 md:px-20 py-20 text-center space-y-20">
-        <p>
-          Please review the media coverage of{" "}
-          <span className="font-[700]">Narendra Bhojraj Bhondekar</span> to gain
-          more insights about him.
-        </p>
+        <p>{t("line")}</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12">
           {news.map((item, index) => {

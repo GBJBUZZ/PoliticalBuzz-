@@ -1,21 +1,16 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 export default function More() {
+  const t = useTranslations("biography");
+
   return (
     <section className="px-8 md:px-20 py-20 space-y-24">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-2 md:gap-8">
         <div className="lg:col-span-2 order-2 md:order-1">
-          <p className="font-[600] text-black">Political Career</p>
-          <p>
-            Narendra Bhondekar&apos;s political journey began with his election
-            to the Maharashtra Legislative Assembly in 2009, representing the
-            Bhandara Vidhan Sabha constituency. His tenure was marked by a focus
-            on grassroots development, addressing local issues, and implementing
-            policies that benefited his constituents. Recognizing his dedication
-            and effectiveness, the people of Bhandara re-elected him in 2019,
-            reaffirming their trust in his leadership.
-          </p>
+          <p className="font-[600] text-black">{t("section1.title")}</p>
+          <p>{t("section1.para")}</p>
         </div>
         <div className="aspect-video bg-gray-200 rounded-xl order-1 md:order-2 relative">
           <Image
@@ -36,17 +31,8 @@ export default function More() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8">
         <div className="lg:col-span-2 order-2">
-          <p className="font-[600] text-black">Commitment to Public Service</p>
-          <p>
-            Throughout his political career, Bhondekar has been a relentless
-            advocate for the common man. He has championed various initiatives
-            aimed at improving the quality of life in his constituency,
-            including infrastructure development, healthcare, education, and
-            agricultural support. His background in farming gives him a unique
-            perspective on the challenges faced by the agrarian community, and
-            he has worked tirelessly to implement sustainable farming practices
-            and support local farmers.
-          </p>
+          <p className="font-[600] text-black">{t("section2.title")}</p>
+          <p>{t("section2.para")}</p>
         </div>
         <div className="aspect-video bg-gray-200 rounded-xl order-1 relative">
           <Image
@@ -67,16 +53,8 @@ export default function More() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8">
         <div className="lg:col-span-2 order-2 md:order-1">
-          <p className="font-[600] text-black">Legacy and Impact</p>
-          <p>
-            Narendra Bhojraj Bhondekar&apos;s legacy is one of dedication, hard
-            work, and an unrelenting commitment to the betterment of his
-            community. His efforts have brought significant positive changes to
-            Bhandara, improving the lives of its residents and setting a
-            benchmark for other politicians. As he continues to serve his
-            constituency, his impact is felt not only in Bhandara but also
-            across Maharashtra, inspiring future generations of leaders.
-          </p>
+          <p className="font-[600] text-black">{t("section3.title")}</p>
+          <p>{t("section3.para")}</p>
         </div>
         <div className="aspect-video bg-gray-200 rounded-xl order-1 md:order-2 relative">
           <Image

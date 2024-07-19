@@ -1,4 +1,5 @@
 import Header from "@/components/Header/Header";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 import {
@@ -12,24 +13,24 @@ import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
 
 export default function page() {
+  const t = useTranslations("contact us");
+
   return (
     <main>
       {" "}
-      <Header title="Contact Us" />
+      <Header title="contact us.title" />
       <section className="px-8 md:px-20 py-20 space-y-16">
         <div className="p-0 md:p-4 shadow-custom grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-[var(--primary-clr)] space-y-16 rounded-lg py-8 px-8">
             <div>
-              <h2 className="text-white ">Send Your Message</h2>
-              <p className="text-white">
-                Fill out this form to send your inquires or complaints.
-              </p>
+              <h2 className="text-white ">{t("msg")}</h2>
+              <p className="text-white">{t("line")}</p>
             </div>
             <div className="space-y-8 text-white">
               <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-center text-center md:text-left flex-wrap gap-1">
                 <FiPhoneCall size={24} className="inline" />{" "}
                 <Link href={"mailto:mlabhondekaroffice@gmail.com"}>
-                  +91 99230 54245
+                  {t("phone")}
                 </Link>
               </div>
               <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-center text-center md:text-left flex-wrap gap-1">
@@ -40,10 +41,7 @@ export default function page() {
               </div>{" "}
               <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-center text-center md:text-left  gap-1">
                 <MdOutlineLocationOn size={24} className="inline" />
-                <p>
-                  Sahkar Nagar, Bank Colony, Kisan Chowk, Bhandara, Maharashtra
-                  441904
-                </p>
+                <p>{t("address")}</p>
               </div>
             </div>
 
@@ -66,35 +64,35 @@ export default function page() {
           <div className="p-8">
             <form className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8">
               <label htmlFor="">
-                <span>First Name</span>
+                <span>{t("form.first name")}</span>
                 <input
                   type="text"
                   className="block border-b-2 border-[#8D8D8D] w-full p-2"
                 />
               </label>
               <label htmlFor="">
-                <span>Last Name</span>
+                <span>{t("form.last name")}</span>
                 <input
                   type="text"
                   className="block border-b-2 border-[#8D8D8D] w-full p-2"
                 />
               </label>
               <label htmlFor="">
-                <span>Email</span>
+                <span>{t("form.email")}</span>
                 <input
                   type="email"
                   className="block border-b-2 border-[#8D8D8D] w-full p-2"
                 />
               </label>
               <label htmlFor="">
-                <span>Phone Number</span>
+                <span>{t("form.phone")}</span>
                 <input
                   type="email"
                   className="block border-b-2 border-[#8D8D8D] w-full p-2"
                 />
               </label>
               <label htmlFor="" className="md:col-span-2">
-                <span>Message</span>
+                <span>{t("form.message")}</span>
                 <input
                   type="email"
                   className="block border-b-2 border-[#8D8D8D] w-full p-2"
@@ -102,7 +100,7 @@ export default function page() {
               </label>
             </form>{" "}
             <button className="btn mt-16 ml-auto px-6 py-3 bg-[var(--primary-clr)] block w-fit text-[#fff] rounded-xl">
-              <span>Send Message</span>
+              <span>{t("form.send message")}</span>
             </button>
           </div>
         </div>

@@ -7,7 +7,7 @@ export default function page() {
   return (
     <main className="overflow-x-hidden">
       {/* <Hero /> */}
-      <Header title={"Political Journey"} />
+      <Header title={"political journey.title"} />
       <Journey />
     </main>
   );

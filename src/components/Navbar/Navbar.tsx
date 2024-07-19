@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/navigation";
+import { Link, usePathname } from "@/navigation";
 import React, { useEffect } from "react";
 import { TfiFacebook } from "react-icons/tfi";
 import { RiTwitterXLine } from "react-icons/ri";
@@ -8,7 +8,6 @@ import { IoMenu, IoClose } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import GoogleTranslate from "../Translate/GoogleTranslate";
-import { usePathname, useRouter } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
 import { useTranslations } from "next-intl";
 import LangSwitcher from "./LangSwitcher";
@@ -16,6 +15,7 @@ import LangSwitcher from "./LangSwitcher";
 export default function Navbar() {
   const pathname = usePathname();
   const t = useTranslations("nav");
+  const t2 = useTranslations();
   // const {  } = useRouter();
   const links = [
     {
@@ -99,13 +99,23 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50">
       <nav className="flex items-center justify-between bg-white py-2 px-4 md:px-16 shadow-lg">
-        <Image
-          src={"/logo.svg"}
-          alt="instagram"
-          width={500}
-          height={500}
-          className="max-w-[150px] md:max-w-[200px]"
-        />
+        {t2("lang") === "English" ? (
+          <Image
+            src={"/logo-english.svg"}
+            alt="instagram"
+            width={500}
+            height={500}
+            className="max-w-[200px] md:max-w-[300px]"
+          />
+        ) : (
+          <Image
+            src={"/logo-marathi.svg"}
+            alt="instagram"
+            width={500}
+            height={500}
+            className="max-w-[150px] md:max-w-[200px]"
+          />
+        )}
         <button
           className="md:hidden z-10"
           onClick={() => {

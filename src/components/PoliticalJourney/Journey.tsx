@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 export default function Journey() {
+  const t = useTranslations("political journey");
+
   return (
     <section className="px-8 md:px-20 py-20 relative">
       <Image
@@ -12,17 +15,8 @@ export default function Journey() {
         className="hidden md:block absolute top-0 right-0 -translate-x-1/2"
       />
       <div className="space-y-8">
-        <p className="font-[600] text-black">
-          Narendra Bhondekar&apos;s political journey is marked by his
-          dedication to public service and consistent efforts to address the
-          issues faced by his constituency:
-        </p>
-        <p>
-          Bhondekar started his political career with a strong commitment to
-          social work, actively participating in community development
-          activities in Bhandara. His grassroots involvement and understanding
-          of local issues laid the foundation for his political aspirations.
-        </p>
+        <p className="font-[600] text-black">{t("para1")}</p>
+        <p>{t("para2")}</p>
       </div>
 
       <div className="mt-20 space-y-12 relative py-10 z-20">
@@ -45,13 +39,9 @@ export default function Journey() {
             <div className="p-4">
               <p className="place-content-center">
                 <span className="font-[600] text-black">
-                  First Election (2009):
+                  {t("journey.2009.title")}:{" "}
                 </span>
-                In 2009, Bhondekar contested the Maharashtra Legislative
-                Assembly elections as an independent candidate from the Bhandara
-                constituency. His victory marked the beginning of his formal
-                political career, driven by his promise to bring about
-                significant developmental changes in the region.
+                {t("journey.2009.para")}
               </p>
             </div>
           </div>
@@ -104,13 +94,9 @@ export default function Journey() {
             <div className="p-4">
               <p className="place-content-center">
                 <span className="font-[600] text-black">
-                  Development Initiatives (2009-2014):
+                  {t("journey.2014.title")}:{" "}
                 </span>
-                During his first term, Bhondekar focused on infrastructural
-                development, including road construction, electrification of
-                villages, and improving water supply systems. He initiated
-                various social welfare programs aimed at improving healthcare
-                and education in rural areas.
+                {t("journey.2014.para")}
               </p>
             </div>
           </div>
@@ -133,12 +119,9 @@ export default function Journey() {
             <div className="p-4">
               <p className="place-content-center">
                 <span className="font-[600] text-black">
-                  Re-election (2019):
+                  {t("journey.2019.title")}:{" "}
                 </span>
-                Bhondekar was re-elected in 2019, reflecting the continued trust
-                and support of the people of Bhandara. His second term saw an
-                intensified focus on sustainable development, digital literacy,
-                and employment generation.
+                {t("journey.2009.para")}
               </p>
             </div>
           </div>
@@ -190,13 +173,10 @@ export default function Journey() {
             </div>
             <div className="p-4">
               <p className="place-content-center">
-                <span className="font-[600] text-black">Ongoing Efforts:</span>
-                IBhondekar continues to work towards his vision of a prosperous
-                Bhandara-Paoni. His ongoing projects include setting up skill
-                development centres, enhancing healthcare facilities, and
-                promoting digital literacy. He remains committed to addressing
-                the needs of his constituents and ensuring that the benefits of
-                development reach every corner of his constituency.
+                <span className="font-[600] text-black">
+                  {t("journey.2024.title")}:{" "}
+                </span>
+                {t("journey.2024.para")}
               </p>
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Header from "@/components/Header/Header";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
@@ -10,14 +11,16 @@ export default function Gallery() {
   const [hidden, setHidden] = useState(true);
   const [image, setImage] = useState<string | null>(null);
 
+  const t = useTranslations("gallery");
+
   return (
     <main className="space-y-12">
       {" "}
       <Header title="Gallery" />
       <section className="px-8 md:px-20 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
         <div className="text-center w-fit mx-auto">
-          <p className="rufina text-xs px-8">Explore Main Information</p>
-          <h2 className="w-fit m-auto">Gallery</h2>{" "}
+          <p className="rufina text-xs px-8">{t("sub-title")}</p>
+          <h2 className="w-fit m-auto">{t("title")}</h2>{" "}
           <span className="flex w-full mt-2 gap-4 items-center">
             <span className="flex-1 border-b-2 border-[var(--primary-clr)]"></span>
             <FaStar size={16} className="text-[var(--primary-clr)]" />
