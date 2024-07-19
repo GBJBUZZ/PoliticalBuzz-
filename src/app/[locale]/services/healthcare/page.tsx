@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
-export default function page() {
+export default function Page() {
   const t = useTranslations("services.healthcare");
   return (
     <main className="space-y-8">

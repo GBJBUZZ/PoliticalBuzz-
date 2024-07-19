@@ -12,7 +12,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
 
-export default function page() {
+export default function Page() {
   const t = useTranslations("contact us");
 
   return (

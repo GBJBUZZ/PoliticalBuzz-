@@ -4,7 +4,7 @@ import { title } from "process";
 import Header from "@/components/Header/Header";
 import { useTranslations } from "next-intl";
 
-export default function page() {
+export default function Page() {
   const t = useTranslations("news");
 
   const news = [
