@@ -105,7 +105,7 @@ export default function Navbar() {
             alt="instagram"
             width={500}
             height={500}
-            className="max-w-[200px] md:max-w-[300px]"
+            className="max-w-[0px] md:max-w-[300px]"
           />
         ) : (
           <Image

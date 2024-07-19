@@ -12,17 +12,28 @@ import { useTranslations } from "use-intl";
 export default function Footer() {
   const t1 = useTranslations("nav");
   const t2 = useTranslations("footer");
+  const t3 = useTranslations();
   return (
     <section className="px-8 md:px-20 py-20 md:py-40 relative bg-[var(--primary-clr)] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-white gap-4">
       <div>
         <Link href={"/"}>
-          <Image
-            src={"/logo.svg"}
-            alt="instagram"
-            width={500}
-            height={500}
-            className="max-w-[300px]"
-          />
+          {t3("lang") === "English" ? (
+            <Image
+              src={"/logo-english.svg"}
+              alt="instagram"
+              width={500}
+              height={500}
+              className="max-w-[300px]"
+            />
+          ) : (
+            <Image
+              src={"/logo-marathi.svg"}
+              alt="instagram"
+              width={500}
+              height={500}
+              className="max-w-[300px]"
+            />
+          )}
         </Link>
         <p className="mt-8">{t2("text")}</p>
       </div>
