@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React, { useEffect } from "react";
 import { TfiFacebook } from "react-icons/tfi";
 import { RiTwitterXLine } from "react-icons/ri";
@@ -8,73 +8,77 @@ import { IoMenu, IoClose } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import GoogleTranslate from "../Translate/GoogleTranslate";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
+import { useTranslations } from "next-intl";
+import LangSwitcher from "./LangSwitcher";
+
 export default function Navbar() {
   const pathname = usePathname();
-
+  const t = useTranslations("nav");
+  // const {  } = useRouter();
   const links = [
     {
-      name: "Home",
+      name: "home",
       link: "/",
       more: [],
     },
     {
-      name: "About",
+      name: "about",
       link: "/about",
       more: [
         {
-          name: "Biography",
+          name: "biography",
           link: "/biography",
         },
         {
-          name: "Political Journey",
+          name: "political journey",
           link: "/political-journey",
         },
       ],
     },
     {
-      name: "Public Services",
+      name: "public services",
       link: "/vision",
       more: [
         {
-          name: "Sports",
+          name: "sports",
           link: "/services/sports",
         },
         {
-          name: "Agriculture",
+          name: "agriculture",
           link: "/services/agriculture",
         },
         {
-          name: "Employment",
+          name: "employment",
           link: "/services/employment",
         },
         {
-          name: "Education",
+          name: "education",
           link: "/services/education",
         },
         {
-          name: "Healthcare",
+          name: "healthcare",
           link: "/services/healthcare",
         },
       ],
     },
     {
-      name: "Media Coverage",
+      name: "media coverage",
       link: "/media-coverage",
       more: [
         {
-          name: "News",
+          name: "news",
           link: "/media-and-coverage",
         },
         {
-          name: "Gallery",
+          name: "gallery",
           link: "/gallery",
         },
       ],
     },
     {
-      name: "Contact",
+      name: "contact",
       link: "/contact",
       more: [],
     },
@@ -118,10 +122,10 @@ export default function Navbar() {
           {links.map((link, index) =>
             link.more.length > 0 ? (
               <button
-                key={103232}
+                key={index + 10000}
                 className="text-[var(--primary-txt)] relative z-50 group hover:text-[var(--primary-clr)] text-left"
               >
-                {link.name}
+                {t(link.name)}
                 <IoIosArrowDown size={20} className="inline" />
                 <span className="shadow-custom dropdown md:absolute top-full left-0 min-w-full w-fit bg-white p-4 rounded-lg z-50 block md:hidden group-hover:block space-y-2 text-left">
                   {link.more.map((link, index) => {
@@ -136,7 +140,7 @@ export default function Navbar() {
                         }`}
                         onClick={() => setShowMenu(false)}
                       >
-                        {link.name}
+                        {t(link.name)}
                       </Link>
                     );
                   })}
@@ -153,12 +157,12 @@ export default function Navbar() {
                 }`}
                 onClick={() => setShowMenu(false)}
               >
-                {link.name}
+                {t(link.name)}
               </Link>
             )
           )}
 
-          <GoogleTranslate prefLangCookie={prefLangCookie} />
+          {/* <GoogleTranslate prefLangCookie={prefLangCookie} /> */}
           <div className="md:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
             <Link
               href={"https://www.facebook.com/BhandaraShivSena/"}
@@ -182,6 +186,7 @@ export default function Navbar() {
               <FaInstagram size={20} />
             </Link>
           </div>
+          <LangSwitcher />
         </div>
         <div className="hidden md:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
           <Link

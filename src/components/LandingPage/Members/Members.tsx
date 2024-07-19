@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 import {
@@ -8,13 +9,15 @@ import {
 } from "react-icons/fa6";
 
 export default function Members() {
+  const t = useTranslations("main.members");
+
   return (
     <section className="px-8 md:px-20 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
       <div className="text-center">
         <p className="rufina text-xs text-[var(--primary-clr)] uppercase">
-          Team Members
+          {t("sub-title")}
         </p>
-        <h2 className="w-fit m-auto">Meet Our Officers</h2>
+        <h2 className="w-fit m-auto">{t("title")}</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="w-full aspect-[3/4] bg-gray-300 rounded-xl relative overflow-hidden">

@@ -1,9 +1,11 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ImQuotesLeft } from "react-icons/im";
 
 export default function About() {
+  const t = useTranslations("main.about");
   return (
     <section className="px-8 md:px-20 py-20 space-y-8">
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
@@ -19,37 +21,22 @@ export default function About() {
             <div className="p-4 bg-[var(--primary-clr)] w-fit md:max-w-[60%] md:absolute bottom-0 left-0  rounded-t-0 md:rounded-t-xl rounded-b-xl">
               <ImQuotesLeft size={28} className="text-black" />
               <div className="pl-8">
-                <p className="font-[600] text-white italic">
-                  Our mission is to provide executive leadership, as well as set
-                  priorities and goals for the City and its neighbourhoods.
-                </p>
+                <p className="font-[600] text-white italic">{t("mission")}</p>
                 <p className="font-[700] rufina text-right text-black">
-                  Narendra Bhojraj Bhondekar
+                  {t("name")}
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div className="space-y-8">
-          <h2>A Strong Politician with great Vision</h2>
+          <h2>{t("title")}</h2>
           <div className="space-y-4">
+            <p>{t("para1")}</p>
             <p>
-              Narendra Bhojraj Bhondekar is a prominent politician and dedicated
-              public servant from Bhandara district, Maharashtra. Born on June
-              28, 1979, in Bhandara, he has risen to become a significant figure
-              in Maharashtra&apos;s political landscape, known for his unwavering
-              commitment to solving the problems of the common man.
-            </p>
-            <p>
-              <span className="font-[600] text-black">Early Life and Education</span>
+              <span className="font-[600] text-black">{t("sub-title")}</span>
               <br />
-              Narendra Bhondekar was born into a family with a farming
-              background. His early life was marked by the values of hard work
-              and dedication, which he carried forward into his professional
-              life. He pursued his education in Bhandara, where he developed a
-              keen interest in social activism and public service. His
-              educational background laid a strong foundation for his future
-              endeavors in politics and community service.
+              {t("para2")}
             </p>
           </div>
         </div>

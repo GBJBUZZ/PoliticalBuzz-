@@ -1,43 +1,40 @@
 "use client";
 
-import { link } from "fs";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { title } from "process";
 import React from "react";
-import { FaStar } from "react-icons/fa";
-import { text } from "stream/consumers";
 
 export default function Vision() {
-  const [activeBlock, setActiveBlock] = React.useState(0);
+  const t = useTranslations("main.services");
 
   const blocks = [
     {
-      title: "Sports",
+      title: "sports",
       image: "/assets/LandingPage/sports.png",
       text: "He was a passionate advocate for student involvement in sports, believing in its power to instill discipline, teamwork, and resilience. He actively supported various sports programs at schools, ensuring that every student had the opportunity to participate regardless of their background.",
       link: "/services/sports",
     },
     {
-      title: "Employment",
+      title: "employment",
       image: "/assets/LandingPage/employment.png",
       text: "Narendra Bhojraj Bhondekar was a visionary leader dedicated to addressing unemployment. He implemented innovative programs to create job opportunities for the unemployed, emphasizing skill development and vocational training.",
       link: "/services/employment",
     },
     {
-      title: "AgriCulture",
+      title: "agriculture",
       image: "/assets/LandingPage/agriculture.png",
       text: "Narendra Bhojraj Bhondekar has made significant contributions to the agricultural sector, particularly in aiding farmers. His efforts have focused on several key areas. Bhondekar introduced modern agricultural techniques, helping farmers increase crop yields and improve soil health",
       link: "/services/agriculture",
     },
     {
-      title: "Education",
+      title: "education",
       image: "/assets/LandingPage/education.png",
       text: "He was a dedicated individual who made significant contributions to education, particularly in helping students achieve their academic goals. He was known for his unwavering commitment to providing support and guidance to students from various backgrounds.",
       link: "/services/education",
     },
     {
-      title: "Healthcare",
+      title: "healthcare",
       image: "/assets/LandingPage/healthcare.png",
       text: "Narendra Bhojraj Bhondekar has worked tirelessly towards upgrading healthcare infrastructure, including the construction and renovation of hospitals, clinics, and primary health centers. His initiatives aimed to ensure that quality medical services were accessible to all, especially in rural and underserved areas. ",
       link: "/services/healthcare",
@@ -50,7 +47,7 @@ export default function Vision() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className=" space-y-4 pt-10">
           <h2 className="text-white nanito font-[700] text-center">
-            Public Services
+            {t("title")}
           </h2>
           <br />
           <div>
@@ -63,9 +60,8 @@ export default function Vision() {
                     ? "bg-[var(--primary-clr)] text-white"
                     : "bg-[#c0581a] text-white"
                 } `}
-                onClick={() => setActiveBlock(index)}
               >
-                <span>{block.title}</span>
+                <span>{t(block.title)}</span>
               </Link>
             ))}
           </div>
@@ -76,7 +72,7 @@ export default function Vision() {
             alt="Vision"
             height={1000}
             width={1000}
-            className="object-cover max-w-[600px]"
+            className="object-cover md:max-w-[600px]"
           />
         </div>
       </div>

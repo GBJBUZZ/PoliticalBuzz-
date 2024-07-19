@@ -1,0 +1,105 @@
+{
+  "lang": "English",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "biography": "Biography",
+    "political journey": "Political Journey",
+    "public services": "Public Services",
+    "sports": "Sports",
+    "agriculture": "Agriculture",
+    "education": "Education",
+    "employment": "Employment",
+    "healthcare": "Healthcare",
+    "media coverage": "Media Coverage",
+    "news": "News",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "marathi": "Marathi",
+    "english": "English"
+  },
+  "main": {
+    "hero": {
+      "quote": "Empowering the Youth: Narendra Bhounderkar's Vision for the Next Generation",
+      "learn more": "Learn More"
+    },
+    "about": {
+      "title": "A Strong Politician with great Vision",
+      "sub-title": "Early Life and Education",
+      "para1": "Narendra Bhojraj Bhondekar is a prominent politician and dedicated public servant from Bhandara district, Maharashtra. Born on June 28, 1979, in Bhandara, he has risen to become a significant figure in Maharashtra's political landscape, known for his unwavering commitment to solving the problems of the common man.",
+      "para2": "Narendra Bhondekar was born into a family with a farming background. His early life was marked by the values of hard work and dedication, which he carried forward into his professional life. He pursued his education in Bhandara, where he developed a keen interest in social activism and public service. His educational background laid a strong foundation for his future endeavors in politics and community service.",
+      "mission": "Our mission is to provide executive leadership, as well as set priorities and goals for the City and its neighbourhoods.",
+      "name": "Narendra Bhondekar"
+    },
+    "video": {
+      "title": "The Ever-Present Pillar: Supporting Students in Education and Sports"
+    },
+    "facts": {
+      "title": "Facts",
+      "title2": "Interesting & amazing facts about Him",
+      "experience": {
+        "number": "12",
+        "text": "Years of Experience"
+      },
+      "constituency": {
+        "number": "2",
+        "text": "Constituencies"
+      },
+      "voters": {
+        "number": "50.8",
+        "amount": "k",
+        "text": "Voters"
+      },
+      "projects": {
+        "number": "100",
+        "text": "Projects Done"
+      }
+    },
+    "services": {
+      "title": "Public Services",
+      "sports": "Sports",
+      "agriculture": "Agriculture",
+      "education": "Education",
+      "employment": "Employment",
+      "healthcare": "Healthcare"
+    },
+    "political journey": {
+      "title": "Political Journey",
+      "sub-title": "SHORT BIOGRAPHY",
+      "2009": {
+        "title": "First Election",
+        "para": "He contested the Maharashtra Legislative Assembly elections as an independent candidate from the Bhandara constituency."
+      },
+      "2014": {
+        "title": "Development Initiatives",
+        "para": "Bhondekar focused on infrastructural development, including road construction, electrification of villages, and improving water supply systems."
+      },
+      "2019": {
+        "title": "Re-election",
+        "para": "Bhondekar was re-elected in 2019, reflecting the continued trust and support of the people of Bhandara."
+      },
+      "2024": {
+        "title": "Ongoing Efforts",
+        "para": "His ongoing projects include setting up skill development centres, enhancing healthcare facilities, and promoting digital literacy."
+      },
+      "contact us": {
+        "text": "Contact us? Consult with us for any Help.",
+        "number": "+91 99230 54245"
+      }
+    },
+    "members": {
+      "title": "Meet Our Officers",
+      "sub-title": "TEAM MEMBERS"
+    }
+  },
+  "footer": {
+    "text": "Narendra Bhondekar is a politician from Bhandara district, Maharashtra. He is current Member of Maharashtra Legislative Assembly from Bhandara Vidhan Sabha constituency.",
+    "explore": "Explore",
+    "services": "Services",
+    "contact us": "Contact Us",
+    "location": "Location",
+    "address": "Sahkar Nagar, Bank Colony, Kisan Chowk, Bhandara, Maharashtra 441904",
+    "mail us": "Mail Us",
+    "email": "mlabhondekaroffice@gmail.com"
+  }
+}

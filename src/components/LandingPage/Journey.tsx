@@ -1,15 +1,18 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 import { IoMdChatbubbles } from "react-icons/io";
 
 export default function Journey() {
+  const t = useTranslations("main.political journey");
+
   return (
     <section className="px-8 md:px-20 py-20 relative">
       <div className="text-center">
         <p className="rufina text-xs text-[var(--primary-clr)] uppercase">
-          Short Biography
+          {t("sub-title")}
         </p>
-        <h2 className="w-fit m-auto">Political Journey</h2>
+        <h2 className="w-fit m-auto">{t("title")}</h2>
       </div>
 
       <div className="relative z-20">
@@ -27,11 +30,10 @@ export default function Journey() {
               </div>
               <p className="text-xs uppercase font-[700]">2009</p>
               <h4 className="rufina text-[var(--primary-txt)] mt-2">
-                First Election
+                {t("2009.title")}
               </h4>
               <p className="md:border-r-2 border-[#E7E9EE] mt-4">
-                He contested the Maharashtra Legislative Assembly elections as
-                an independent candidate from the Bhandara constituency.
+                {t("2009.para")}
               </p>
             </div>
             <div className="md:px-4 md:-translate-y-[20%] text-center">
@@ -46,12 +48,10 @@ export default function Journey() {
               </div>
               <p className="text-xs uppercase font-[700]">2014</p>
               <h4 className="rufina text-[var(--primary-txt)] mt-2">
-                Development Initiatives
+                {t("2014.title")}
               </h4>
               <p className="md:border-r-2 border-[#E7E9EE] mt-4">
-                Bhondekar focused on infrastructural development, including road
-                construction, electrification of villages, and improving water
-                supply systems.
+                {t("2014.para")}
               </p>
             </div>
             <div className="md:px-4 md:-translate-y-[20%] text-center">
@@ -66,11 +66,10 @@ export default function Journey() {
               </div>
               <p className="text-xs uppercase font-[700]">2019</p>
               <h4 className="rufina text-[var(--primary-txt)] mt-2">
-                Re-election
+                {t("2019.title")}
               </h4>
               <p className="md:border-r-2 border-[#E7E9EE] mt-4">
-                Bhondekar was re-elected in 2019, reflecting the continued trust
-                and support of the people of Bhandara.
+                {t("2019.para")}
               </p>
             </div>
             <div className="md:px-4 md:-translate-y-[20%] text-center">
@@ -85,22 +84,18 @@ export default function Journey() {
               </div>
               <p className="text-xs uppercase font-[700]">2024</p>
               <h4 className="rufina text-[var(--primary-txt)] mt-2">
-                Ongoing Efforts
+                {t("2024.title")}
               </h4>
-              <p className="mt-4">
-                His ongoing projects include setting up skill development
-                centres, enhancing healthcare facilities, and promoting digital
-                literacy.
-              </p>
+              <p className="mt-4">{t("2024.para")}</p>
             </div>
           </div>
           <div className="shadow-custom contact text-center py-4 px-8 rounded-xl md:rounded-full w-fit mx-auto flex flex-wrap items-center justify-center gap-8">
             <IoMdChatbubbles size={28} className="text-[var(--primary-clr)]" />
             <h4 className="rufina text-[var(--primary-txt)] font-[700]">
-              Contact us? Consult with us for any Help.
+              {t("contact.text")}
             </h4>
             <h4 className="rufina text-[var(--primary-clr)] font-[700]">
-              +91 99230 54245
+              {t("contact.number")}
             </h4>
           </div>
         </div>

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,8 +7,11 @@ import { FaRegEnvelope } from "react-icons/fa6";
 import { TfiFacebook } from "react-icons/tfi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
+import { useTranslations } from "use-intl";
 
 export default function Footer() {
+  const t1 = useTranslations("nav");
+  const t2 = useTranslations("footer");
   return (
     <section className="px-8 md:px-20 py-20 md:py-40 relative bg-[var(--primary-clr)] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-white gap-4">
       <div>
@@ -20,69 +24,62 @@ export default function Footer() {
             className="max-w-[300px]"
           />
         </Link>
-        <p className="mt-8">
-          Narendra Bhondekar is a politician from Bhandara district,
-          Maharashtra. He is current Member of Maharashtra Legislative Assembly
-          from Bhandara Vidhan Sabha constituency.
-        </p>
+        <p className="mt-8">{t2("text")}</p>
       </div>
       <div className="md:pl-8">
-        <h5 className="text-2xl my-8 font-[600] rufina">Explore</h5>
+        <h5 className="text-2xl my-8 font-[600] rufina">{t2("explore")}</h5>
         <div className="md:mt-12 space-y-2">
           <Link href="/biography" className="block">
-            Biography
+            {t1("biography")}
           </Link>
           <Link href="/political-journey" className="block">
-            Political Journey
+            {t1("political journey")}
           </Link>
           <Link href="/#services" className="block">
-            Services
+            {t1("public services")}
           </Link>
           <Link href="/media-and-coverage" className="block">
-            Media And Coverage
+            {t1("media coverage")}
           </Link>
           <Link href="/gallery" className="block">
-            Photo Gallery
+            {t1("gallery")}
           </Link>
         </div>
       </div>
       <div className="">
-        <h5 className="text-2xl my-8 font-[600] rufina">Services</h5>
+        <h5 className="text-2xl my-8 font-[600] rufina">{t2("services")}</h5>
         <div className="md:mt-12 space-y-2">
           <Link href="/services/sports" className="block">
-            Sports
+            {t1("sports")}
           </Link>
           <Link href="/services/agriculture" className="block">
-            Education
+            {t1("agriculture")}
           </Link>
           <Link href="/services/employment" className="block">
-            Employment
+            {t1("employment")}
           </Link>
           <Link href="/services/education" className="block">
-            Environment
+            {t1("education")}
           </Link>
           <Link href="/services/healthcare" className="block">
-            Healthcare
+            {t1("healthcare")}
           </Link>
         </div>
       </div>
       <div className="">
-        <h5 className="text-2xl my-8 font-[600] rufina">Contact us</h5>
+        <h5 className="text-2xl my-8 font-[600] rufina">{t2("contact us")}</h5>
         <div className="md:mt-12 space-y-2">
           <div>
             <div className="flex items-center flex-wrap gap-1">
               <MdOutlineLocationOn size={24} className="inline" />
-              <p className="text-lg font-[600]">Location</p>
+              <p className="text-lg font-[600]">{t2("location")}</p>
             </div>
-            <p className="ml-8">
-              Sahkar Nagar, Bank Colony, Kisan Chowk, Bhandara, Maharashtra
-              441904
-            </p>
+            <p className="ml-8">{t2("address")}</p>
           </div>
           <div>
             <div className="flex items-center flex-wrap gap-1">
               <FaRegEnvelope size={24} className="inline" />
-              <p className="text-lg font-[600]">Mail us</p>
+              <p className="text-lg font-[600]">{t2("mail us")}</p>
             </div>
             <Link href={"mailto:mlabhondekaroffice@gmail.com"} className="ml-8">
               mlabhondekaroffice@gmail.com
