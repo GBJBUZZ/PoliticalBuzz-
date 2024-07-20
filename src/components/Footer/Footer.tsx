@@ -15,33 +15,33 @@ export default function Footer() {
   const t3 = useTranslations();
   return (
     <section className="px-8 md:px-20 py-10 md:py-20 mt-20 relative bg-[var(--primary-clr)]">
-      <div className="bg-white rounded-xl w-fit mx-auto shadow-custom overflow-hidden absolute top-0 left-0 right-0 translate-y-[-60%]">
+      <div className="bg-white rounded-xl w-fit mx-auto shadow-custom overflow-hidden absolute top-0 left-0 right-0 translate-y-[-50%]">
         <div className="py-10 bg-[var(--primary-clr)]"></div>
-        <div className="px-10 md:px-20 py-10 flex items-center justify-center gap-8">
+        <div className="px-10 md:px-40 py-10 flex items-center justify-center gap-8">
           <Link
             href={"https://www.facebook.com/BhandaraShivSena/"}
             target="_blank"
             className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
-            <TfiFacebook size={30} className="text-black" />
+            <TfiFacebook className="text-black text-4xl md:text-6xl" />
           </Link>{" "}
           <Link
             href={"https://x.com/NBhondekar61"}
             target="_blank"
             className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
-            <RiTwitterXLine size={30} className="text-black" />
+            <RiTwitterXLine className="text-black text-4xl md:text-6xl" />
           </Link>
           <Link
             href={"https://www.instagram.com/narendra_bhondekar/"}
             target="_blank"
             className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
-            <FaInstagram size={30} className="text-black" />
+            <FaInstagram className="text-black text-4xl md:text-6xl" />
           </Link>
         </div>
       </div>
-      <footer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-white gap-4 py-16">
+      <footer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-white gap-4 py-20">
         <div>
           <Link href={"/"}>
             {t3("lang") === "English" ? (
