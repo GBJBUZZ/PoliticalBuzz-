@@ -8,22 +8,25 @@ export default function Video() {
   const t = useTranslations("main.video");
 
   return (
-    <section className="px-8 md:px-20 py-20 space-y-8 relative ">
+    <section className="px-8 md:px-20 py-10 md:py-60 space-y-8 relative">
       <Image
-        src={"/assets/LandingPage/image1.png"}
+        src={"/assets/banner1.jpg"}
         alt="background"
         width={1080}
         height={1000}
-        className="absolute top-0 left-0 -z-1 w-full h-full object-cover"
+        className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.2]"
       />
-      <div className="md:px-80 text-center relative z-10">
-        <h2 className="text-white">{t("title")}</h2>
+      <div className="md:px-80 text-center relative z-10 space-y-8">
+        <h2 className="text-white" data-aos="fade-down">
+          {t("title")}
+        </h2>
         <Link
           target="_blank"
           href={
             "https://www.instagram.com/reel/C5Vu7-oxfSv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
           }
-          className="p-4 rounded-full bg-white block w-fit mx-auto hover:scale-125 transition-all duration-200 mt-40"
+          className="p-4 rounded-full bg-white block w-fit mx-auto hover:scale-125 transition-all duration-200"
+          data-aos="fade-in"
         >
           <FaPlay className="text-[var(--primary-clr)]" size={24} />
         </Link>

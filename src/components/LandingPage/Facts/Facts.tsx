@@ -8,11 +8,18 @@ export default function Facts() {
   return (
     <section className="px-8 md:px-20 py-20 space-y-8 pattern2 bg-[var(--primary-txt)] grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
       <div className="space-y-4 text-center md:text-left">
-        <h2 className="text-[var(--primary-clr)]">{t("title")}</h2>
-        <h2 className="text-white">{t("title2")}</h2>
+        <h2 className="text-[var(--primary-clr)]" data-aos="fade-right">
+          {t("title")}
+        </h2>
+        <h2 className="text-white" data-aos="fade-right" data-aos-delay="100">
+          {t("title2")}
+        </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full md:col-span-2 ">
-        <div className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl">
+        <div
+          className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl"
+          data-aos="fade-up"
+        >
           <div className="pr-4 pb-2 pl-6 pt-4 bg-[var(--primary-clr)] rounded-full w-fit aspect-square mx-auto absolute top-0 left-0 -translate-x-[30%] -translate-y-[20%]">
             <Image
               src={"/assets/LandingPage/facts/badge.svg"}
@@ -26,11 +33,15 @@ export default function Facts() {
             {t("experience.number")}
             <sup className="">+</sup>
           </h4>
-          <p className="rufina text-lg text-[#919191] font-[700]">
+          <p className="montserrat text-lg text-[#919191] font-[700]">
             {t("experience.text")}
           </p>
         </div>
-        <div className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl">
+        <div
+          className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div className="pr-4 pb-2 pl-6 pt-4 bg-[var(--primary-clr)] rounded-full w-fit aspect-square mx-auto absolute top-0 left-0 -translate-x-[30%] -translate-y-[20%]">
             <Image
               src={"/assets/LandingPage/facts/officer.svg"}
@@ -43,11 +54,15 @@ export default function Facts() {
           <h4 className="text-5xl font-[700] text-[var(--primary-txt)]">
             {t("constituency.number")}
           </h4>
-          <p className="rufina text-lg text-[#919191] font-[700]">
+          <p className="montserrat text-lg text-[#919191] font-[700]">
             {t("constituency.text")}
           </p>
         </div>
-        <div className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl">
+        <div
+          className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div className="pr-4 pb-2 pl-6 pt-4 bg-[var(--primary-clr)] rounded-full w-fit aspect-square mx-auto absolute top-0 left-0 -translate-x-[30%] -translate-y-[20%]">
             <Image
               src={"/assets/LandingPage/facts/daimond.svg"}
@@ -61,11 +76,15 @@ export default function Facts() {
             {t("voters.number")}
             <sup className="">k</sup>
           </h4>
-          <p className="rufina text-lg text-[#919191] font-[700]">
+          <p className="montserrat text-lg text-[#919191] font-[700]">
             {t("voters.text")}
           </p>
         </div>
-        <div className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl">
+        <div
+          className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <div className="pr-4 pb-2 pl-6 pt-4 bg-[var(--primary-clr)] rounded-full w-fit aspect-square mx-auto absolute top-0 left-0 -translate-x-[30%] -translate-y-[20%]">
             <Image
               src={"/assets/LandingPage/facts/badge.svg"}
@@ -79,7 +98,7 @@ export default function Facts() {
             {t("projects.number")}
             <sup className="">+</sup>
           </h4>
-          <p className="rufina text-lg text-[#919191] font-[700]">
+          <p className="montserrat text-lg text-[#919191] font-[700]">
             {t("projects.text")}
           </p>
         </div>

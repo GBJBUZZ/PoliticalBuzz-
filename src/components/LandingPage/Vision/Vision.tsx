@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React from "react";
 
 export default function Vision() {
@@ -46,11 +46,14 @@ export default function Vision() {
       {" "}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className=" space-y-4 pt-10">
-          <h2 className="text-white nanito font-[700] text-center">
+          <h2
+            className="text-white nanito font-[700] text-center"
+            data-aos="fade-in"
+          >
             {t("title")}
           </h2>
           <br />
-          <div>
+          <div data-aos="fade-up">
             {blocks.map((block, index) => (
               <Link
                 href={block.link}
@@ -59,14 +62,16 @@ export default function Vision() {
                   index % 2 === 0
                     ? "bg-[var(--primary-clr)] text-white"
                     : "bg-[#c0581a] text-white"
-                } `}
+                }
+                
+                `}
               >
                 <span>{t(block.title)}</span>
               </Link>
             ))}
           </div>
         </div>
-        <div className="">
+        <div className="" data-aos="fade-in">
           <Image
             src={"/assets/LandingPage/narendra-vision.png"}
             alt="Vision"

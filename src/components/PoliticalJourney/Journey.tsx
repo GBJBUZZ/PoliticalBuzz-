@@ -22,9 +22,11 @@ export default function Journey() {
       <div className="mt-20 space-y-12 relative py-10 z-20">
         <div className="absolute top-0 left-1/2 border-x-2 border-dashed px-1 border-[#696969] h-full translate-x-[-50%] z-[-1]"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group">
           <div className=" absolute top-0 bottom-0 right-0 left-0 m-auto p-2 w-fit h-fit bg-white">
-            <div className="p-4 border-2 border-[var(--primary-clr)] rounded-full"></div>
+            <div className="p-2 border-2 border-[var(--primary-clr)] rounded-full">
+              <div className="p-2 group-hover:bg-[var(--primary-clr)] rounded-full transition-all duration-200"></div>
+            </div>
           </div>
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:ml-auto md:mr-20 bg-white order-2 md:order-1">
             <div className="overflow-hidden rounded-xl aspect-video">
@@ -61,9 +63,11 @@ export default function Journey() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group">
           <div className=" absolute top-0 bottom-0 right-0 left-0 m-auto p-2 w-fit h-fit bg-white">
-            <div className="p-4 border-2 border-[var(--primary-clr)] rounded-full"></div>
+            <div className="p-2 border-2 border-[var(--primary-clr)] rounded-full">
+              <div className="p-2 group-hover:bg-[var(--primary-clr)] rounded-full transition-all duration-200"></div>
+            </div>
           </div>
 
           <div className="border-4 border-[var(--primary-clr)] w-[30%] aspect-square rounded-full bg-white my-auto ml-auto mx-auto md:mr-20">
@@ -102,9 +106,11 @@ export default function Journey() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group">
           <div className=" absolute top-0 bottom-0 right-0 left-0 m-auto p-2 w-fit h-fit bg-white">
-            <div className="p-4 border-2 border-[var(--primary-clr)] rounded-full"></div>
+            <div className="p-2 border-2 border-[var(--primary-clr)] rounded-full">
+              <div className="p-2 group-hover:bg-[var(--primary-clr)] rounded-full transition-all duration-200"></div>
+            </div>
           </div>
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:ml-auto md:mr-20 bg-white order-2 md:order-1">
             <div className="overflow-hidden rounded-xl aspect-video">
@@ -141,9 +147,11 @@ export default function Journey() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group">
           <div className=" absolute top-0 bottom-0 right-0 left-0 m-auto p-2 w-fit h-fit bg-white">
-            <div className="p-4 border-2 border-[var(--primary-clr)] rounded-full"></div>
+            <div className="p-2 border-2 border-[var(--primary-clr)] rounded-full">
+              <div className="p-2 group-hover:bg-[var(--primary-clr)] rounded-full transition-all duration-200"></div>
+            </div>
           </div>
 
           <div className="border-4 border-[var(--primary-clr)] w-[30%] aspect-square rounded-full bg-white my-auto ml-auto mx-auto md:mr-20">

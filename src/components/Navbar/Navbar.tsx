@@ -105,7 +105,7 @@ export default function Navbar() {
             alt="instagram"
             width={500}
             height={500}
-            className="max-w-[0px] md:max-w-[300px]"
+            className="max-w-[200px] md:max-w-[300px]"
           />
         ) : (
           <Image
@@ -202,21 +202,21 @@ export default function Navbar() {
           <Link
             href={"https://www.facebook.com/BhandaraShivSena/"}
             target="_blank"
-            className="bg-[#F4F4F4] p-3 rounded-lg"
+            className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
             <TfiFacebook size={20} />
           </Link>
           <Link
             href={"https://x.com/NBhondekar61"}
             target="_blank"
-            className="bg-[#F4F4F4] p-3 rounded-lg"
+            className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
             <RiTwitterXLine size={20} />
           </Link>
           <Link
             href={"https://www.instagram.com/narendra_bhondekar/"}
             target="_blank"
-            className="bg-[#F4F4F4] p-3 rounded-lg"
+            className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
             <FaInstagram size={20} />
           </Link>

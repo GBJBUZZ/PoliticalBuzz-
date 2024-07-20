@@ -49,7 +49,7 @@ export default function Page() {
   return (
     <main className="space-y-8">
       <Header title="news.title" />
-      <section className="px-8 md:px-20 py-20 text-center space-y-20">
+      <section className="px-8 md:px-20 py-10 md:py-20 text-center space-y-20">
         <p>{t("line")}</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12">

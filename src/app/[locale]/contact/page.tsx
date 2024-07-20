@@ -23,25 +23,25 @@ export default function Page() {
         <div className="p-0 md:p-4 shadow-custom grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-[var(--primary-clr)] space-y-16 rounded-lg py-8 px-8">
             <div>
-              <h2 className="text-white ">{t("msg")}</h2>
+              <h3 className="text-white ">{t("msg")}</h3>
               <p className="text-white">{t("line")}</p>
             </div>
             <div className="space-y-8 text-white">
-              <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-center text-center md:text-left flex-wrap gap-1">
+              <div className="flex gap-0 md:gap-8 items-center text-center md:text-left flex-wrap gap-1">
                 <FiPhoneCall size={24} className="inline" />{" "}
                 <Link href={"mailto:mlabhondekaroffice@gmail.com"}>
                   {t("phone")}
                 </Link>
               </div>
-              <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-center text-center md:text-left flex-wrap gap-1">
+              <div className="flex gap-0 md:gap-8 items-center text-center md:text-left gap-1">
                 <FaRegEnvelope size={24} className="inline" />{" "}
-                <Link href={"mailto:mlabhondekaroffice@gmail.com"}>
+                <Link href={"mailto:mlabhondekaroffice@gmail.com"} className="truncate">
                   mlabhondekaroffice@gmail.com
                 </Link>
               </div>{" "}
-              <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-center text-center md:text-left  gap-1">
-                <MdOutlineLocationOn size={24} className="inline" />
-                <p>{t("address")}</p>
+              <div className="flex gap-0 md:gap-8 items-start text-center md:text-left  gap-1">
+                <MdOutlineLocationOn size={24} className="inline text-3xl" />
+                <p className="">{t("address")}</p>
               </div>
             </div>
 
@@ -99,7 +99,7 @@ export default function Page() {
                 />
               </label>
             </form>{" "}
-            <button className="btn mt-16 ml-auto px-6 py-3 bg-[var(--primary-clr)] block w-fit text-[#fff] rounded-xl">
+            <button className="btn mt-16 mx-auto md:mx-0 md:ml-auto px-6 py-3 bg-[var(--primary-clr)] block w-fit text-[#fff] rounded-xl">
               <span>{t("form.send message")}</span>
             </button>
           </div>

@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import {
-  Inter,
-  Montserrat_Alternates,
-  Nunito_Sans,
-  Rufina,
-} from "next/font/google";
+import { Montserrat, Nunito_Sans, Rufina } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { AOSInit } from "@/components/aos";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -22,6 +18,13 @@ const rufina = Rufina({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-rufina",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -39,7 +42,10 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang="en">
-      <body className={`${nunitoSans.variable} ${rufina.variable}`}>
+      <AOSInit />
+      <body
+        className={`${nunitoSans.variable} ${rufina.variable} ${montserrat.variable}`}
+      >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}

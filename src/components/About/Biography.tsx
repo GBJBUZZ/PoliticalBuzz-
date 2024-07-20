@@ -15,17 +15,17 @@ export default function Biography() {
         className="absolute top-0 left-0 w-full h-full z-[-1] object-cover brightness-[0.3]"
       />
 
-      <div className="px-8 md:px-20 py-10 md:py-20 space-y-8 place-content-center">
-        <h5 className="text-[2rem] text-white">{t("title")}</h5>
+      <div className="px-8 md:px-20 py-10 md:py-20 space-y-4 place-content-center text-center md:text-left">
+        <h5 className="text-white">{t("title")}</h5>
         <h1 className="text-white">{t("name")}</h1>
       </div>
-      <div className="md:pt-10">
+      <div className="md:pt-4">
         <Image
           src={"/assets/About/narendra2.png"}
           alt="Narendra Bhojraj Bhondekar"
           width={1000}
           height={1000}
-          className="max-w-[300px] md:max-w-[600px] mx-auto"
+          className="max-w-full md:max-w-[600px] mx-auto"
         />
       </div>
     </section>
