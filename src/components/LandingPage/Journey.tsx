@@ -7,7 +7,7 @@ export default function Journey() {
   const t = useTranslations("main.political journey");
 
   return (
-    <section className="px-8 md:px-20 py-20 relative">
+    <section className="px-8 md:px-20 py-20 relative mb-20">
       <div className="text-center">
         <p
           className="montserrat font-[500] text-xs text-[var(--primary-clr)] uppercase"

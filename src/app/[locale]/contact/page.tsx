@@ -1,7 +1,9 @@
+"use client";
+
 import Header from "@/components/Header/Header";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import React from "react";
+import React, { FormEvent, useState } from "react";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -11,9 +13,43 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
+import supabase from "@/supabase";
 
 export default function Page() {
   const t = useTranslations("contact us");
+
+  const [formdata, setFormData] = useState({
+    First_Name: "",
+    Last_Name: "",
+    Email: "",
+    Phone_Number: "",
+    Message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const { data, error } = await supabase
+        .from("narendra_bhondekar_contact_form")
+        .insert([formdata])
+        .select();
+
+      if (error) {
+        throw error;
+      }
+
+      alert("Message sent successfully");
+    } catch (e) {
+      alert("An error occurred while sending the message");
+    }
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  };
 
   return (
     <main>
@@ -35,7 +71,10 @@ export default function Page() {
               </div>
               <div className="flex gap-0 md:gap-8 items-center text-center md:text-left gap-1">
                 <FaRegEnvelope size={24} className="inline" />{" "}
-                <Link href={"mailto:mlabhondekaroffice@gmail.com"} className="truncate">
+                <Link
+                  href={"mailto:mlabhondekaroffice@gmail.com"}
+                  className="truncate"
+                >
                   mlabhondekaroffice@gmail.com
                 </Link>
               </div>{" "}
@@ -62,46 +101,74 @@ export default function Page() {
           </div>
 
           <div className="p-8">
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8">
+            <form
+              className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8"
+              onSubmit={handleSubmit}
+            >
               <label htmlFor="">
                 <span>{t("form.first name")}</span>
                 <input
                   type="text"
-                  className="block border-b-2 border-[#8D8D8D] w-full p-2"
+                  className="block border-b-2 border-[#8D8D8D] w-full p-2 outline-none focus:border-b-black"
+                  onChange={(e) => {
+                    setFormData({ ...formdata, First_Name: e.target.value });
+                  }}
+                  required
                 />
               </label>
               <label htmlFor="">
                 <span>{t("form.last name")}</span>
                 <input
                   type="text"
-                  className="block border-b-2 border-[#8D8D8D] w-full p-2"
+                  className="block border-b-2 border-[#8D8D8D] w-full p-2 outline-none focus:border-b-black"
+                  onChange={(e) => {
+                    setFormData({ ...formdata, Last_Name: e.target.value });
+                  }}
+                  required
                 />
               </label>
               <label htmlFor="">
                 <span>{t("form.email")}</span>
                 <input
                   type="email"
-                  className="block border-b-2 border-[#8D8D8D] w-full p-2"
+                  className="block border-b-2 border-[#8D8D8D] w-full p-2 outline-none focus:border-b-black"
+                  onChange={(e) => {
+                    setFormData({ ...formdata, Email: e.target.value });
+                  }}
+                  required
                 />
               </label>
               <label htmlFor="">
                 <span>{t("form.phone")}</span>
                 <input
-                  type="email"
-                  className="block border-b-2 border-[#8D8D8D] w-full p-2"
+                  type="tel"
+                  className="block border-b-2 border-[#8D8D8D] w-full p-2 outline-none focus:border-b-black"
+                  onChange={(e) => {
+                    setFormData({ ...formdata, Phone_Number: e.target.value });
+                  }}
+                  required
                 />
               </label>
               <label htmlFor="" className="md:col-span-2">
                 <span>{t("form.message")}</span>
                 <input
-                  type="email"
-                  className="block border-b-2 border-[#8D8D8D] w-full p-2"
+                  type="text"
+                  className="block border-b-2 border-[#8D8D8D] w-full p-2 outline-none focus:border-b-black"
+                  onChange={(e) => {
+                    setFormData({ ...formdata, Message: e.target.value });
+                  }}
+                  required
                 />
               </label>
+              <button
+                disabled={loading}
+                className="md:col-span-2 btn mx-auto md:mx-0 md:ml-auto px-6 py-3 bg-[var(--primary-clr)] block w-fit text-[#fff] rounded-xl"
+              >
+                <span>
+                  {loading ? t("form.sending") : t("form.send message")}
+                </span>
+              </button>
             </form>{" "}
-            <button className="btn mt-16 mx-auto md:mx-0 md:ml-auto px-6 py-3 bg-[var(--primary-clr)] block w-fit text-[#fff] rounded-xl">
-              <span>{t("form.send message")}</span>
-            </button>
           </div>
         </div>
 

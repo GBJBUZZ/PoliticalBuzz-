@@ -258,7 +258,8 @@
       "email": "ईमेल",
       "phone": "फोन नंबर",
       "message": "संदेश",
-      "send message": "संदेश पाठवा"
+      "send message": "संदेश पाठवा",
+      "sending": "प्रक्रियेत..."
     }
   }
 }

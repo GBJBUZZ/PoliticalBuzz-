@@ -18,7 +18,8 @@ export default function Home() {
       <Facts />
       <Vision />
       <Journey />
-      <Members />
+
+      {/* <Members /> */}
     </main>
   );
 }
