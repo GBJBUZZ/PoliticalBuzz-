@@ -18,7 +18,7 @@ export default function NewsCard({
   const t = useTranslations("news");
 
   return (
-    <div className="shadow-custom rounded-2xl overflow-hidden group flex flex-col">
+    <div className="shadow-custom rounded-2xl overflow-hidden group flex flex-col" data-aos="fade-up">
       <div className="aspect-square relative overflow-hidden">
         <Image
           src={image}

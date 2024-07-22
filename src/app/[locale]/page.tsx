@@ -16,8 +16,8 @@ export default function Home() {
       {/* <FeaturedInfo /> */}
       <Video />
       <Facts />
-      <Vision />
       <Journey />
+      <Vision />
 
       {/* <Members /> */}
     </main>

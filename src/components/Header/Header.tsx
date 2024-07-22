@@ -8,14 +8,22 @@ export default function Header({ title }: { title: string }) {
   return (
     <div className="py-20 md:py-60 px-8 relative">
       {" "}
-      <Image
-        src={"/assets/banner1.jpg"}
-        alt="background"
-        width={1080}
-        height={1000}
-        className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.4] z-[-1]"
-      />
-      <h1 className=" text-center text-white">{t(title)}</h1>
+      <div className="absolute top-0 left-0  w-full h-full -z-1">
+        <Image
+          src={"/assets/banner1.jpg"}
+          alt="background"
+          width={1080}
+          height={1000}
+          className="h-full w-full object-cover "
+          data-aos="fade-in"
+        />
+        <div className="absolute top-0 left-0  w-full h-full -z-1 bg-black bg-opacity-40">
+
+        </div>
+      </div>
+      <h1 className=" text-center text-white" data-aos="fade-up">
+        {t(title)}
+      </h1>
     </div>
   );
 }

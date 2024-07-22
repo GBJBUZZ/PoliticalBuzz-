@@ -42,7 +42,7 @@ export default function Vision() {
   ];
 
   return (
-    <section className=" space-y-8 bg-black" id="services">
+    <section className=" space-y-8 bg-black mb-20" id="services">
       {" "}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className=" space-y-4 pt-10">
