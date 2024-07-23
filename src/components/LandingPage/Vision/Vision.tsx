@@ -53,7 +53,7 @@ export default function Vision() {
             {t("title")}
           </h2>
           <br />
-          <div data-aos="fade-up">
+          <div data-aos="fade-in">
             {blocks.map((block, index) => (
               <Link
                 href={block.link}

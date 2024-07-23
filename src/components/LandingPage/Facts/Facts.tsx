@@ -6,7 +6,7 @@ export default function Facts() {
   const t = useTranslations("main.facts");
 
   return (
-    <section className="px-8 md:px-20 py-20 space-y-8 pattern2 bg-[var(--primary-txt)] grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+    <section className="px-8 md:px-40 py-20 space-y-8 pattern2 bg-[var(--primary-txt)] grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
       <div className="space-y-4 text-center md:text-left">
         <h2 className="text-[var(--primary-clr)]" data-aos="fade-right">
           {t("title")}

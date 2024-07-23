@@ -1,4 +1,5 @@
 import About from "@/components/LandingPage/About";
+import BannerCarousel from "@/components/LandingPage/BannerCarousel";
 import Facts from "@/components/LandingPage/Facts/Facts";
 import FeaturedInfo from "@/components/LandingPage/FeaturedInfo/FeaturedInfo";
 import Hero from "@/components/LandingPage/Hero/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
+      <BannerCarousel />
       <About />
       {/* <FeaturedInfo /> */}
       <Video />

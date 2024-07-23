@@ -7,7 +7,7 @@ export default function Journey() {
   const t = useTranslations("main.political journey");
 
   return (
-    <section className="px-8 md:px-20 py-20 relative mb-24">
+    <section className="px-8 md:px-40 py-20 relative mb-24">
       <div className="text-center">
         <p
           className="montserrat font-[500] text-xs text-[var(--primary-clr)] uppercase"
@@ -36,18 +36,18 @@ export default function Journey() {
                   className="h-full w-full max-w-[35px] object-contain object-center"
                 />
               </div>
-              <p className="text-xs uppercase font-[700]" data-aos="fade-up">
+              <p className="text-xs uppercase font-[700]" data-aos="fade-in">
                 2009
               </p>
               <h4
                 className="montserrat font-[500] text-[var(--primary-txt)] mt-2"
-                data-aos="fade-up"
+                data-aos="fade-in"
               >
                 {t("2009.title")}
               </h4>
               <p
                 className="md:border-r-2 border-[#E7E9EE] mt-4"
-                data-aos="fade-up"
+                data-aos="fade-in"
               >
                 {t("2009.para")}
               </p>
@@ -66,18 +66,18 @@ export default function Journey() {
                   className="h-full w-full max-w-[35px] object-contain object-center"
                 />
               </div>
-              <p className="text-xs uppercase font-[700]" data-aos="fade-up">
+              <p className="text-xs uppercase font-[700]" data-aos="fade-in">
                 2014
               </p>
               <h4
                 className="montserrat font-[500] text-[var(--primary-txt)] mt-2"
-                data-aos="fade-up"
+                data-aos="fade-in"
               >
                 {t("2014.title")}
               </h4>
               <p
                 className="md:border-r-2 border-[#E7E9EE] mt-4"
-                data-aos="fade-up"
+                data-aos="fade-in"
               >
                 {t("2014.para")}
               </p>
@@ -96,18 +96,18 @@ export default function Journey() {
                   className="h-full w-full max-w-[35px] object-contain object-center"
                 />
               </div>
-              <p className="text-xs uppercase font-[700]" data-aos="fade-up">
+              <p className="text-xs uppercase font-[700]" data-aos="fade-in">
                 2019
               </p>
               <h4
                 className="montserrat font-[500] text-[var(--primary-txt)] mt-2"
-                data-aos="fade-up"
+                data-aos="fade-in"
               >
                 {t("2019.title")}
               </h4>
               <p
                 className="md:border-r-2 border-[#E7E9EE] mt-4"
-                data-aos="fade-up"
+                data-aos="fade-in"
               >
                 {t("2019.para")}
               </p>
@@ -126,22 +126,22 @@ export default function Journey() {
                   className="h-full w-full max-w-[35px] object-contain object-center"
                 />
               </div>
-              <p className="text-xs uppercase font-[700]" data-aos="fade-up">
+              <p className="text-xs uppercase font-[700]" data-aos="fade-in">
                 2024
               </p>
               <h4
                 className="montserrat font-[500] text-[var(--primary-txt)] mt-2"
-                data-aos="fade-up"
+                data-aos="fade-in"
               >
                 {t("2024.title")}
               </h4>
-              <p className="mt-4" data-aos="fade-up">
+              <p className="mt-4" data-aos="fade-in">
                 {t("2024.para")}
               </p>
             </div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="fade-in"
             className="shadow-custom contact text-center py-4 px-8 rounded-xl md:rounded-full w-fit mx-auto flex flex-wrap items-center justify-center gap-8"
           >
             <IoMdChatbubbles size={28} className="text-[var(--primary-clr)]" />

@@ -11,7 +11,7 @@ export default function Hero() {
   const t = useTranslations("main.hero");
 
   return (
-    <section className="min-h-[90dvh] grid grid-cols-1 md:grid-cols-2 px-8 md:px-20 py-20 pb-40 md:pb-20 gap-8 relative">
+    <section className="min-h-[90dvh] grid grid-cols-1 md:grid-cols-2 px-8 md:px-40 py-20 pb-40 md:pb-20 gap-8 relative">
       <Image
         data-aos="fade-in"
         src={"/assets/LandingPage/hero-bg.png"}
