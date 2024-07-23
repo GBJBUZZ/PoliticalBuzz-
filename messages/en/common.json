@@ -5,6 +5,8 @@
     "about": "About",
     "biography": "Biography",
     "political journey": "Political Journey",
+    "government schemes": "Government Schemes",
+    "development works": "Development Works",
     "public services": "Public Services",
     "sports": "Sports",
     "agriculture": "Agriculture",
@@ -22,7 +24,10 @@
     "hero": {
       "quote": "Empowering the Youth: Narendra Bhounderkar's Vision for the Next Generation",
       "para": "Narendra Bhojraj Bhondekar's journey from Bhandara to the political forefront of Maharashtra exemplifies dedication and service. With a profound understanding of the challenges faced by the common man, he has tirelessly worked to implement solutions that foster community development and empowerment.",
-      "learn more": "Learn More"
+      "learn more": "Learn More",
+      "get more news": "Get Our News",
+      "subscribe": "Subscribe to Our News !",
+      "input": "Your Email"
     },
     "about": {
       "title": "A Strong Politician with great Vision",
@@ -260,6 +265,47 @@
       "message": "Message",
       "send message": "Send Message",
       "sending": "Sending..."
+    }
+  },
+  "government schemes": {
+    "title": "Government Schemes",
+    "para1": "Narendra Bhondekar, a prominent politician from Maharashtra, has implemented a range of government schemes and initiatives aimed at fostering development in his constituency of Bhandara-Paoni. As a dedicated member of the Maharashtra Legislative Assembly, Bhondekar has channeled his efforts into various sectors, focusing on holistic development and improving the quality of life for his constituents.",
+    "para2": "Under his tenure, numerous infrastructure projects have been launched to enhance connectivity and public amenities. This includes the construction of new roads and bridges, improving transportation, and boosting local commerce. Bhondekar has also prioritized the development of water supply and sanitation facilities to ensure clean water and proper sanitation, thus enhancing public health.",
+    "para3": "The Maharashtra government has introduced a stipend scheme aimed at providing financial assistance to students who have successfully passed their 12th grade. This initiative is designed to support students in pursuing higher education and alleviate some of the financial burdens associated with continuing their studies.",
+    "small-title": "Some notable schemes and projects under his tenure include:",
+    "main-scheme": "Student stipend scheme: Maharashtra govt to give Rs 6,000 to 12th pass students",
+    "scheme1": "Student stipend scheme: Maharashtra govt to give Rs 6,000 to 12th pass students",
+    "scheme2": "Infrastructure Development scheme",
+    "scheme3": "Healthcare Projects",
+    "scheme4": "Maharashtra Launches Free Comprehensive Health Insurance Scheme For All Residents",
+    "scheme5": "Minister Of Agriculuture"
+  },
+  "development works": {
+    "title": "Development Works",
+    "title2": "Empowering Our Community for a Better Tomorrow",
+    "para1": "We are committed to enhancing living standards and fostering national development. By implementing innovative policies and community-driven initiatives, we aim to create sustainable growth and prosperity for all. Our focus is on holistic development, ensuring every citizen has access to quality healthcare, education, and infrastructure. Join us in our mission to build a brighter and more inclusive future for everyone. Together, we can achieve remarkable progress and transform our country.",
+    "movement": "Our Movement is Expanding",
+    "para2": "We are witnessing incredible growth, welcoming new members dedicated to our vision. Together, we strive for a brighter future with inclusive progress and sustainable development.",
+    "care": "We care about Issues",
+    "para3": "To make sure all Citizen rights, you have to work together better country for our child. So we have to take initiative way ensure the all right and make the country better for living",
+    "para4": "Narendra Bhondekar, a dedicated politician from Maharashtra, has initiated numerous development projects aimed at improving the quality of life for residents in his constituency, Bhandara-Paoni. His efforts have focused on several key areas:",
+    "development": {
+      "1": {
+        "title1": "Infrastructure Development",
+        "title2": "Road and Bridge Construction:",
+        "title3": "Water Supply and Sanitation:",
+        "para1": "Bhondekar has overseen the construction and widening of roads and bridges to enhance connectivity and reduce travel time, fostering economic growth in the region.",
+        "para2": "Significant improvements have been made in water supply systems and sanitation facilities, ensuring access to clean water and better hygiene for all residents."
+      },
+      "2": {
+        "title1": "Healthcare Improvements",
+        "title2": "Health Care Facilites:",
+        "para1": "Narendra Bhondekar has focused on significantly improving healthcare in Bhandara-Paoni by establishing new healthcare centers and upgrading existing ones. These initiatives have provided quality medical services closer to residents, reducing the need for long-distance travel for medical care. Bhondekar's efforts have also helped alleviate the burden on major hospitals by ensuring that primary healthcare needs are met locally. This strategic enhancement of healthcare infrastructure has resulted in better health outcomes and increased accessibility for all community members."
+      },
+      "3": {
+        "title1": "Agricultural Support",
+        "para1": "Agricultural support encompasses various initiatives aimed at enhancing farming productivity and sustainability. It includes financial assistance, such as subsidies or grants, to help farmers invest in modern equipment or technologies. Technical support provides expertise on best practices, crop management, and pest control. Training programs educate farmers on innovative techniques and sustainable practices. Additionally, agricultural support often involves research and development to improve crop varieties and farming methods."
+      }
     }
   }
 }

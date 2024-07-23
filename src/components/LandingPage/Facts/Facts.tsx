@@ -15,7 +15,7 @@ export default function Facts() {
           {t("title2")}
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full md:col-span-2 ">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 w-full md:col-span-2 text-center">
         <div
           className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl"
           data-aos="fade-up"
@@ -29,11 +29,11 @@ export default function Facts() {
               className="max-w-[20px] object-contain object-center w-full h-full"
             />
           </div>
-          <h4 className="text-5xl font-[700] text-[var(--primary-txt)]">
+          <h4 className="text-3xl md:text-5xl font-[700] text-[var(--primary-txt)]">
             {t("experience.number")}
             <sup className="">+</sup>
           </h4>
-          <p className="montserrat text-lg text-[#919191] font-[700]">
+          <p className="montserrat text-sm md:text-lg text-[#919191] font-[700]">
             {t("experience.text")}
           </p>
         </div>
@@ -51,10 +51,10 @@ export default function Facts() {
               className="max-w-[20px] object-contain object-center w-full h-full"
             />
           </div>
-          <h4 className="text-5xl font-[700] text-[var(--primary-txt)]">
+          <h4 className="text-3xl md:text-5xl font-[700] text-[var(--primary-txt)]">
             {t("constituency.number")}
           </h4>
-          <p className="montserrat text-lg text-[#919191] font-[700]">
+          <p className="montserrat text-sm md:text-lg text-[#919191] font-[700]">
             {t("constituency.text")}
           </p>
         </div>
@@ -72,11 +72,11 @@ export default function Facts() {
               className="max-w-[20px] object-contain object-center w-full h-full"
             />
           </div>
-          <h4 className="text-5xl font-[700] text-[var(--primary-txt)]">
+          <h4 className="text-3xl md:text-5xl font-[700] text-[var(--primary-txt)]">
             {t("voters.number")}
             <sup className="">k</sup>
           </h4>
-          <p className="montserrat text-lg text-[#919191] font-[700]">
+          <p className="montserrat text-sm md:text-lg text-[#919191] font-[700]">
             {t("voters.text")}
           </p>
         </div>
@@ -94,11 +94,11 @@ export default function Facts() {
               className="max-w-[20px] object-contain object-center w-full h-full"
             />
           </div>
-          <h4 className="text-5xl font-[700] text-[var(--primary-txt)]">
+          <h4 className="text-3xl md:text-5xl font-[700] text-[var(--primary-txt)]">
             {t("projects.number")}
             <sup className="">+</sup>
           </h4>
-          <p className="montserrat text-lg text-[#919191] font-[700]">
+          <p className="montserrat text-sm md:text-lg text-[#919191] font-[700]">
             {t("projects.text")}
           </p>
         </div>

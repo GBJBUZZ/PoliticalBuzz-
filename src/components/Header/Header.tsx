@@ -12,12 +12,12 @@ export default function Header({ title }: { title: string }) {
         <Image
           src={"/assets/banner1.jpg"}
           alt="background"
-          width={1080}
-          height={1000}
+          width={1920}
+          height={1080}
           className="h-full w-full object-cover "
           data-aos="fade-in"
         />
-        <div className="absolute top-0 left-0  w-full h-full -z-1 bg-black bg-opacity-40">
+        <div className="absolute top-0 left-0  w-full h-full -z-1 bg-black bg-opacity-50">
 
         </div>
       </div>

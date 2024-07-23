@@ -17,6 +17,7 @@ export default function BannerCarousel() {
       created() {
         setLoaded(true);
       },
+      loop: true,
     },
     [
       (slider) => {
@@ -67,16 +68,16 @@ export default function BannerCarousel() {
             <Image
               src={image}
               alt="Banner Image"
-              layout="responsive"
               width={1920}
               height={1080}
+              className="h-full w-full object-cover object-center"
             />
           </div>
         ))}
       </div>
       {/* <div className="p-2 md:p-0 h-fit md:h-20 border-2 rounded-xl aspect-square"></div> */}
       {loaded && (
-        <div className="hidden md:flex flex-row md:flex-col gap-2">
+        <div className="flex flex-row md:flex-col gap-2">
           {bannerImages.map((_, idx) => (
             <button
               key={idx}
@@ -84,7 +85,9 @@ export default function BannerCarousel() {
                 instanceRef.current?.moveToIdx(idx);
               }}
               className={`p-2 md:p-0 h-fit md:h-20 border-2 rounded-xl aspect-square overflow-hidden border-2 border-[var(--primary-clr)] ${
-                currentSlide === idx ? "bg-[var(--primary-clr)] md:border-4 border-[var(--primary-clr)]" : "md:border-0"
+                currentSlide === idx
+                  ? "bg-[var(--primary-clr)] md:border-4 border-[var(--primary-clr)]"
+                  : "md:border-0"
               }`}
             >
               <Image

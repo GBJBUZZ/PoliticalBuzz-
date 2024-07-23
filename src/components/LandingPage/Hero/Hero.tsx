@@ -1,17 +1,18 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React from "react";
 import "keen-slider/keen-slider.min.css";
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
+import SubscribeCard from "@/components/SubscribeCard/SubscribeCard";
 
 export default function Hero() {
   const t = useTranslations("main.hero");
 
   return (
-    <section className="min-h-[90dvh] grid grid-cols-1 md:grid-cols-2 px-8 md:px-40 py-20 pb-40 md:pb-20 gap-8 relative">
+    <section className="min-h-[90dvh] grid grid-cols-1 md:grid-cols-2 px-8 md:px-40 py-10 pb-40 md:pb-20 mb-16 md:mb-0 gap-8 relative">
       <Image
         data-aos="fade-in"
         src={"/assets/LandingPage/hero-bg.png"}
@@ -62,6 +63,10 @@ export default function Hero() {
           width={1000}
           className="max-h-[800px] w-full object-contain"
         />
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 w-fit mx-auto md:mx-0 md:ml-40 translate-y-1/2 md:translate-y-[10%]">
+        <SubscribeCard />
       </div>
     </section>
   );

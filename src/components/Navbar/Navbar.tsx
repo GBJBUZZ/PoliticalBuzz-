@@ -35,6 +35,14 @@ export default function Navbar() {
           name: "political journey",
           link: "/political-journey",
         },
+        {
+          name: "government schemes",
+          link: "/government-schemes",
+        },
+        {
+          name: "development works",
+          link: "/development-works",
+        },
       ],
     },
     {
