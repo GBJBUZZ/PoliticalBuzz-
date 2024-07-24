@@ -6,6 +6,7 @@ import { TfiFacebook } from "react-icons/tfi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
 import Image from "next/image";
 import GoogleTranslate from "../Translate/GoogleTranslate";
 import { IoIosArrowDown } from "react-icons/io";
@@ -124,14 +125,23 @@ export default function Navbar() {
             className="max-w-[150px] md:max-w-[200px]"
           />
         )}
-        <button
-          className="md:hidden z-10"
-          onClick={() => {
-            setShowMenu((x) => !x);
-          }}
-        >
-          {showMenu ? <IoClose size={28} /> : <IoMenu size={28} />}
-        </button>
+        <div className="flex md:hidden items-center gap-2 text-black">
+          <Link
+            href={"/"}
+            className=" p-2 border-2 border-[var(--primary-clr)] rounded-xl hover:bg-[var(--primary-clr)] hover:text-white"
+          >
+            Socials
+          </Link>
+          <button
+            className="md:hidden z-10"
+            onClick={() => {
+              setShowMenu((x) => !x);
+            }}
+          >
+            {showMenu ? <IoClose size={28} /> : <IoMenu size={28} />}
+          </button>
+        </div>
+
         <div
           className={`flex flex-col md:flex-row md:items-center gap-6 fixed md:static bg-white top-0 right-0 w-3/4 md:w-auto h-full md:h-auto py-20 md:py-0 px-8 md:px-0 items-start transition-all duration-200 overflow-y-scroll md:overflow-y-visible ${
             showMenu ? "translate-x-0" : "translate-x-full"
@@ -227,6 +237,13 @@ export default function Navbar() {
             className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
             <FaInstagram size={20} />
+          </Link>
+          <Link
+            href={"https://www.instagram.com/narendra_bhondekar/"}
+            target="_blank"
+            className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
+          >
+            <FaYoutube size={20} />
           </Link>
         </div>
       </nav>

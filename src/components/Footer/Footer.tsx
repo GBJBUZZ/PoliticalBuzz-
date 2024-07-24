@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React from "react";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { TfiFacebook } from "react-icons/tfi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
 import { useTranslations } from "use-intl";
 
 export default function Footer() {
@@ -17,27 +18,34 @@ export default function Footer() {
     <section className="px-8 md:px-40 py-10 md:py-20 mt-20 relative bg-[var(--primary-clr)]">
       <div className="bg-white rounded-xl w-fit mx-auto shadow-custom overflow-hidden absolute top-0 left-0 right-0 translate-y-[-50%]">
         <div className="py-10 bg-[var(--primary-clr)]"></div>
-        <div className="px-10 md:px-40 py-10 flex items-center justify-center gap-8">
+        <div className="px-8 md:px-40 py-10 flex items-center justify-center gap-4 md:gap-8">
           <Link
             href={"https://www.facebook.com/BhandaraShivSena/"}
             target="_blank"
             className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
-            <TfiFacebook className="text-black text-4xl md:text-6xl" />
+            <TfiFacebook className="text-black text-2xl md:text-6xl" />
           </Link>{" "}
           <Link
             href={"https://x.com/NBhondekar61"}
             target="_blank"
             className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
-            <RiTwitterXLine className="text-black text-4xl md:text-6xl" />
+            <RiTwitterXLine className="text-black text-2xl md:text-6xl" />
           </Link>
           <Link
             href={"https://www.instagram.com/narendra_bhondekar/"}
             target="_blank"
             className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
-            <FaInstagram className="text-black text-4xl md:text-6xl" />
+            <FaInstagram className="text-black text-2xl md:text-6xl" />
+          </Link>
+          <Link
+            href={"https://www.instagram.com/narendra_bhondekar/"}
+            target="_blank"
+            className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
+          >
+            <FaYoutube className="text-black text-2xl md:text-6xl" />
           </Link>
         </div>
       </div>
@@ -154,6 +162,13 @@ export default function Footer() {
                 className="bg-[#F4F4F4] p-3 rounded-lg"
               >
                 <FaInstagram size={20} />
+              </Link>
+              <Link
+                href={"https://www.instagram.com/narendra_bhondekar/"}
+                target="_blank"
+                className="bg-[#F4F4F4] p-3 rounded-lg"
+              >
+                <FaYoutube size={20} />
               </Link>
             </div>
           </div>
