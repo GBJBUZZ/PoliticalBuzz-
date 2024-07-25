@@ -1,15 +1,28 @@
 "use client";
 
 import Header from "@/components/Header/Header";
+import { fetchImages } from "@/utils/fetchImages";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
 export default function Gallery() {
   const [hidden, setHidden] = useState(true);
+  const [images, setImages] = useState<string[]>([]);
   const [image, setImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const images = async () => {
+      const data = await fetchImages();
+      // remove the first image from the list
+      data.shift();
+      setImages(data);
+    };
+
+    images();
+  }, []);
 
   const t = useTranslations("gallery");
 
@@ -17,7 +30,7 @@ export default function Gallery() {
     <main className="space-y-12">
       {" "}
       <Header title="Gallery" image1="/assets/Banner/banner3.jpg" image2="" />
-      <section className="px-8 md:px-20 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
+      <section className="px-8 md:px-40 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
         <div className="text-center w-fit mx-auto">
           <p className="montserrat text-xs px-8">{t("sub-title")}</p>
           <h2 className="w-fit m-auto">{t("title")}</h2>{" "}
@@ -30,160 +43,47 @@ export default function Gallery() {
           </span>
         </div>
 
-        <div className="space-y-2 rounded-2xl overflow-hidden relative">
-          <div className="flex flex-col md:flex-row gap-2">
-            <Image
-              src={"/assets/gallery/img3.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img3.png");
-              }}
-            />
-            <Image
-              src={"/assets/gallery/img1.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img1.png");
-              }}
-            />
-            <Image
-              src={"/assets/gallery/img4.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img4.png");
-              }}
-            />
-            <Image
-              src={"/assets/gallery/img2.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img2.png");
-              }}
-            />
-          </div>
-          <div className="flex flex-col md:flex-row gap-2">
-            <Image
-              src={"/assets/gallery/img5.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 object-cover max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img5.png");
-              }}
-            />
-            <Image
-              src={"/assets/gallery/img6.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 object-cover  max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img6.png");
-              }}
-            />
-            <Image
-              src={"/assets/gallery/img7.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 object-cover  max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img7.png");
-              }}
-            />
-          </div>
-          <div className="flex flex-col md:flex-row gap-2">
-            {" "}
-            <Image
-              src={"/assets/gallery/img8.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 object-cover max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img8.png");
-              }}
-            />
-            <Image
-              src={"/assets/gallery/img9.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 object-cover  max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img9.png");
-              }}
-            />
-            <Image
-              src={"/assets/gallery/img10.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 object-cover  max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img10.png");
-              }}
-            />
-            <Image
-              src={"/assets/gallery/img11.png"}
-              alt="Gallery"
-              width={500}
-              height={500}
-              className="flex-1 object-cover  max-h-[300px]"
-              onClick={() => {
-                setHidden(false);
-                setImage("/assets/gallery/img11.png");
-              }}
-            />
-          </div>
-
-          {!hidden && (
-            <div className="fixed md:absolute top-0 left-0 w-full h-full bg-[#f3702180] px-8 md:px-20 py-20 flex items-center justify-center z-50 md:z-auto">
-              <button
-                className="absolute m-4 top-0 right-0"
+        <div className="space-y-2 rounded-2xl overflow-hidden relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="relative aspect-square rounded-xl overflow-hidden w-full"
+            >
+              <Image
+                src={image}
+                alt="gallery"
+                width={500}
+                height={500}
                 onClick={() => {
-                  setHidden(true);
-                  setImage(null);
+                  setHidden(false);
+                  setImage(image);
                 }}
-              >
-                <IoCloseCircleOutline size={40} className="text-white" />
-              </button>
-              {image && (
-                <Image
-                  src={image}
-                  alt="Gallery"
-                  width={1000}
-                  height={1000}
-                  className="max-h-[90%] mx-auto border-4 border-white"
-                />
-              )}
+                loading="lazy"
+                className="w-full h-full object-cover cursor-pointer"
+              />
             </div>
-          )}
+          ))}
         </div>
       </section>
+      {!hidden && (
+        <div className="fixed top-[-10%] left-0 right-0 bottom-0 bg-[#f37021] bg-opacity-50 backdrop-blur z-50 p-8 md:p-40">
+          <button
+            onClick={() => setHidden(true)}
+            className="absolute top-8 right-4 text-white"
+          >
+            <IoCloseCircleOutline size={40} />
+          </button>
+          <div className="w-full h-full flex items-center justify-center">
+            <Image
+              src={image as string}
+              alt="gallery"
+              width={500}
+              height={500}
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+      )}
     </main>
   );
 }

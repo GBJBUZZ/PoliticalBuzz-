@@ -106,7 +106,7 @@ export default function Navbar() {
   const prefLangCookie = encodeURIComponent("/en/mr");
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-40">
       <nav className="flex items-center justify-between bg-white py-2 px-4 md:px-16 shadow-lg">
         {t2("lang") === "English" ? (
           <Image
@@ -151,7 +151,7 @@ export default function Navbar() {
             link.more.length > 0 ? (
               <button
                 key={index + 10000}
-                className="text-[var(--primary-txt)] relative z-50 group hover:text-[var(--primary-clr)] text-left"
+                className="text-[var(--primary-txt)] relative z-40 group hover:text-[var(--primary-clr)] text-left"
               >
                 {t(link.name)}
                 <IoIosArrowDown size={20} className="inline" />
