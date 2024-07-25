@@ -10,7 +10,11 @@ export default function DevelopmentWorks() {
 
   return (
     <main className="">
-      <Header title="development works.title" />
+      <Header
+        title="development works.title"
+        image1="/assets/Banner/banner2.jpg"
+        image2=""
+      />
       <div className="px-8 md:px-40 pt-20 pb-20 space-y-8">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="px-8 pb-8 md:px-20 md:pb-20">

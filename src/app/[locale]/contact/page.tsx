@@ -54,7 +54,11 @@ export default function Page() {
   return (
     <main>
       {" "}
-      <Header title="contact us.title" />
+      <Header
+        title="contact us.title"
+        image1="/assets/Banner/banner1.jpg"
+        image2=""
+      />
       <section className="px-8 md:px-20 py-20 space-y-16">
         <div className="p-0 md:p-4 shadow-custom grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-[var(--primary-clr)] space-y-16 rounded-lg py-8 px-8">

@@ -42,10 +42,10 @@ export default function Vision() {
   ];
 
   return (
-    <section className=" space-y-8 bg-black mb-20" id="services">
+    <section className=" space-y-8 bg-black" id="services">
       {" "}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className=" space-y-4 pt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8">
+        <div className=" space-y-4 pt-10 h-full">
           <h2
             className="text-white nanito font-[700] text-center"
             data-aos="fade-in"
@@ -53,7 +53,7 @@ export default function Vision() {
             {t("title")}
           </h2>
           <br />
-          <div data-aos="fade-in">
+          <div className="" data-aos="fade-in">
             {blocks.map((block, index) => (
               <Link
                 href={block.link}
@@ -71,13 +71,13 @@ export default function Vision() {
             ))}
           </div>
         </div>
-        <div className="" data-aos="fade-in">
+        <div className="w-fit mx-auto" data-aos="fade-in">
           <Image
-            src={"/assets/LandingPage/narendra-vision.png"}
+            src={"/assets/Banner/banner4.jpg"}
             alt="Vision"
             height={1000}
             width={1000}
-            className="object-cover md:max-w-[600px]"
+            className="object-contain md:max-w-[350px]"
           />
         </div>
       </div>

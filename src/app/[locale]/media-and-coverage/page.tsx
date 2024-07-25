@@ -48,7 +48,11 @@ export default function Page() {
 
   return (
     <main className="space-y-8">
-      <Header title="news.title" />
+      <Header
+        title="news.title"
+        image1="/assets/Banner/banner1.jpg"
+        image2=""
+      />
       <section className="px-8 md:px-20 py-10 md:py-20 text-center space-y-20">
         <p>{t("line")}</p>
 

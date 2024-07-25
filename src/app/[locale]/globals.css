@@ -10,6 +10,10 @@
   --btn-txt: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .nanito {
   font-family: var(--font-nunito-sans);
 }
@@ -153,4 +157,19 @@ body {
   .dropdown {
     box-shadow: none;
   }
+}
+
+.feeds::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.feeds::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+.feeds::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--primary-clr);
 }

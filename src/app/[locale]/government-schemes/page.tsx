@@ -9,7 +9,7 @@ export default function GovernmentSchemes() {
 
   return (
     <main className="">
-      <Header title="government schemes.title" />
+      <Header title="government schemes.title" image1="/assets/Banner/banner2.jpg" image2="" />
       <div className="px-8 md:px-40 pt-20 pb-20 space-y-8">
         <Image
           src={"/assets/schemes/main-image.png"}

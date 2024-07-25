@@ -16,7 +16,7 @@ export default function Gallery() {
   return (
     <main className="space-y-12">
       {" "}
-      <Header title="Gallery" />
+      <Header title="Gallery" image1="/assets/Banner/banner3.jpg" image2="" />
       <section className="px-8 md:px-20 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
         <div className="text-center w-fit mx-auto">
           <p className="montserrat text-xs px-8">{t("sub-title")}</p>

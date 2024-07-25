@@ -6,7 +6,7 @@ export default function More() {
   const t = useTranslations("biography");
 
   return (
-    <section className="px-8 md:px-20 py-20 space-y-24">
+    <section className="px-8 md:px-40 py-20 space-y-24">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-2 md:gap-8">
         <div className="lg:col-span-2 order-2 md:order-1">
           <p className="font-[600] text-black">{t("section1.title")}</p>

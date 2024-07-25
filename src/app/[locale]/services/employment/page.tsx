@@ -1,4 +1,4 @@
-import Header from "@/components/Header/Header";
+import Header from "../_Header/Header";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
@@ -8,8 +8,12 @@ export default function Page() {
   return (
     <main className="space-y-8">
       {" "}
-      <Header title={"services.employment.title"} />
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 px-8 md:px-20 py-20 text-justify">
+      <Header
+        title={"services.employment.title"}
+        image1="/assets/Employment/employment-bg.png"
+        image2="/assets/sticker/sticker5.jpg"
+      />
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 px-8 md:px-40 py-10 md:py-20 text-justify">
         <div className="lg:col-span-2 space-y-4">
           <p>{t("para1")}</p>
           <p>{t("para2")}</p>

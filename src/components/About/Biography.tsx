@@ -16,16 +16,16 @@ export default function Biography() {
       />
 
       <div className="px-8 md:px-20 py-10 md:py-20 space-y-4 place-content-center text-center md:text-left">
-        <h5 className="text-white">{t("title")}</h5>
+        <h2 className="text-[var(--primary-clr)]">{t("title")}</h2>
         <h1 className="text-white">{t("name")}</h1>
       </div>
       <div className="md:pt-4">
         <Image
-          src={"/assets/About/narendra2.png"}
+          src={"/assets/About/bio-header.png"}
           alt="Narendra Bhojraj Bhondekar"
           width={1000}
           height={1000}
-          className="max-w-full md:max-w-[600px] mx-auto"
+          className="max-w-full md:max-w-[500px] mx-auto"
         />
       </div>
     </section>
