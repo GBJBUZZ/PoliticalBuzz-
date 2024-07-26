@@ -84,6 +84,10 @@ export default function Navbar() {
           name: "gallery",
           link: "/gallery",
         },
+        {
+          name: "assets",
+          link: "https://drive.google.com/drive/folders/1YjdgIuAdYp7Yvsm9N_vk5X18oHqmivVR",
+        },
       ],
     },
     {
@@ -207,11 +211,18 @@ export default function Navbar() {
               <RiTwitterXLine size={20} />
             </Link>
             <Link
-              href={"https://www.instagram.com/narendra_bhondekar/"}
+              href={"https://www.youtube.com/@narendrabhondekar-jr5iv/featured"}
               target="_blank"
               className="bg-[#F4F4F4] p-3 rounded-lg"
             >
               <FaInstagram size={20} />
+            </Link>
+            <Link
+              href={"https://www.youtube.com/@narendrabhondekar-jr5iv/featured"}
+              target="_blank"
+              className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
+            >
+              <FaYoutube size={20} />
             </Link>
           </div>
           <LangSwitcher />
@@ -239,7 +250,7 @@ export default function Navbar() {
             <FaInstagram size={20} />
           </Link>
           <Link
-            href={"https://www.instagram.com/narendra_bhondekar/"}
+            href={"https://www.youtube.com/@narendrabhondekar-jr5iv/featured"}
             target="_blank"
             className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >

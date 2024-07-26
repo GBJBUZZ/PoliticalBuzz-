@@ -17,7 +17,9 @@ export default function Footer() {
   return (
     <section className="px-8 md:px-40 py-10 md:py-20 mt-20 relative bg-[var(--primary-clr)]">
       <div className="bg-white rounded-xl w-fit mx-auto shadow-custom overflow-hidden absolute top-0 left-0 right-0 translate-y-[-50%]">
-        <div className="py-10 bg-[var(--primary-clr)]"></div>
+        <div className="py-4 bg-[var(--primary-clr)] text-center ">
+          <h2 className="text-white">Social Media</h2>
+        </div>
         <div className="px-8 md:px-40 py-10 flex items-center justify-center gap-4 md:gap-8">
           <Link
             href={"https://www.facebook.com/BhandaraShivSena/"}
@@ -41,7 +43,7 @@ export default function Footer() {
             <FaInstagram className="text-black text-2xl md:text-6xl" />
           </Link>
           <Link
-            href={"https://www.instagram.com/narendra_bhondekar/"}
+            href={"https://www.youtube.com/@narendrabhondekar-jr5iv/featured"}
             target="_blank"
             className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
           >
@@ -164,7 +166,9 @@ export default function Footer() {
                 <FaInstagram size={20} />
               </Link>
               <Link
-                href={"https://www.instagram.com/narendra_bhondekar/"}
+                href={
+                  "https://www.youtube.com/@narendrabhondekar-jr5iv/featured"
+                }
                 target="_blank"
                 className="bg-[#F4F4F4] p-3 rounded-lg"
               >

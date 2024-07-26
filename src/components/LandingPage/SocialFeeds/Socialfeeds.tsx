@@ -4,7 +4,7 @@ import React from "react";
 export default function Socialfeeds() {
   return (
     <section
-      className="px-8 md:px-20 py-20 bg-[var(--primary-clr)] mb-20 grid grid-cols-1 md:grid-cols-3 gap-8"
+      className="px-8 md:px-40 py-20 bg-[var(--primary-clr)] mb-20 grid grid-cols-1 md:grid-cols-3 gap-8"
       id="feed"
     >
       <div className="rounded-xl overflow-hidden feeds">
@@ -32,7 +32,7 @@ export default function Socialfeeds() {
             className="fb-xfbml-parse-ignore"
           >
             <a href="https://www.facebook.com/BhandaraShivSena/">
-              Narendra Bhondekar
+              Facebook posts by Narendra Bhondekar
             </a>
           </blockquote>
         </div>
