@@ -69,7 +69,7 @@ export default function More() {
             width={200}
             height={200}
             alt="Dotted Circle"
-            className="absolute top-full left-full -translate-y-2/3 -translate-x-2/3"
+            className="absolute top-full left-full -translate-y-2/3 -translate-x-2/3 z-[-1]"
           />
         </div>
       </div>

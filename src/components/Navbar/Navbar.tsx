@@ -17,6 +17,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const t = useTranslations("nav");
   const t2 = useTranslations();
+  const t3 = useTranslations("footer");
   // const {  } = useRouter();
   const links = [
     {
@@ -134,7 +135,7 @@ export default function Navbar() {
             href={"/"}
             className=" p-2 border-2 border-[var(--primary-clr)] rounded-xl hover:bg-[var(--primary-clr)] hover:text-white"
           >
-            Socials
+            {t3("socials")}
           </Link>
           <button
             className="md:hidden z-10"
