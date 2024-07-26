@@ -130,7 +130,7 @@ export default function Navbar() {
             className="max-w-[150px] md:max-w-[200px]"
           />
         )}
-        <div className="flex md:hidden items-center gap-2 text-black">
+        <div className="flex lg:hidden items-center gap-2 text-black">
           <Link
             href={"https://linktr.ee/mla_narendra_bhondekar"}
             target="_blank"
@@ -139,7 +139,7 @@ export default function Navbar() {
             {t3("socials")}
           </Link>
           <button
-            className="md:hidden z-10"
+            className="lg:hidden z-10"
             onClick={() => {
               setShowMenu((x) => !x);
             }}
@@ -149,9 +149,9 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`flex flex-col md:flex-row md:items-center gap-6 fixed md:static bg-white top-0 right-0 w-3/4 md:w-auto h-full md:h-auto py-20 md:py-0 px-8 md:px-0 items-start transition-all duration-200 overflow-y-scroll md:overflow-y-visible ${
+          className={`flex flex-col lg:flex-row lg:items-center gap-6 fixed lg:static bg-white top-0 right-0 w-fit lg:w-auto h-full lg:h-auto py-20 lg:py-0 px-8 lg:px-0 items-start transition-all duration-200 overflow-y-scroll lg:overflow-y-visible ${
             showMenu ? "translate-x-0" : "translate-x-full"
-          } md:translate-x-0`}
+          } lg:translate-x-0`}
         >
           {links.map((link, index) =>
             link.more.length > 0 ? (
@@ -197,7 +197,7 @@ export default function Navbar() {
           )}
 
           {/* <GoogleTranslate prefLangCookie={prefLangCookie} /> */}
-          <div className="md:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
+          <div className="lg:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
             <Link
               href={"https://www.facebook.com/BhandaraShivSena/"}
               target="_blank"
@@ -229,7 +229,7 @@ export default function Navbar() {
           </div>
           <LangSwitcher />
         </div>
-        <div className="hidden md:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
+        <div className="hidden lg:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
           <Link
             href={"https://www.facebook.com/BhandaraShivSena/"}
             target="_blank"

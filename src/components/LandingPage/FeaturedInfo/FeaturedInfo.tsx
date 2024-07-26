@@ -4,7 +4,7 @@ import InfoCards from "./InfoCards";
 
 export default function FeaturedInfo() {
   return (
-    <section className="px-8 md:px-20 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
+    <section className="px-8 lg:px-20 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
       <div className="text-center">
         <p className="rufina text-xs">Explore Main Information</p>
         <h2 className="w-fit m-auto">

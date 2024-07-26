@@ -7,8 +7,8 @@ import { ImQuotesLeft } from "react-icons/im";
 export default function About() {
   const t = useTranslations("main.about");
   return (
-    <section className="px-8 md:px-40 pt-10 py-20 space-y-8 text-justify">
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
+    <section className="px-8 lg:px-40 pt-10 py-20 space-y-8 text-justify">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
         <div data-aos="fade-in">
           <div className="pt-6 md:pb-20 md:px-8 relative">
             <Image

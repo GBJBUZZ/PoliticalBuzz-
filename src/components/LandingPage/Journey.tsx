@@ -7,7 +7,7 @@ export default function Journey() {
   const t = useTranslations("main.political journey");
 
   return (
-    <section className="px-8 md:px-40 py-20 relative mb-24">
+    <section className="px-8 lg:px-40 py-20 relative mb-24">
       <div className="text-center">
         <p
           className="montserrat font-[500] text-xs text-[var(--primary-clr)] uppercase"
@@ -21,9 +21,16 @@ export default function Journey() {
       </div>
 
       <div className="relative z-20">
-        <div className="shadow-custom bg-white relative z-10 md:px-2 px-8 py-8 lg:pt-0 mt-8 lg:mt-24 rounded-xl space-y-8 lg:space-y-0 ">
+        <div className="bg-white relative z-10 md:px-2 px-8 py-8 lg:pt-0 mt-8 rounded-xl space-y-8 ">
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-2">
-            <div className="md:px-4 lg:-translate-y-[20%] text-center">
+            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-custom">
+              <Image
+                src={"/assets/Banner/banner1.jpg"}
+                alt="background"
+                width={1080}
+                height={1000}
+                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.3]"
+              />
               <div
                 data-aos="fade-in"
                 className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
@@ -36,23 +43,30 @@ export default function Journey() {
                   className="h-full w-full max-w-[35px] object-contain object-center"
                 />
               </div>
-              <p className="text-xs uppercase font-[700]" data-aos="fade-in">
+              <p
+                className="text-xs uppercase font-[700] text-white"
+                data-aos="fade-in"
+              >
                 2009
               </p>
               <h4
-                className="montserrat font-[500] text-[var(--primary-txt)] mt-2"
+                className="montserrat font-[700] text-white mt-2"
                 data-aos="fade-in"
               >
                 {t("2009.title")}
               </h4>
-              <p
-                className="md:border-r-2 border-[#E7E9EE] mt-4"
-                data-aos="fade-in"
-              >
+              <p className="mt-4 text-sm text-white" data-aos="fade-in">
                 {t("2009.para")}
               </p>
             </div>
-            <div className="md:px-4 md:-translate-y-[20%] text-center">
+            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-custom">
+              <Image
+                src={"/assets/Banner/banner2.jpg"}
+                alt="background"
+                width={1080}
+                height={1000}
+                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.3]"
+              />
               <div
                 data-aos="fade-in"
                 data-aos-delay="100"
@@ -66,23 +80,30 @@ export default function Journey() {
                   className="h-full w-full max-w-[35px] object-contain object-center"
                 />
               </div>
-              <p className="text-xs uppercase font-[700]" data-aos="fade-in">
+              <p
+                className="text-xs uppercase font-[700] text-white"
+                data-aos="fade-in"
+              >
                 2014
               </p>
               <h4
-                className="montserrat font-[500] text-[var(--primary-txt)] mt-2"
+                className="montserrat font-[700] text-white mt-2"
                 data-aos="fade-in"
               >
                 {t("2014.title")}
               </h4>
-              <p
-                className="md:border-r-2 border-[#E7E9EE] mt-4"
-                data-aos="fade-in"
-              >
+              <p className=" mt-4 text-sm  text-white" data-aos="fade-in">
                 {t("2014.para")}
               </p>
             </div>
-            <div className="md:px-4 md:-translate-y-[20%] text-center">
+            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-custom">
+              <Image
+                src={"/assets/Banner/banner3.jpg"}
+                alt="background"
+                width={1080}
+                height={1000}
+                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.3]"
+              />
               <div
                 data-aos="fade-in"
                 data-aos-delay="100"
@@ -96,23 +117,30 @@ export default function Journey() {
                   className="h-full w-full max-w-[35px] object-contain object-center"
                 />
               </div>
-              <p className="text-xs uppercase font-[700]" data-aos="fade-in">
+              <p
+                className="text-xs uppercase font-[700] text-white"
+                data-aos="fade-in"
+              >
                 2019
               </p>
               <h4
-                className="montserrat font-[500] text-[var(--primary-txt)] mt-2"
+                className="montserrat font-[700] text-white mt-2"
                 data-aos="fade-in"
               >
                 {t("2019.title")}
               </h4>
-              <p
-                className="md:border-r-2 border-[#E7E9EE] mt-4"
-                data-aos="fade-in"
-              >
+              <p className=" mt-4 text-sm text-white" data-aos="fade-in">
                 {t("2019.para")}
               </p>
             </div>
-            <div className="md:px-4 md:-translate-y-[20%] text-center">
+            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-custom">
+              <Image
+                src={"/assets/Banner/banner1.jpg"}
+                alt="background"
+                width={1080}
+                height={1000}
+                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.3]"
+              />
               <div
                 data-aos="fade-in"
                 data-aos-delay="100"
@@ -126,23 +154,26 @@ export default function Journey() {
                   className="h-full w-full max-w-[35px] object-contain object-center"
                 />
               </div>
-              <p className="text-xs uppercase font-[700]" data-aos="fade-in">
+              <p
+                className="text-xs uppercase font-[700] text-white"
+                data-aos="fade-in"
+              >
                 2024
               </p>
               <h4
-                className="montserrat font-[500] text-[var(--primary-txt)] mt-2"
+                className="montserrat font-[700] text-white mt-2"
                 data-aos="fade-in"
               >
                 {t("2024.title")}
               </h4>
-              <p className="mt-4" data-aos="fade-in">
+              <p className="mt-4 text-sm text-white" data-aos="fade-in">
                 {t("2024.para")}
               </p>
             </div>
           </div>
           <div
             data-aos="fade-in"
-            className="shadow-custom contact text-center py-4 px-8 rounded-xl md:rounded-full w-fit mx-auto flex flex-wrap items-center justify-center gap-8"
+            className="shadow-custom contact text-center py-4 px-8 rounded-xl lg:rounded-full w-fit mx-auto flex flex-wrap items-center justify-center gap-8"
           >
             <IoMdChatbubbles size={28} className="text-[var(--primary-clr)]" />
             <h4 className="montserrat font-[500] text-[var(--primary-txt)] font-[700]">

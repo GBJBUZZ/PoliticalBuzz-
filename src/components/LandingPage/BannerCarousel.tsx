@@ -58,7 +58,7 @@ export default function BannerCarousel() {
   ];
 
   return (
-    <section className="px-8 md:px-40 pt-20 md:pb-10 space-y-8 flex flex-col md:flex-row items-center md:items-end md:gap-4" data-aos="fade-in">
+    <section className="px-8 lg:px-40 pt-20 md:pb-10 space-y-8 flex flex-col md:flex-row items-center md:items-end md:gap-4" data-aos="fade-in">
       <div
         ref={ref}
         className="keen-slider aspect-video rounded-xl overflow-hidden"
