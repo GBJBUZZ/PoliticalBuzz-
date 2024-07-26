@@ -132,7 +132,8 @@ export default function Navbar() {
         )}
         <div className="flex md:hidden items-center gap-2 text-black">
           <Link
-            href={"/"}
+            href={"https://linktr.ee/mla_narendra_bhondekar"}
+            target="_blank"
             className=" p-2 border-2 border-[var(--primary-clr)] rounded-xl hover:bg-[var(--primary-clr)] hover:text-white"
           >
             {t3("socials")}
