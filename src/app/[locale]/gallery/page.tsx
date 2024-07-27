@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 import { fetchImages } from "@/utils/fetchImages";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { IoCloseCircleOutline } from "react-icons/io5";
@@ -57,11 +58,8 @@ export default function Gallery() {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="relative aspect-square rounded-xl overflow-hidden w-full"
+                className="relative aspect-square rounded-xl overflow-hidden w-full group"
               >
-                <div className="absolute top-0 left-0 bottom-0 right-0 flex items-center justify-center h-full  bg-gray-400 z-[-1]">
-                  <div className="w-8 aspect-square rounded-full mx-auto border-4 border-[#b7b7b5] border-t-[var(--primary-clr)] animate-spin" />
-                </div>
                 <Image
                   src={image}
                   alt="gallery"
@@ -74,6 +72,16 @@ export default function Gallery() {
                   loading="lazy"
                   className="w-full h-full object-cover cursor-pointer"
                 />
+                <div className="opacity-100 transition-all duration-200 absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-[#000000a0] flex items-end">
+                  <Link
+                    href={image}
+                    target="_blank"
+                    className="m-2 block w-fit mx-auto py-1 px-4 border-2 border-[var(--primary-clr)] rounded-full text-white text-sm font-[700] hover:bg-[var(--primary-clr)]"
+                    download={"Image " + index}
+                  >
+                    Download
+                  </Link>
+                </div>
               </div>
             ))}
           </div>

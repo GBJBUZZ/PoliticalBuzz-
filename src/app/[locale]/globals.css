@@ -154,7 +154,7 @@ body {
 }
 
 .shadow-primary {
-  box-shadow: 0 0 10px #f36821;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .gradient-bg {
