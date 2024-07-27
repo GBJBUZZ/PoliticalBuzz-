@@ -37,7 +37,7 @@ export default function Gallery() {
         image1="/assets/Banner/banner3.jpg"
         image2=""
       />
-      <section className="px-8 md:px-40 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
+      <section className="px-8 xl:px-40 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
         <div className="text-center w-fit mx-auto">
           <p className="montserrat text-xs px-8">{t("sub-title")}</p>
           <h2 className="w-fit m-auto">{t("title")}</h2>{" "}
@@ -83,7 +83,7 @@ export default function Gallery() {
         <div className="fixed top-[-10%] left-0 right-0 bottom-0 bg-[#f37021] bg-opacity-50 backdrop-blur z-50 p-8 md:p-40">
           <button
             onClick={() => setHidden(true)}
-            className="absolute top-8 right-4 text-white"
+            className="absolute top-8 md:top-[10%] right-4 text-white"
           >
             <IoCloseCircleOutline size={40} />
           </button>

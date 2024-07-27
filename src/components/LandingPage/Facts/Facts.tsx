@@ -6,7 +6,7 @@ export default function Facts() {
   const t = useTranslations("main.facts");
 
   return (
-    <section className="px-8 lg:px-40 py-20 space-y-8 pattern2 bg-[var(--primary-txt)] grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+    <section className="px-8 xl:px-40 py-20 space-y-8 pattern2 bg-[var(--primary-txt)] grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
       <div className="space-y-4 text-center md:text-left">
         <h2 className="text-[var(--primary-clr)]" data-aos="fade-right">
           {t("title")}
@@ -15,7 +15,7 @@ export default function Facts() {
           {t("title2")}
         </h2>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 w-full md:col-span-2 text-center">
+      <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 w-full md:col-span-2 text-center">
         <div
           className="w-full py-10 px-6 bg-white text-center relative overflow-hidden rounded-xl"
           data-aos="fade-up"

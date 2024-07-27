@@ -15,7 +15,7 @@ export default function Footer() {
   const t2 = useTranslations("footer");
   const t3 = useTranslations();
   return (
-    <section className="px-8 lg:px-40 py-10 md:py-20 mt-20 relative bg-[var(--primary-clr)]">
+    <section className="px-8 xl:px-40 py-10 md:py-20 mt-20 relative bg-[var(--primary-clr)]">
       <div className="bg-white rounded-xl w-fit mx-auto shadow-custom overflow-hidden absolute top-0 left-0 right-0 translate-y-[-50%]">
         <div className="py-4 bg-[var(--primary-clr)] text-center ">
           <h2 className="text-white">{t2("socials")}</h2>
@@ -51,7 +51,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <footer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-white gap-4 py-20">
+      <footer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 text-white gap-4 py-20">
         <div>
           <Link href={"/"}>
             {t3("lang") === "English" ? (

@@ -7,7 +7,7 @@ export default function Journey() {
   const t = useTranslations("main.political journey");
 
   return (
-    <section className="px-8 lg:px-40 py-20 relative mb-24">
+    <section className="px-8 xl:px-40 py-20 relative mb-24">
       <div className="text-center">
         <p
           className="montserrat font-[500] text-xs text-[var(--primary-clr)] uppercase"
@@ -21,8 +21,8 @@ export default function Journey() {
       </div>
 
       <div className="relative z-20">
-        <div className="bg-white relative z-10 md:px-2 px-8 py-8 lg:pt-0 mt-8 rounded-xl space-y-8 ">
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+        <div className="bg-white relative z-10 md:px-2 px-8 py-8 xl:pt-0 mt-8 rounded-xl space-y-8 ">
+          <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-4">
             <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-primary grid grid-row-2">
               <Image
                 src={"/assets/Banner/banner1.jpg"}
@@ -190,7 +190,7 @@ export default function Journey() {
           </div>
           <div
             data-aos="fade-in"
-            className="shadow-primary contact text-center py-4 px-8 rounded-xl lg:rounded-full w-fit mx-auto flex flex-wrap items-center justify-center gap-8"
+            className="shadow-primary contact text-center py-4 px-8 rounded-xl xl:rounded-full w-fit mx-auto flex flex-wrap items-center justify-center gap-8"
           >
             <IoMdChatbubbles size={28} className="text-[var(--primary-clr)]" />
             <h4 className="montserrat font-[500] text-[var(--primary-txt)] font-[700]">
@@ -202,7 +202,7 @@ export default function Journey() {
           </div>
         </div>
 
-        <div className="w-[90%] lg:h-1/2 bg-white absolute top-3/4 left-0 right-0 mx-auto rounded-xl z-[-1]"></div>
+        <div className="w-[90%] xl:h-1/2 bg-white absolute top-3/4 left-0 right-0 mx-auto rounded-xl z-[-1]"></div>
       </div>
 
       <Image

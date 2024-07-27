@@ -8,7 +8,7 @@ export default function Video() {
   const t = useTranslations("main.video");
 
   return (
-    <section className="px-8 lg:px-40 py-10 md:py-28 lg:py-60 space-y-8 relative">
+    <section className="px-8 xl:px-40 py-10 md:py-28 xl:py-60 space-y-8 relative">
       <Image
         src={"/assets/Banner/banner1.jpg"}
         alt="background"
@@ -16,7 +16,7 @@ export default function Video() {
         height={1000}
         className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.2]"
       />
-      <div className="lg:px-80 text-center relative z-10 space-y-8">
+      <div className="xl:px-80 text-center relative z-10 space-y-8">
         <h2 className="text-white" data-aos="fade-down">
           {t("title")}
         </h2>

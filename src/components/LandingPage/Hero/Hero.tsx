@@ -12,7 +12,7 @@ export default function Hero() {
   const t = useTranslations("main.hero");
 
   return (
-    <section className="lg:min-h-[90dvh] grid grid-cols-1 md:grid-cols-2 px-8 lg:px-40 py-10 pb-40 md:pb-20 mb-16 md:mb-0 gap-8 relative">
+    <section className="xl:min-h-[90dvh] grid grid-cols-1 md:grid-cols-2 px-8 xl:px-40 py-10 pb-40 md:pb-20 mb-16 md:mb-0 gap-8 relative">
       <Image
         data-aos="fade-in"
         src={"/assets/LandingPage/hero-bg.png"}

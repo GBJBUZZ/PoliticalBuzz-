@@ -19,16 +19,16 @@ export default function DropDown({
 
   return (
     <button
-      className="text-[var(--primary-txt)] relative z-40 group lg:hover:text-[var(--primary-clr)] text-left w-full lg:w-auto"
+      className="text-[var(--primary-txt)] relative z-40 group xl:hover:text-[var(--primary-clr)] text-left w-full xl:w-auto"
       onClick={() => setHide((x) => !x)}
     >
-      <span className="p-4 lg:p-0 bg-[var(--primary-clr)] text-white lg:text-black lg:bg-white block lg:inline-block">
+      <span className="p-4 xl:p-0 bg-[var(--primary-clr)] text-white xl:text-black xl:bg-white block xl:inline-block">
         {t(name)}
         <IoIosArrowDown size={20} className="inline" />
       </span>
       <span
-        className={`shadow-custom dropdown md:absolute top-full left-0 min-w-full w-fit bg-white px-6 lg:py-4 overflow-hidden lg:overflow-auto rounded-lg z-50 block md:hidden group-hover:block space-y-2 text-left max-h-0 lg:max-h-fit ${
-          hide ? "max-h-[40dvh] py-4" : "max-h-0"
+        className={`shadow-custom dropdown static xl:absolute top-full left-0 min-w-full w-fit bg-white px-6 xl:py-4 overflow-hidden xl:overflow-auto rounded-lg z-50 block xl:hidden group-hover:block space-y-2 text-left xl:max-h-fit ${
+          hide ? "max-h-[80dvh] py-4" : "max-h-0"
         } transition-all duration-700`}
       >
         {links.map((link, index) => {

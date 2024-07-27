@@ -133,7 +133,7 @@ export default function Navbar() {
             />
           )}
         </Link>
-        <div className="flex lg:hidden items-center gap-2 text-black">
+        <div className="flex xl:hidden items-center gap-2 text-black">
           <Link
             href={"https://linktr.ee/mla_narendra_bhondekar"}
             target="_blank"
@@ -142,7 +142,7 @@ export default function Navbar() {
             {t3("socials")}
           </Link>
           <button
-            className="lg:hidden z-10"
+            className="xl:hidden z-10"
             onClick={() => {
               setShowMenu((x) => !x);
             }}
@@ -152,32 +152,33 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`fixed flex justify-end lg:static bg-white top-0 left-0 right-0 bottom-0  transition-all duration-200 ${
-            showMenu ? "translate-x-0 bg-opacity-40 backdrop-blur" : "translate-x-full bg-opacity-0 backdrop-blur-none"
-          } lg:translate-x-0`}
+          className={`fixed flex justify-end xl:static bg-white top-0 left-0 right-0 bottom-0  transition-all duration-200 ${
+            showMenu
+              ? "translate-x-0 bg-opacity-40 backdrop-blur"
+              : "translate-x-full bg-opacity-0 backdrop-blur-none"
+          } xl:translate-x-0`}
         >
           <div
-            className={`bg-white shadow-xl lg:shadow-none flex flex-col lg:flex-row lg:items-center lg:gap-6 w-fit lg:w-auto h-full lg:h-auto py-20 lg:py-0 lg:px-8 lg:px-0 items-start transition-all duration-200 overflow-y-scroll lg:overflow-y-visible divide-y-2 lg:divide-y-0 divide-white ${
+            className={`bg-white shadow-xl xl:shadow-none flex flex-col xl:flex-row xl:items-center xl:gap-6 w-fit xl:w-auto h-full xl:h-auto py-20 xl:py-0 xl:px-8 xl:px-0 items-start transition-all duration-200 overflow-y-scroll xl:overflow-y-visible divide-y-2 xl:divide-y-0 divide-white ${
               showMenu ? "translate-x-0" : "translate-x-full"
-            } lg:translate-x-0`}
+            } xl:translate-x-0`}
           >
             {links.map((link, index) =>
               link.more.length > 0 ? (
-                <>
-                  <DropDown
-                    name={link.name}
-                    links={link.more}
-                    setShowMenu={setShowMenu}
-                  />
-                </>
+                <DropDown
+                  key={index}
+                  name={link.name}
+                  links={link.more}
+                  setShowMenu={setShowMenu}
+                />
               ) : (
                 <Link
                   key={index}
                   href={link.link}
-                  className={`lg:hover:text-[var(--primary-clr)] p-4 lg:p-0 bg-[var(--primary-clr)] w-full lg:w-fit lg:bg-white text-white ${
+                  className={`xl:hover:text-[var(--primary-clr)] p-4 xl:p-0 bg-[var(--primary-clr)] w-full xl:w-fit xl:bg-white text-white ${
                     link.link === pathname
-                      ? "lg:text-[var(--primary-clr)]"
-                      : "lg:text-black"
+                      ? "xl:text-[var(--primary-clr)]"
+                      : "xl:text-black"
                   }`}
                   onClick={() => setShowMenu(false)}
                 >
@@ -187,7 +188,7 @@ export default function Navbar() {
             )}
 
             {/* <GoogleTranslate prefLangCookie={prefLangCookie} /> */}
-            <div className="p-4 lg:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
+            <div className="p-4 xl:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
               <Link
                 href={"https://www.facebook.com/BhandaraShivSena/"}
                 target="_blank"
@@ -224,7 +225,7 @@ export default function Navbar() {
             <LangSwitcher />
           </div>
         </div>
-        <div className="hidden lg:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
+        <div className="hidden xl:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
           <Link
             href={"https://www.facebook.com/BhandaraShivSena/"}
             target="_blank"

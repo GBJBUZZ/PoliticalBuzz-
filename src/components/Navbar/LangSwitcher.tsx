@@ -18,7 +18,7 @@ export default function LangSwitcher() {
     <>
       <button
         key={10002320}
-        className="text-[var(--primary-txt)] hover:text-[var(--primary-clr)] relative z-50 group text-left hidden lg:block"
+        className="text-[var(--primary-txt)] hover:text-[var(--primary-clr)] relative z-50 group text-left hidden xl:block"
       >
         {t("lang")}
         <IoIosArrowDown size={20} className="inline" />
@@ -39,7 +39,7 @@ export default function LangSwitcher() {
           </span>
         </span>
       </button>
-      <form className="p-4 block lg:hidden">
+      <form className="p-4 block xl:hidden">
         {/* <label htmlFor="" className="block">
           <input
             type="radio"

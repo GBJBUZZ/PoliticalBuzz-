@@ -6,7 +6,7 @@ export default function Journey() {
   const t = useTranslations("political journey");
 
   return (
-    <section className="px-8 md:px-20 py-20 relative">
+    <section className="px-8 xl:px-40 py-20 relative">
       <Image
         src={"/assets/LandingPage/dotted-circle.png"}
         width={200}

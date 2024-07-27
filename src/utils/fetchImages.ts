@@ -4,7 +4,7 @@ export const fetchImages = async () => {
   const { data, error } = await supabase.storage
     .from("Narendra Bhondekar")
     .list("gallery", {
-      limit: 100,
+      limit: 30,
       offset: 0,
       sortBy: { column: "name", order: "asc" },
     });
