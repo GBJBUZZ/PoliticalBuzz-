@@ -12,6 +12,7 @@ import GoogleTranslate from "../Translate/GoogleTranslate";
 import { IoIosArrowDown } from "react-icons/io";
 import { useTranslations } from "next-intl";
 import LangSwitcher from "./LangSwitcher";
+import DropDown from "./DropDown";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -113,23 +114,25 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40">
       <nav className="flex items-center justify-between bg-white py-2 px-4 md:px-16 shadow-lg">
-        {t2("lang") === "English" ? (
-          <Image
-            src={"/logo-english.svg"}
-            alt="instagram"
-            width={500}
-            height={500}
-            className="max-w-[200px] md:max-w-[300px]"
-          />
-        ) : (
-          <Image
-            src={"/logo-marathi.svg"}
-            alt="instagram"
-            width={500}
-            height={500}
-            className="max-w-[150px] md:max-w-[200px]"
-          />
-        )}
+        <Link href={"/"}>
+          {t2("lang") === "English" ? (
+            <Image
+              src={"/logo-english.svg"}
+              alt="instagram"
+              width={500}
+              height={500}
+              className="max-w-[200px] md:max-w-[300px]"
+            />
+          ) : (
+            <Image
+              src={"/logo-marathi.svg"}
+              alt="instagram"
+              width={500}
+              height={500}
+              className="max-w-[150px] md:max-w-[200px]"
+            />
+          )}
+        </Link>
         <div className="flex lg:hidden items-center gap-2 text-black">
           <Link
             href={"https://linktr.ee/mla_narendra_bhondekar"}
@@ -149,85 +152,77 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`flex flex-col lg:flex-row lg:items-center gap-6 fixed lg:static bg-white top-0 right-0 w-fit lg:w-auto h-full lg:h-auto py-20 lg:py-0 px-8 lg:px-0 items-start transition-all duration-200 overflow-y-scroll lg:overflow-y-visible ${
-            showMenu ? "translate-x-0" : "translate-x-full"
+          className={`fixed flex justify-end lg:static bg-white top-0 left-0 right-0 bottom-0  transition-all duration-200 ${
+            showMenu ? "translate-x-0 bg-opacity-40 backdrop-blur" : "translate-x-full bg-opacity-0 backdrop-blur-none"
           } lg:translate-x-0`}
         >
-          {links.map((link, index) =>
-            link.more.length > 0 ? (
-              <button
-                key={index + 10000}
-                className="text-[var(--primary-txt)] relative z-40 group hover:text-[var(--primary-clr)] text-left"
-              >
-                {t(link.name)}
-                <IoIosArrowDown size={20} className="inline" />
-                <span className="shadow-custom dropdown md:absolute top-full left-0 min-w-full w-fit bg-white p-4 rounded-lg z-50 block md:hidden group-hover:block space-y-2 text-left">
-                  {link.more.map((link, index) => {
-                    return (
-                      <Link
-                        key={index + 100}
-                        href={link.link}
-                        className={`block hover:text-[var(--primary-clr)] text-nowrap ${
-                          link.link === pathname
-                            ? "text-[var(--primary-clr)]"
-                            : "text-[#070707]"
-                        }`}
-                        onClick={() => setShowMenu(false)}
-                      >
-                        {t(link.name)}
-                      </Link>
-                    );
-                  })}
-                </span>
-              </button>
-            ) : (
-              <Link
-                key={index}
-                href={link.link}
-                className={`hover:text-[var(--primary-clr)] ${
-                  link.link === pathname
-                    ? "text-[var(--primary-clr)]"
-                    : "text-[#070707]"
-                }`}
-                onClick={() => setShowMenu(false)}
-              >
-                {t(link.name)}
-              </Link>
-            )
-          )}
+          <div
+            className={`bg-white shadow-xl lg:shadow-none flex flex-col lg:flex-row lg:items-center lg:gap-6 w-fit lg:w-auto h-full lg:h-auto py-20 lg:py-0 lg:px-8 lg:px-0 items-start transition-all duration-200 overflow-y-scroll lg:overflow-y-visible divide-y-2 lg:divide-y-0 divide-white ${
+              showMenu ? "translate-x-0" : "translate-x-full"
+            } lg:translate-x-0`}
+          >
+            {links.map((link, index) =>
+              link.more.length > 0 ? (
+                <>
+                  <DropDown
+                    name={link.name}
+                    links={link.more}
+                    setShowMenu={setShowMenu}
+                  />
+                </>
+              ) : (
+                <Link
+                  key={index}
+                  href={link.link}
+                  className={`lg:hover:text-[var(--primary-clr)] p-4 lg:p-0 bg-[var(--primary-clr)] w-full lg:w-fit lg:bg-white text-white ${
+                    link.link === pathname
+                      ? "lg:text-[var(--primary-clr)]"
+                      : "lg:text-black"
+                  }`}
+                  onClick={() => setShowMenu(false)}
+                >
+                  {t(link.name)}
+                </Link>
+              )
+            )}
 
-          {/* <GoogleTranslate prefLangCookie={prefLangCookie} /> */}
-          <div className="lg:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
-            <Link
-              href={"https://www.facebook.com/BhandaraShivSena/"}
-              target="_blank"
-              className="bg-[#F4F4F4] p-3 rounded-lg"
-            >
-              <TfiFacebook size={20} />
-            </Link>
-            <Link
-              href={"https://x.com/NBhondekar61"}
-              target="_blank"
-              className="bg-[#F4F4F4] p-3 rounded-lg"
-            >
-              <RiTwitterXLine size={20} />
-            </Link>
-            <Link
-              href={"https://www.youtube.com/@narendrabhondekar-jr5iv/featured"}
-              target="_blank"
-              className="bg-[#F4F4F4] p-3 rounded-lg"
-            >
-              <FaInstagram size={20} />
-            </Link>
-            <Link
-              href={"https://www.youtube.com/@narendrabhondekar-jr5iv/featured"}
-              target="_blank"
-              className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
-            >
-              <FaYoutube size={20} />
-            </Link>
+            {/* <GoogleTranslate prefLangCookie={prefLangCookie} /> */}
+            <div className="p-4 lg:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
+              <Link
+                href={"https://www.facebook.com/BhandaraShivSena/"}
+                target="_blank"
+                className="bg-[#F4F4F4] p-3 rounded-lg"
+              >
+                <TfiFacebook size={20} />
+              </Link>
+              <Link
+                href={"https://x.com/NBhondekar61"}
+                target="_blank"
+                className="bg-[#F4F4F4] p-3 rounded-lg"
+              >
+                <RiTwitterXLine size={20} />
+              </Link>
+              <Link
+                href={
+                  "https://www.youtube.com/@narendrabhondekar-jr5iv/featured"
+                }
+                target="_blank"
+                className="bg-[#F4F4F4] p-3 rounded-lg"
+              >
+                <FaInstagram size={20} />
+              </Link>
+              <Link
+                href={
+                  "https://www.youtube.com/@narendrabhondekar-jr5iv/featured"
+                }
+                target="_blank"
+                className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
+              >
+                <FaYoutube size={20} />
+              </Link>
+            </div>
+            <LangSwitcher />
           </div>
-          <LangSwitcher />
         </div>
         <div className="hidden lg:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
           <Link

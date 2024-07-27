@@ -22,8 +22,8 @@ export default function Journey() {
 
       <div className="relative z-20">
         <div className="bg-white relative z-10 md:px-2 px-8 py-8 lg:pt-0 mt-8 rounded-xl space-y-8 ">
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-2">
-            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-custom">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-primary grid grid-row-2">
               <Image
                 src={"/assets/Banner/banner1.jpg"}
                 alt="background"
@@ -31,72 +31,122 @@ export default function Journey() {
                 height={1000}
                 className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.3]"
               />
-              <div
-                data-aos="fade-in"
-                className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
-              >
-                <Image
-                  src={"/assets/LandingPage/Journey/calci.svg"}
-                  width={30}
-                  height={30}
-                  alt="Calculator"
-                  className="h-full w-full max-w-[35px] object-contain object-center"
-                />
+              <div className="flex items-center gap-4">
+                <div
+                  data-aos="fade-in"
+                  className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
+                >
+                  <Image
+                    src={"/assets/LandingPage/Journey/calci.svg"}
+                    width={30}
+                    height={30}
+                    alt="Calculator"
+                    className="h-full w-full max-w-[35px] object-contain object-center"
+                  />
+                </div>
+                <div className="w-full text-left">
+                  <h4
+                    className="uppercase text-3xl font-[700] text-[var(--primary-clr)] khand tracking-widest"
+                    data-aos="fade-in"
+                  >
+                    2009
+                  </h4>
+                  <p
+                    className="montserrat font-[600] text-white mt-2"
+                    data-aos="fade-in"
+                  >
+                    {t("2009.title")}
+                  </p>
+                </div>
               </div>
-              <p
-                className="text-xs uppercase font-[700] text-white"
-                data-aos="fade-in"
-              >
-                2009
-              </p>
-              <h4
-                className="montserrat font-[700] text-white mt-2"
-                data-aos="fade-in"
-              >
-                {t("2009.title")}
-              </h4>
               <p className="mt-4 text-sm text-white" data-aos="fade-in">
                 {t("2009.para")}
               </p>
             </div>
-            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-custom">
+            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-primary grid grid-row-2">
               <Image
                 src={"/assets/Banner/banner2.jpg"}
                 alt="background"
                 width={1080}
                 height={1000}
                 className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.3]"
-              />
-              <div
-                data-aos="fade-in"
-                data-aos-delay="100"
-                className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
-              >
-                <Image
-                  src={"/assets/LandingPage/Journey/calendar.svg"}
-                  width={30}
-                  height={30}
-                  alt="Calculator"
-                  className="h-full w-full max-w-[35px] object-contain object-center"
-                />
+              />{" "}
+              <div className="flex items-center gap-4">
+                <div
+                  data-aos="fade-in"
+                  data-aos-delay="100"
+                  className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
+                >
+                  <Image
+                    src={"/assets/LandingPage/Journey/calendar.svg"}
+                    width={30}
+                    height={30}
+                    alt="Calculator"
+                    className="h-full w-full max-w-[35px] object-contain object-center"
+                  />
+                </div>
+                <div className="w-full text-left">
+                  <h4
+                    className="uppercase text-3xl font-[700] text-[var(--primary-clr)] khand tracking-widest"
+                    data-aos="fade-in"
+                  >
+                    2014
+                  </h4>
+                  <p
+                    className="montserrat font-[600] text-white mt-2"
+                    data-aos="fade-in"
+                  >
+                    {t("2014.title")}
+                  </p>
+                </div>
               </div>
-              <p
-                className="text-xs uppercase font-[700] text-white"
-                data-aos="fade-in"
-              >
-                2014
-              </p>
-              <h4
-                className="montserrat font-[700] text-white mt-2"
-                data-aos="fade-in"
-              >
-                {t("2014.title")}
-              </h4>
               <p className=" mt-4 text-sm  text-white" data-aos="fade-in">
                 {t("2014.para")}
               </p>
             </div>
-            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-custom">
+            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-primary grid grid-row-2">
+              <Image
+                src={"/assets/Banner/banner3.jpg"}
+                alt="background"
+                width={1080}
+                height={1000}
+                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.3]"
+              />{" "}
+              <div className="flex items-center gap-4">
+                <div
+                  data-aos="fade-in"
+                  data-aos-delay="100"
+                  className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
+                >
+                  <Image
+                    src={"/assets/LandingPage/Journey/checklist.svg"}
+                    width={30}
+                    height={30}
+                    alt="Calculator"
+                    className="h-full w-full max-w-[35px] object-contain object-center"
+                  />
+                </div>
+                <div className="w-full text-left">
+                  <h4
+                    className="uppercase text-3xl font-[700] text-[var(--primary-clr)] khand tracking-widest"
+                    data-aos="fade-in"
+                  >
+                    2019
+                  </h4>
+                  <p
+                    className="montserrat font-[600] text-white mt-2"
+                    data-aos="fade-in"
+                  >
+                    {t("2019.title")}
+                  </p>
+                </div>
+              </div>
+              <p className=" mt-4 text-sm text-white" data-aos="fade-in">
+                {t("2019.para")}
+              </p>
+            </div>
+            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-primary grid grid-row-2">
+              {" "}
               <Image
                 src={"/assets/Banner/banner3.jpg"}
                 alt="background"
@@ -104,68 +154,35 @@ export default function Journey() {
                 height={1000}
                 className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.3]"
               />
-              <div
-                data-aos="fade-in"
-                data-aos-delay="100"
-                className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
-              >
-                <Image
-                  src={"/assets/LandingPage/Journey/checklist.svg"}
-                  width={30}
-                  height={30}
-                  alt="Calculator"
-                  className="h-full w-full max-w-[35px] object-contain object-center"
-                />
+              <div className="flex items-center gap-4">
+                <div
+                  data-aos="fade-in"
+                  data-aos-delay="100"
+                  className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
+                >
+                  <Image
+                    src={"/assets/LandingPage/Journey/calendar.svg"}
+                    width={30}
+                    height={30}
+                    alt="Calculator"
+                    className="h-full w-full max-w-[35px] object-contain object-center"
+                  />
+                </div>
+                <div className="w-full text-left">
+                  <h4
+                    className="uppercase text-3xl font-[700] text-[var(--primary-clr)] khand tracking-widest"
+                    data-aos="fade-in"
+                  >
+                    2024
+                  </h4>
+                  <p
+                    className="montserrat font-[600] text-white mt-2"
+                    data-aos="fade-in"
+                  >
+                    {t("2024.title")}
+                  </p>
+                </div>
               </div>
-              <p
-                className="text-xs uppercase font-[700] text-white"
-                data-aos="fade-in"
-              >
-                2019
-              </p>
-              <h4
-                className="montserrat font-[700] text-white mt-2"
-                data-aos="fade-in"
-              >
-                {t("2019.title")}
-              </h4>
-              <p className=" mt-4 text-sm text-white" data-aos="fade-in">
-                {t("2019.para")}
-              </p>
-            </div>
-            <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-custom">
-              <Image
-                src={"/assets/Banner/banner1.jpg"}
-                alt="background"
-                width={1080}
-                height={1000}
-                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.3]"
-              />
-              <div
-                data-aos="fade-in"
-                data-aos-delay="100"
-                className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
-              >
-                <Image
-                  src={"/assets/LandingPage/Journey/calendar.svg"}
-                  width={30}
-                  height={30}
-                  alt="Calculator"
-                  className="h-full w-full max-w-[35px] object-contain object-center"
-                />
-              </div>
-              <p
-                className="text-xs uppercase font-[700] text-white"
-                data-aos="fade-in"
-              >
-                2024
-              </p>
-              <h4
-                className="montserrat font-[700] text-white mt-2"
-                data-aos="fade-in"
-              >
-                {t("2024.title")}
-              </h4>
               <p className="mt-4 text-sm text-white" data-aos="fade-in">
                 {t("2024.para")}
               </p>
@@ -173,7 +190,7 @@ export default function Journey() {
           </div>
           <div
             data-aos="fade-in"
-            className="shadow-custom contact text-center py-4 px-8 rounded-xl lg:rounded-full w-fit mx-auto flex flex-wrap items-center justify-center gap-8"
+            className="shadow-primary contact text-center py-4 px-8 rounded-xl lg:rounded-full w-fit mx-auto flex flex-wrap items-center justify-center gap-8"
           >
             <IoMdChatbubbles size={28} className="text-[var(--primary-clr)]" />
             <h4 className="montserrat font-[500] text-[var(--primary-txt)] font-[700]">

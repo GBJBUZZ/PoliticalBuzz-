@@ -26,6 +26,10 @@ html {
   font-family: var(--font-montserrat);
 }
 
+.khand {
+  font-family: var(--font-khand);
+}
+
 nav {
   font-family: var(--font-montserrat);
   font-weight: 700;
@@ -149,6 +153,10 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.shadow-primary {
+  box-shadow: 0 0 10px #f36821;
+}
+
 .gradient-bg {
   background: linear-gradient(-101deg, #ffffff -70.78%, #f36821 100%);
 }
@@ -172,4 +180,8 @@ body {
 .feeds::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: var(--primary-clr);
+}
+
+.opacity-transition {
+  transition: opacity 0.3s ease 0.5s;
 }

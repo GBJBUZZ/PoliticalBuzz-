@@ -18,7 +18,7 @@ export default function LangSwitcher() {
     <>
       <button
         key={10002320}
-        className="text-[var(--primary-txt)] hover:text-[var(--primary-clr)] relative z-50 group text-left hidden md:block"
+        className="text-[var(--primary-txt)] hover:text-[var(--primary-clr)] relative z-50 group text-left hidden lg:block"
       >
         {t("lang")}
         <IoIosArrowDown size={20} className="inline" />
@@ -39,8 +39,8 @@ export default function LangSwitcher() {
           </span>
         </span>
       </button>
-      <form className="block md:hidden">
-        <label htmlFor="" className="block">
+      <form className="p-4 block lg:hidden">
+        {/* <label htmlFor="" className="block">
           <input
             type="radio"
             name="lang"
@@ -63,7 +63,29 @@ export default function LangSwitcher() {
             checked={t("lang") === "मराठी"}
           />{" "}
           <span>Marathi</span>
-        </label>
+        </label> */}
+
+        <div className="flex gap-2">
+          <p>{t("nav.english")}</p>
+          <label className="relative inline-flex cursor-pointer items-center">
+            <input
+              id="switch"
+              type="checkbox"
+              checked={t("lang") === "मराठी"}
+              onChange={() => {
+                if (t("lang") === "English") {
+                  changeLang("mr");
+                } else {
+                  changeLang("en");
+                }
+              }}
+              className="peer sr-only"
+            />
+            <label className="hidden"></label>
+            <div className="peer h-6 w-11 rounded-full border bg-black after:absolute after:left-[2px] after:top-0.5 after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-[var(--primary-clr)] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:ring-green-300"></div>
+          </label>
+          <p>{t("nav.marathi")}</p>
+        </div>
       </form>
     </>
   );

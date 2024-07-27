@@ -8,7 +8,6 @@ import { useTranslations } from "next-intl";
 export default function SubscribeCard() {
   const t = useTranslations("main.hero");
 
-
   const [formdata, setFormData] = useState({
     First_Name: "",
     Last_Name: "",
@@ -36,9 +35,7 @@ export default function SubscribeCard() {
       alert("An error occurred while sending the message");
     }
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
+    setLoading(false);
   };
 
   return (
@@ -55,6 +52,7 @@ export default function SubscribeCard() {
             setFormData({ ...formdata, Email: e.target.value });
           }}
           placeholder={t("input")}
+          required
         />
         <button className="shadow-custom p-2 rounded-r-xl bg-[var(--primary-clr)]">
           {loading ? (

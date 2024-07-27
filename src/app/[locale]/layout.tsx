@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Nunito_Sans, Rufina } from "next/font/google";
+import { Montserrat, Nunito_Sans, Rufina, Khand } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -29,6 +29,13 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+const khand = Khand({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-khand",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Narendra Bhondekar",
   description:
@@ -45,7 +52,7 @@ export default async function RootLayout({
     <html lang="en">
       <AOSInit />
       <body
-        className={`${nunitoSans.variable} ${rufina.variable} ${montserrat.variable}`}
+        className={`${nunitoSans.variable} ${rufina.variable} ${montserrat.variable} ${khand.variable}`}
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
