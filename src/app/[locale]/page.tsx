@@ -7,6 +7,7 @@ import Journey from "@/components/LandingPage/Journey";
 import Members from "@/components/LandingPage/Members/Members";
 import Socialfeeds from "@/components/LandingPage/SocialFeeds/Socialfeeds";
 import Video from "@/components/LandingPage/Video";
+import VideoCarousel from "@/components/LandingPage/VideoCarousel/VideoCarousel";
 import Vision from "@/components/LandingPage/Vision/Vision";
 import Image from "next/image";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Video />
       <Facts />
       <Journey />
+      <VideoCarousel />
       <Vision />
       <Socialfeeds />
 

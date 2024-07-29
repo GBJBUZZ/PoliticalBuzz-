@@ -149,6 +149,13 @@ body {
   background-position: center;
 }
 
+.pattern3 {
+  background-image: url("/assets/backgrounds/pattern3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .shadow-custom {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -184,4 +191,44 @@ body {
 
 .opacity-transition {
   transition: opacity 0.3s ease 0.5s;
+}
+
+.journey,
+.journey-card {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .journey::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -10%;
+    height: 100%;
+    border: 2px solid #f36821;
+    background-color: #f36821;
+    transform: translateX(-50%);
+  }
+
+  .journey-card::before {
+    position: absolute;
+    content: "";
+    top: 10%;
+    left: -10%;
+    padding: 0.8rem;
+    border: 2px solid #f36821;
+    background-color: #fff;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+}
+
+.rotate-left {
+  transform: perspective(500px) rotateY(35deg);
+  scale: 0.7;
+}
+
+.rotate-right {
+  transform: perspective(500px) rotateY(-35deg);
+  scale: 0.7;
 }
