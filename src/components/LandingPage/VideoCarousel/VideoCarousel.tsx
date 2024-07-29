@@ -62,6 +62,7 @@ export default function VideoCarousel() {
 
   const arr = [
     <iframe
+      key={2001}
       src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -69,6 +70,7 @@ export default function VideoCarousel() {
       className="w-full h-full"
     ></iframe>,
     <iframe
+      key={2002}
       src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -76,6 +78,7 @@ export default function VideoCarousel() {
       className="w-full h-full"
     ></iframe>,
     <iframe
+      key={2003}
       src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -83,6 +86,7 @@ export default function VideoCarousel() {
       className="w-full h-full"
     ></iframe>,
     <iframe
+      key={2004}
       src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -90,6 +94,7 @@ export default function VideoCarousel() {
       className="w-full h-full"
     ></iframe>,
     <iframe
+      key={2005}
       src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -97,6 +102,7 @@ export default function VideoCarousel() {
       className="w-full h-full"
     ></iframe>,
     <iframe
+      key={2006}
       src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -104,6 +110,7 @@ export default function VideoCarousel() {
       className="w-full h-full"
     ></iframe>,
     <iframe
+      key={2007}
       src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -111,6 +118,7 @@ export default function VideoCarousel() {
       className="w-full h-full"
     ></iframe>,
     <iframe
+      key={2008}
       src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -118,6 +126,7 @@ export default function VideoCarousel() {
       className="w-full h-full"
     ></iframe>,
     <iframe
+      key={2009}
       src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -134,6 +143,7 @@ export default function VideoCarousel() {
           {arr.map((item, index) => {
             return (
               <div
+                key={index + 100}
                 className={`keen-slider__slide number-slide6 aspect-video overflow-hidden ${
                   currentSlide === index ? "" : ""
                 } `}
