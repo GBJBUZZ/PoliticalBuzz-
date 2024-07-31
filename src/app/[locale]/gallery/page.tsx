@@ -77,7 +77,7 @@ export default function Gallery() {
                     href={image}
                     target="_blank"
                     className="m-2 block w-fit mx-auto py-1 px-4 border-2 border-[var(--primary-clr)] rounded-full text-white text-sm font-[700] hover:bg-[var(--primary-clr)]"
-                    download={"Image " + index}
+                    download
                   >
                     Download
                   </Link>

@@ -134,6 +134,8 @@ export default function VideoCarousel() {
       className="w-full h-full"
     ></iframe>,
   ];
+
+  
   return (
     <div className="px-8 xl:px-40 py-20 relative bg-black mb-8 pattern3">
       <h2 className="text-white text-center">{t("quote1")}</h2>

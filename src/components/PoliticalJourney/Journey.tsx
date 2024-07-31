@@ -1,9 +1,49 @@
+"use client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { FaYoutube } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 export default function Journey() {
   const t = useTranslations("political journey");
+  const [hidden, setHidden] = useState(true);
+  const [active, setActive] = useState(0);
+  const videos = [
+    // <iframe width="560" height="315" src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe
+      key={1}
+      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      className="w-full h-full"
+    ></iframe>,
+    <iframe
+      key={2}
+      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      className="w-full h-full"
+    ></iframe>,
+    <iframe
+      key={3}
+      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      className="w-full h-full"
+    ></iframe>,
+    <iframe
+      key={4}
+      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      className="w-full h-full"
+    ></iframe>,
+  ];
 
   return (
     <section className="px-8 xl:px-40 py-20 relative">
@@ -22,21 +62,33 @@ export default function Journey() {
       <div className="mt-20 space-y-12 relative py-10 z-20">
         <div className="absolute top-0 left-1/2 border-x-2 border-dashed px-1 border-[#696969] h-full translate-x-[-50%] z-[-1]"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group" data-aos="fade-in">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group"
+          data-aos="fade-in"
+        >
           <div className=" absolute top-0 bottom-0 right-0 left-0 m-auto p-2 w-fit h-fit bg-white">
             <div className="p-2 border-2 border-[var(--primary-clr)] rounded-full">
               <div className="p-2 group-hover:bg-[var(--primary-clr)] rounded-full transition-all duration-200"></div>
             </div>
           </div>
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:ml-auto md:mr-20 bg-white order-2 md:order-1">
-            <div className="overflow-hidden rounded-xl aspect-video">
+            <div className="w-full aspect-video rounded-xl overflow-clip relative">
               <Image
                 src={"/assets/Political-Journey/2009.png"}
-                alt="Narendra Video"
-                width={500}
-                height={500}
-                className="rounded-xl object-cover object-center h-full w-full group-hover:scale-110 transition-all duration-200 "
+                alt="background"
+                width={1080}
+                height={1000}
+                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.7]"
               />
+              <button
+                className="absolute top-0 left-0 right-0 bottom-0 w-fit h-fit m-auto"
+                onClick={() => {
+                  setHidden(false);
+                  setActive(0);
+                }}
+              >
+                <FaYoutube size={40} className="text-[#ff0000]" />
+              </button>
             </div>
             <div className="p-4">
               <p className="place-content-center">
@@ -63,7 +115,10 @@ export default function Journey() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group" data-aos="fade-in">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group"
+          data-aos="fade-in"
+        >
           <div className=" absolute top-0 bottom-0 right-0 left-0 m-auto p-2 w-fit h-fit bg-white">
             <div className="p-2 border-2 border-[var(--primary-clr)] rounded-full">
               <div className="p-2 group-hover:bg-[var(--primary-clr)] rounded-full transition-all duration-200"></div>
@@ -86,14 +141,23 @@ export default function Journey() {
           </div>
 
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:mr-auto md:ml-20 bg-white">
-            <div className="overflow-hidden rounded-xl aspect-video">
+            <div className="w-full aspect-video rounded-xl overflow-clip relative">
               <Image
                 src={"/assets/Political-Journey/2014.png"}
-                alt="Narendra Video"
-                width={500}
-                height={500}
-                className="rounded-xl object-cover object-center h-full w-full group-hover:scale-110 transition-all duration-200 "
+                alt="background"
+                width={1080}
+                height={1000}
+                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.7]"
               />
+              <button
+                className="absolute top-0 left-0 right-0 bottom-0 w-fit h-fit m-auto"
+                onClick={() => {
+                  setHidden(false);
+                  setActive(0);
+                }}
+              >
+                <FaYoutube size={40} className="text-[#ff0000]" />
+              </button>
             </div>
             <div className="p-4">
               <p className="place-content-center">
@@ -106,21 +170,33 @@ export default function Journey() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group" data-aos="fade-in">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group"
+          data-aos="fade-in"
+        >
           <div className=" absolute top-0 bottom-0 right-0 left-0 m-auto p-2 w-fit h-fit bg-white">
             <div className="p-2 border-2 border-[var(--primary-clr)] rounded-full">
               <div className="p-2 group-hover:bg-[var(--primary-clr)] rounded-full transition-all duration-200"></div>
             </div>
           </div>
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:ml-auto md:mr-20 bg-white order-2 md:order-1">
-            <div className="overflow-hidden rounded-xl aspect-video">
+            <div className="w-full aspect-video rounded-xl overflow-clip relative">
               <Image
                 src={"/assets/Political-Journey/2019.png"}
-                alt="Narendra Video"
-                width={500}
-                height={500}
-                className="rounded-xl object-cover object-center h-full w-full group-hover:scale-110 transition-all duration-200 "
+                alt="background"
+                width={1080}
+                height={1000}
+                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.7]"
               />
+              <button
+                className="absolute top-0 left-0 right-0 bottom-0 w-fit h-fit m-auto"
+                onClick={() => {
+                  setHidden(false);
+                  setActive(0);
+                }}
+              >
+                <FaYoutube size={40} className="text-[#ff0000]" />
+              </button>
             </div>
             <div className="p-4">
               <p className="place-content-center">
@@ -147,7 +223,10 @@ export default function Journey() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group" data-aos="fade-in">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 relative group"
+          data-aos="fade-in"
+        >
           <div className=" absolute top-0 bottom-0 right-0 left-0 m-auto p-2 w-fit h-fit bg-white">
             <div className="p-2 border-2 border-[var(--primary-clr)] rounded-full">
               <div className="p-2 group-hover:bg-[var(--primary-clr)] rounded-full transition-all duration-200"></div>
@@ -170,14 +249,23 @@ export default function Journey() {
           </div>
 
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:mr-auto md:ml-20 bg-white">
-            <div className="overflow-hidden rounded-xl aspect-video">
+            <div className="w-full aspect-video rounded-xl overflow-clip relative">
               <Image
                 src={"/assets/Political-Journey/2024.png"}
-                alt="Narendra Video"
-                width={500}
-                height={500}
-                className="rounded-xl object-cover object-center h-full w-full group-hover:scale-110 transition-all duration-200 "
+                alt="background"
+                width={1080}
+                height={1000}
+                className="absolute top-0 left-0 -z-1 w-full h-full object-cover brightness-[0.7]"
               />
+              <button
+                className="absolute top-0 left-0 right-0 bottom-0 w-fit h-fit m-auto"
+                onClick={() => {
+                  setHidden(false);
+                  setActive(0);
+                }}
+              >
+                <FaYoutube size={40} className="text-[#ff0000]" />
+              </button>
             </div>
             <div className="p-4">
               <p className="place-content-center">
@@ -190,6 +278,19 @@ export default function Journey() {
           </div>
         </div>
       </div>
+      {!hidden && (
+        <div className="fixed top-0 bottom-0 left-0 right-0 p-8 m-auto bg-black bg-opacity-40 backdrop-blur z-50 flex items-center justify-center">
+          <div className=" max-w-[500px] bg-white aspect-video w-full rounded-xl overflow-hidden">
+            {videos[active]}
+          </div>
+          <button
+            className="p-2 rounded-xl bg-[var(--primary-clr)] absolute top-0 right-0 m-4"
+            onClick={() => setHidden(true)}
+          >
+            <IoClose className="text-white" size={30} />
+          </button>
+        </div>
+      )}
     </section>
   );
 }
