@@ -18,7 +18,7 @@ export default function About() {
               height={500}
               className="md:max-w-[500px] md:max-h-[600px] object-cover object-top md:rounded-xl"
             />
-            <div className="p-4 bg-[var(--primary-clr)] mt-4 w-fit md:max-w-[60%] md:absolute bottom-0 left-0  rounded-t-0 md:rounded-t-xl md:rounded-b-xl">
+            <div className="p-4 bg-[var(--primary-clr)]  w-fit md:max-w-[60%] md:absolute bottom-0 left-0  rounded-t-0 md:rounded-t-xl md:rounded-b-xl">
               <ImQuotesLeft size={28} className="text-black" />
               <div className="pl-8">
                 <p className="font-[600] text-white italic">{t("mission")}</p>

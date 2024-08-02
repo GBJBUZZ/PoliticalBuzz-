@@ -232,3 +232,31 @@ body {
   transform: perspective(500px) rotateY(-35deg);
   scale: 0.7;
 }
+
+.up-and-up-animate {
+  animation: up-and-up 20s ease-in-out 5s;
+}
+
+@keyframes up-and-up {
+  0% {
+    transform: translateY(300%);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

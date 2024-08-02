@@ -137,7 +137,7 @@ export default function VideoCarousel() {
 
   
   return (
-    <div className="px-8 xl:px-40 py-20 relative bg-black mb-8 pattern3">
+    <div className="px-8 xl:px-40 py-20 relative bg-black pattern3">
       <h2 className="text-white text-center">{t("quote1")}</h2>
       <br />
       <div className="navigation-wrapper relative">
