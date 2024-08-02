@@ -74,7 +74,7 @@ export default function Facts() {
           </div>
           <h4 className="text-3xl md:text-5xl font-[700] text-[var(--primary-txt)]">
             {t("voters.number")}
-            <sup className="">k</sup>
+            <sup className="">lac</sup>
           </h4>
           <p className="montserrat text-sm md:text-lg text-[#919191] font-[700]">
             {t("voters.text")}
