@@ -17,6 +17,15 @@ export default function Popup() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (hidden) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [hidden]);
+
   const [formdata, setFormData] = useState({
     First_Name: "",
     Last_Name: "",
@@ -52,7 +61,7 @@ export default function Popup() {
 
   return (
     <div
-      className={`${hidden ? "hidden" : "flex items-center justify-center gap-8"} fixed top-0 left-0 right-0 bottom-0 bg-[#f37021] bg-opacity-50 backdrop-blur z-50`}
+      className={`${hidden ? "hidden" : "flex lg:items-center justify-center gap-8"} overflow-y-auto fixed top-0 left-0 right-0 bottom-0 bg-[#f37021] bg-opacity-50 backdrop-blur z-50`}
     >
       <button
         className="absolute top-0 right-0 m-4 text-black"
@@ -61,11 +70,11 @@ export default function Popup() {
         <IoClose size={40} />
       </button>
 
-      <div className=" w-fit text-center">
+      <div className="w-full py-12 px-8 lg:w-fit mx-auto text-center">
         <h1 className="text-white text-4xl text-center">{t("quote2")}</h1>
         <h2 className="text-white text-center">{t("join")}</h2>
 
-        <div className="py-8">
+        <div className="">
           <form
             className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8"
             onSubmit={handleSubmit}
@@ -93,9 +102,9 @@ export default function Popup() {
               />
             </label>
             <label htmlFor="">
-              <span className="text-white">{t1("form.email")}</span>
+              <span className="text-white">{t1("form.city")}</span>
               <input
-                type="email"
+                type="text"
                 className="block border-b-2 border-[#8D8D8D] w-full p-2 outline-none focus:border-b-black rounded-xl"
                 onChange={(e) => {
                   setFormData({ ...formdata, Email: e.target.value });
@@ -126,7 +135,7 @@ export default function Popup() {
             </label>
             <button
               disabled={loading}
-              className="md:col-span-2 btn mx-auto md:mx-0 md:ml-auto px-6 py-3 bg-[var(--primary-clr)] block w-fit text-[#fff] rounded-xl"
+              className="md:col-span-2 btn mx-auto px-6 py-3 bg-[var(--primary-clr)] block w-fit text-[#fff] rounded-xl"
             >
               <span>
                 {loading ? t1("form.sending") : t1("form.send message")}

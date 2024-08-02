@@ -266,7 +266,8 @@
       "phone": "Phone Number",
       "message": "Message",
       "send message": "Send Message",
-      "sending": "Sending..."
+      "sending": "Sending...",
+      "city": "City"
     }
   },
   "government schemes": {
