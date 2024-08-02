@@ -71,10 +71,10 @@ export default function Popup() {
       </button>
 
       <div className="w-full py-12 px-8 lg:w-fit mx-auto text-center">
-        <h1 className="text-white text-4xl text-center">{t("quote2")}</h1>
+        <h1 className="text-white text-4xl md:text-5xl text-center">{t("quote2")}</h1>
         <h2 className="text-white text-center">{t("join")}</h2>
 
-        <div className="">
+        <div className="py-8">
           <form
             className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8"
             onSubmit={handleSubmit}
