@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { AOSInit } from "@/components/aos";
 import RecentPost from "@/components/RecentPost";
+import Popup from "@/components/Popup";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -59,6 +60,7 @@ export default async function RootLayout({
           {children}
           <Footer />
           <RecentPost />
+          <Popup />
         </NextIntlClientProvider>
       </body>
     </html>

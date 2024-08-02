@@ -44,9 +44,9 @@ export default function SubscribeCard() {
       <h3 className="text-black">{t("subscribe")}</h3>
       <form action="" className="flex mt-2" onSubmit={handleSubmit}>
         <input
-          type="email"
-          name="subscribe-email"
-          id="subscribe-email"
+          type="tel"
+          name="subscribe-phone"
+          id="subscribe-phone"
           className="shadow-custom px-4 py-2 rounded-l-xl outline-0"
           onChange={(e) => {
             setFormData({ ...formdata, Email: e.target.value });

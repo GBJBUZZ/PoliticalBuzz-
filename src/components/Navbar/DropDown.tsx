@@ -3,6 +3,7 @@ import { Link } from "@/navigation";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function DropDown({
   name,
@@ -36,7 +37,7 @@ export default function DropDown({
             <Link
               key={index + 100}
               href={link.link}
-              className={`block hover:text-[var(--primary-clr)] text-nowrap font-[500] ${
+              className={`flex items-center gap-2 hover:text-[var(--primary-clr)] text-nowrap font-[500] ${
                 link.link === pathname
                   ? "text-[var(--primary-clr)]"
                   : "text-[#070707]"
@@ -47,6 +48,7 @@ export default function DropDown({
               }}
             >
               {t(link.name)}
+              <FaArrowRight className="inline" />
             </Link>
           );
         })}

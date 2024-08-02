@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/navigation";
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Vision() {
   const t = useTranslations("main.services");
@@ -58,7 +59,7 @@ export default function Vision() {
               <Link
                 href={block.link}
                 key={index}
-                className={`px-6 py-8 block text-center uppercase w-full hover:text-white hover:scale-x-105 hover:scale-y-125 origin-bottom-left transition-all duration-200 shadow-custom ${
+                className={`px-6 py-8 flex justify-center items-center gap-2 text-xl font-[700] block text-center uppercase w-full hover:text-white hover:scale-x-105 hover:scale-y-125 origin-bottom-left transition-all duration-200 shadow-custom ${
                   index % 2 === 0
                     ? "bg-[var(--primary-clr)] text-white"
                     : "bg-[#c0581a] text-white"
@@ -67,6 +68,7 @@ export default function Vision() {
                 `}
               >
                 <span>{t(block.title)}</span>
+                <FaArrowRight className="inline" />
               </Link>
             ))}
           </div>

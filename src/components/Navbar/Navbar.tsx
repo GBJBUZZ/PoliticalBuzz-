@@ -9,7 +9,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import Image from "next/image";
 import GoogleTranslate from "../Translate/GoogleTranslate";
-import { IoIosArrowDown } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import LangSwitcher from "./LangSwitcher";
 import DropDown from "./DropDown";
@@ -175,7 +175,7 @@ export default function Navbar() {
                 <Link
                   key={index}
                   href={link.link}
-                  className={`xl:hover:text-[var(--primary-clr)] p-4 xl:p-0 bg-[var(--primary-clr)] w-full xl:w-fit xl:bg-white text-white ${
+                  className={`flex items-center gap-2 xl:hover:text-[var(--primary-clr)] p-4 xl:p-0 bg-[var(--primary-clr)] w-full xl:w-fit xl:bg-white text-white ${
                     link.link === pathname
                       ? "xl:text-[var(--primary-clr)]"
                       : "xl:text-black"
@@ -183,6 +183,7 @@ export default function Navbar() {
                   onClick={() => setShowMenu(false)}
                 >
                   {t(link.name)}
+                  <FaArrowRight className="inline" />
                 </Link>
               )
             )}
