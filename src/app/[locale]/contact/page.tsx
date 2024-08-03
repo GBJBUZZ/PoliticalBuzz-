@@ -14,6 +14,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
 import supabase from "@/supabase";
+import { sanityClient } from "../../../../sanity/sanity";
 
 export default function Page() {
   const t = useTranslations("contact us");
@@ -31,15 +32,17 @@ export default function Page() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    const doc = {
+      _type: "contactForm",
+      firstName: formdata.First_Name,
+      lastName: formdata.Last_Name,
+      email: formdata.Email,
+      phone: formdata.Phone_Number,
+      message: formdata.Message,
+    };
     try {
-      const { data, error } = await supabase
-        .from("narendra_bhondekar_contact_form")
-        .insert([formdata])
-        .select();
-
-      if (error) {
-        throw error;
-      }
+      setLoading(true);
+      await sanityClient.create(doc);
 
       alert("Message sent successfully");
     } catch (e) {

@@ -8,8 +8,12 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import { sanityClient } from "../../../../sanity/sanity";
+import imageUrlBuilder from "@sanity/image-url";
 
 export default function Gallery() {
+  const builder = imageUrlBuilder(sanityClient);
+
   const [hidden, setHidden] = useState(true);
   const [images, setImages] = useState<string[]>([]);
   const [image, setImage] = useState<string | null>(null);
@@ -26,6 +30,16 @@ export default function Gallery() {
     };
 
     images();
+  }, []);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      const query = '*[_type == "gallery"]{title, images}';
+      const gallery = await sanityClient.fetch(query);
+      console.log(gallery[0].images[0]);
+    };
+
+    fetchImages();
   }, []);
 
   const t = useTranslations("gallery");

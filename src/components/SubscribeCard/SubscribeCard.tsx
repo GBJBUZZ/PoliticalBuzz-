@@ -4,6 +4,7 @@ import React, { FormEvent, useState } from "react";
 import { IoIosSend } from "react-icons/io";
 import supabase from "@/supabase";
 import { useTranslations } from "next-intl";
+import { sanityClient } from "../../../sanity/sanity";
 
 export default function SubscribeCard() {
   const t = useTranslations("main.hero");
@@ -19,16 +20,14 @@ export default function SubscribeCard() {
   const [loading, setLoading] = useState(false);
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    const doc = {
+      _type: "subscribeForm",
+      phoneNumber: formdata.Phone_Number,
+    };
     setLoading(true);
     try {
-      const { data, error } = await supabase
-        .from("narendra_bhondekar_contact_form")
-        .insert([formdata])
-        .select();
-
-      if (error) {
-        throw error;
-      }
+      setLoading(true);
+      await sanityClient.create(doc);
 
       alert("You have successfully subscribed to our newsletter!");
     } catch (e) {
@@ -49,7 +48,7 @@ export default function SubscribeCard() {
           id="subscribe-phone"
           className="shadow-custom px-4 py-2 rounded-l-xl outline-0"
           onChange={(e) => {
-            setFormData({ ...formdata, Email: e.target.value });
+            setFormData({ ...formdata, Phone_Number: e.target.value });
           }}
           placeholder={t("input")}
           required

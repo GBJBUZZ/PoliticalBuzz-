@@ -59,7 +59,7 @@ export default function Popup() {
 
   return (
     <div
-      className={`${hidden ? "opacity-0" : ""} overflow-y-auto fixed top-0 left-0 right-0 bottom-0 w-fit h-fit m-auto z-50 transition-all duration-500 up-and-up-animate`}
+      className={`${hidden ? "opacity-0 translate-y-[300%]" : ""} overflow-y-auto fixed top-0 left-0 right-0 bottom-0 w-fit h-fit m-auto z-50 transition-all duration-500 up-and-up-animate`}
     >
       <figure className="relative ">
         <Image
