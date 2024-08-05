@@ -2,7 +2,6 @@
 
 import React, { FormEvent, useState } from "react";
 import { IoIosSend } from "react-icons/io";
-import supabase from "@/supabase";
 import { useTranslations } from "next-intl";
 import { sanityClient } from "../../../sanity/sanity";
 

@@ -13,7 +13,6 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
-import supabase from "@/supabase";
 import { sanityClient } from "../../../../sanity/sanity";
 
 export default function Page() {

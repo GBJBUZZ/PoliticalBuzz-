@@ -1,6 +1,6 @@
 "use client";
 
-import supabase from "@/supabase";
+// import supabase from "@/supabase";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { FormEvent, useEffect, useState } from "react";
@@ -34,28 +34,28 @@ export default function Popup() {
 
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      const { data, error } = await supabase
-        .from("narendra_bhondekar_contact_form")
-        .insert([formdata])
-        .select();
+  // const handleSubmit = async (e: FormEvent) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   try {
+  //     const { data, error } = await supabase
+  //       .from("narendra_bhondekar_contact_form")
+  //       .insert([formdata])
+  //       .select();
 
-      if (error) {
-        throw error;
-      }
+  //     if (error) {
+  //       throw error;
+  //     }
 
-      alert("Message sent successfully");
-    } catch (e) {
-      alert("An error occurred while sending the message");
-    }
+  //     alert("Message sent successfully");
+  //   } catch (e) {
+  //     alert("An error occurred while sending the message");
+  //   }
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-  };
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 4000);
+  // };
 
   return (
     <div
