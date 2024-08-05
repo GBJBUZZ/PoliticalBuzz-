@@ -1,7 +1,6 @@
 "use client";
 
 import Header from "@/components/Header/Header";
-import { fetchImages } from "@/utils/fetchImages";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,30 +12,28 @@ import imageUrlBuilder from "@sanity/image-url";
 
 export default function Gallery() {
   const builder = imageUrlBuilder(sanityClient);
+  function urlFor(source: any) {
+    return builder.image(source);
+  }
 
   const [hidden, setHidden] = useState(true);
   const [images, setImages] = useState<string[]>([]);
   const [image, setImage] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const images = async () => {
-      setLoading(true);
-      const data = await fetchImages();
-      // remove the first image from the list
-      data.shift();
-      setImages(data);
-      setLoading(false);
-    };
-
-    images();
-  }, []);
 
   useEffect(() => {
     const fetchImages = async () => {
+      setLoading(true);
       const query = '*[_type == "gallery"]{title, images}';
       const gallery = await sanityClient.fetch(query);
-      console.log(gallery[0].images[0]);
+      const imageUrls = gallery[0].images.map((image: any) =>
+        urlFor(image).url()
+      );
+
+      setImages(imageUrls);
+
+      setLoading(false);
     };
 
     fetchImages();

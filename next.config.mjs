@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["eyqgsnrjdxbgvzafpkti.supabase.co"],
+    domains: ["eyqgsnrjdxbgvzafpkti.supabase.co", "cdn.sanity.io"],
   },
 };
 
