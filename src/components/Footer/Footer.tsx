@@ -178,8 +178,14 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-          <div className="flex justify-center text-2xl text-white">
-            GBJ BUZZ PRIVATE LIMITED
+          <div className="flex justify-center text-xl text-white">
+          <a
+              href="https://www.gbjbuzz.com/"
+              className="underline"
+              target="_blank"
+            >
+              GBJ BUZZ PRIVATE LIMITED
+            </a>
           </div>
     </section>
   );
