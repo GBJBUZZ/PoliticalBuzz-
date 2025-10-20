@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committed to Righteousness - Leader Official Website</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for professional aesthetic */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc; /* Light background */
+        }
+        /* Custom shadow for cards */
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Focus state for political colors */
+        .focus-ring-primary:focus {
+            --tw-ring-color: #FF9933;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Saffron/Orange as Primary
+                        'primary': '#FF9933', 
+                        // Deep Green for Contrast (Shiv Sena's Green)
+                        'secondary': '#047857', 
+                        'light-saffron': '#ffbf73',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white card-shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 text-2xl font-extrabold text-secondary rounded-lg p-1 transition duration-300 hover:text-primary">
+                        <span class="text-primary">Shivesh</span> Kadav
+                    </a>
+                </div>
+
+                <!-- Desktop Menu Links (Visible on sm: screens and up) -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">
+                    <a href="#seva" class="text-gray-600 hover:bg-gray-50 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-150">Seva</a>
+                    <a href="#projects" class="text-gray-600 hover:bg-gray-50 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-150">Key Projects</a>
+                    <a href="#vision" class="text-gray-600 hover:bg-gray-50 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-150">Future Vision</a>
+                    <!-- CTA Button uses Saffron/Orange -->
+                    <a href="#contact" class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-full text-sm font-medium transition duration-300 shadow-lg hover:shadow-xl">Support the Mission</a>
+                </div>
+
+                <!-- Mobile Menu Button (Hamburger - Hidden on sm: screens and up) -->
+                <div class="flex items-center sm:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus-ring-primary" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default, shown by JS when button is clicked) -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#seva" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary">Seva</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary">Key Projects</a>
+                <a href="#vision" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary">Future Vision</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary hover:bg-secondary mt-2">Support the Mission</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Responsive Layout Change) -->
+    <header class="bg-white pt-16 pb-24 text-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-10">
+            <!-- Text Content (Takes full width on mobile, 1/2 on large) -->
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <p class="text-xl font-medium mb-3 text-secondary">The Path of Dharma and Development</p>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                    <span class="text-primary">Justice</span>, <span class="text-secondary">Progress</span>, and the <span class="text-primary">Marathi Spirit</span>.
+                </h1>
+                <p class="text-lg opacity-90 mb-8 text-gray-600">
+                    Committed to transformative governance, preserving cultural heritage, and ensuring inclusive growth for every citizen.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4">
+                    <!-- Saffron Primary Button -->
+                    <a href="#projects" class="inline-block w-full sm:w-auto bg-primary hover:bg-light-saffron text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-xl transform hover:scale-105">View Progress</a>
+                    <!-- Green Secondary Button -->
+                    <a href="#contact" class="inline-block w-full sm:w-auto border border-secondary hover:bg-secondary hover:text-white text-secondary font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Join the Movement</a>
+                </div>
+            </div>
+
+            <!-- Leader Image (Takes full width on mobile, 1/2 on large) -->
+            <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
+                <!-- Placeholder for the Leader's Image - Fluid width, limited max size -->
+                <img
+                    src="/PoliticalBuzz-/Bhandara/Nagar-Parishad/Ward-9/7U9A0004.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x500/FF9933/FFFFFF?text=Image+Not+Found'"
+                    alt="Official portrait of the Political Leader"
+                    class="rounded-3xl object-cover card-shadow border-8 border-primary w-full max-w-sm md:max-w-md"
+                >
+            </div>
+        </div>
+    </header>
+
+    <!-- Seva (Service)/Biography Section (Responsive Grid) -->
+    <section id="seva" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12 border-b-4 border-primary inline-block pb-1">Our Pledge of Service</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                <!-- Leader Quote/Moto (Always 1 column) -->
+                <div class="lg:col-span-1 bg-white p-8 rounded-xl border-l-4 border-secondary card-shadow">
+                    <span class="text-4xl text-secondary mb-4 block">⚔️</span>
+                    <p class="text-xl italic text-gray-700">
+                        "Maharashtra is our motherland, and its people are our family. Service is our birthright, and development is our duty."
+                    </p>
+                    <p class="mt-4 font-bold text-right text-primary">— Leader Name</p>
+                </div>
+
+                <!-- Biography Text (Takes 2 columns on large screens) -->
+                <div class="lg:col-span-2 text-lg leading-relaxed text-gray-600">
+                    <p class="mb-6">
+                        Rooted in the ideals of [Specific Regional/Historical Leader], the Leader's journey is one of passionate advocacy for regional identity and justice. Starting in local politics, the focus has always been on mobilizing people to demand accountability and uphold the dignity of the regional language and culture.
+                    </p>
+                    <p class="mb-6">
+                        Rising to prominence through decisive action and unwavering commitment to the common man, the Leader's career is marked by significant achievements in [Specific Field, e.g., slum redevelopment, water management]. Their tenure saw the successful launch of [Key Project] which directly benefited millions.
+                    </p>
+                    <p>
+                        The mission continues: to ensure robust urban and rural infrastructure, provide fair employment opportunities, and establish the state as a benchmark for good governance and strong cultural values.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Projects/Achievements Section (Responsive 1/2/3 Column Grid) -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Landmark 'Karya' Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: Infrastructure -->
+                <div class="bg-gray-50 p-6 rounded-xl card-shadow hover:shadow-2xl transition duration-300 border-t-4 border-primary">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-primary mr-3">🏗️</span>
+                        <h3 class="text-xl font-bold text-gray-900">Urban Renewal Drive</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Pioneered 1,000+ redevelopment projects, transforming urban slums into modern, sustainable housing colonies.
+                    </p>
+                </div>
+
+                <!-- Project Card 2: Regional Pride -->
+                <div class="bg-gray-50 p-6 rounded-xl card-shadow hover:shadow-2xl transition duration-300 border-t-4 border-secondary">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-secondary mr-3">🚩</span>
+                        <h3 class="text-xl font-bold text-gray-900">Cultural Preservation Fund</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Established a dedicated fund and policy for the preservation and promotion of regional historical sites and language.
+                    </p>
+                </div>
+
+                <!-- Project Card 3: Water/Agriculture -->
+                <div class="bg-gray-50 p-6 rounded-xl card-shadow hover:shadow-2xl transition duration-300 border-t-4 border-primary">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-primary mr-3">💧</span>
+                        <h3 class="text-xl font-bold text-gray-900">Drought Resilience Plan</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Implemented major water conservation and dam linking projects to ensure water security for 10 million farmers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section (Call to Action) -->
+    <section id="vision" class="py-20 bg-light-saffron text-gray-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg font-medium mb-3 text-secondary">The Vision for Future</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-snug">
+                An Empowered State: Strong in <span class="text-primary">Spirit</span>, Rich in <span class="text-secondary">Progress</span>.
+            </h2>
+            <p class="text-xl opacity-90 mb-10 max-w-3xl mx-auto">
+                Join our movement to uphold justice, accelerate infrastructure, and ensure a prosperous future for all residents.
+            </p>
+            <!-- CTA Button uses Green Secondary Color -->
+            <a href="#contact" class="inline-block bg-secondary text-white hover:bg-primary hover:text-white font-bold py-3 px-10 rounded-full transition duration-300 shadow-xl transform hover:scale-105">Pledge Your Support Today</a>
+        </div>
+    </section>
+
+    <!-- Contact/Footer Section (Responsive 1/4 Column Grid) -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Column -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 border-b-2 border-primary pb-1">DHARMA VEER</h4>
+                    <p class="text-sm text-gray-400">
+                        Official platform dedicated to the mission of service, justice, and development for the people.
+                    </p>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 border-b-2 border-secondary pb-1">Essential Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#seva" class="text-gray-400 hover:text-primary transition duration-150 text-sm">Service & Biography</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-primary transition duration-150 text-sm">Our Work</a></li>
+                        <li><a href="#vision" class="text-gray-400 hover:text-primary transition duration-150 text-sm">Future Vision</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details Column -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 border-b-2 border-primary pb-1">Connect</h4>
+                    <p class="text-sm text-gray-400">
+                        Central Office, Service Kendra<br>
+                        Mumbai, Maharashtra<br>
+                        Email: <a href="mailto:contact@dharmaveer.org" class="text-primary hover:underline">contact@dharmaveer.org</a><br>
+                        Helpline: 1800-DHARMA-01
+                    </p>
+                </div>
+
+                <!-- Social Media Column -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 border-b-2 border-secondary pb-1">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <!-- Placeholder Icons -->
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-150 text-2xl" aria-label="Facebook">📘</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-150 text-2xl" aria-label="Twitter">🐦</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-150 text-2xl" aria-label="Instagram">📸</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-150 text-2xl" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
+                &copy; 2025 Dharma Veer. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle and Smooth Scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+
+            // 1. Mobile Menu Toggle
+            button.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                // Optional: Change icon (Hamburger <-> X)
+                button.querySelector('svg:nth-child(1)').classList.toggle('hidden');
+                button.querySelector('svg:nth-child(2)').classList.toggle('hidden');
+            });
+
+            // 2. Smooth Scrolling for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Optional: Close mobile menu after clicking a link
+                        if (!menu.classList.contains('hidden')) {
+                            menu.classList.add('hidden');
+                            button.querySelector('svg:nth-child(1)').classList.remove('hidden');
+                            button.querySelector('svg:nth-child(2)').classList.add('hidden');
+                        }
+
+                        // Smooth scroll behavior
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70, // Offset for fixed header
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
