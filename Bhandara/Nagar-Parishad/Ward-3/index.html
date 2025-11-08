@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivesh Kadao - Indian National Congress</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* INC Primary Blue (often used for digital) */
+            --primary-color: #0084CC; 
+            /* INC Saffron/Orange */
+            --secondary-color: #FF9933; 
+            /* INC Green */
+            --tertiary-color: #138808;
+            
+            --light-bg: #f5f8fa; /* Light blue-grey background */
+            --dark-bg: #032a4e; /* Deep blue/navy for headers/footers */
+            --text-light: #ffffff;
+            --text-dark: #2c3e50;
+            --hero-overlay: rgba(3, 42, 78, 0.75); /* Dark blue overlay */
+            /* UPDATED: Lighter overlay for Tricolor background image */
+            --issues-overlay: rgba(0, 0, 0, 0.4); 
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+        }
+
+        /* 1. Navbar & Header */
+        .navbar {
+            background-color: var(--dark-bg);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+        }
+        .navbar-brand {
+            color: var(--primary-color) !important;
+            font-weight: 900;
+            font-size: 1.8rem;
+        }
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        .btn-donate-nav {
+            background-color: var(--tertiary-color); /* Using Green for Donate button */
+            border: 1px solid var(--tertiary-color);
+            color: var(--text-light) !important;
+            padding: 8px 20px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-donate-nav:hover {
+            background-color: #117807;
+        }
+
+        /* 2. Hero Carousel Section */
+        #hero-carousel {
+            height: 85vh;
+            margin-top: 66px;
+            overflow: hidden;
+        }
+        .carousel-item {
+            height: 85vh;
+            background-color: var(--dark-bg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hero-overlay);
+        }
+        .carousel-caption {
+            bottom: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+            padding-bottom: 0;
+            color: var(--text-light);
+        }
+        .carousel-caption h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--secondary-color); /* Saffron for highlight */
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+        }
+        .carousel-caption h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .btn-primary-custom:hover {
+            background-color: #0076b8;
+            border-color: #0076b8;
+            transform: translateY(-2px);
+        }
+
+        /* 3. About Section */
+        #about { padding: 80px 0; background-color: var(--text-light); }
+        #about img { border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 4px solid var(--primary-color); }
+        #about h3 { color: var(--primary-color); font-weight: 700; font-size: 2.2rem; margin-bottom: 20px; }
+        .section-title { text-align: center; margin-bottom: 70px; font-size: 3rem; font-weight: 800; color: var(--text-dark); text-transform: uppercase; }
+        .section-title::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--primary-color); margin: 20px auto 0; }
+
+        /* 4. Timeline Section */
+        #timeline { 
+            background-color: var(--dark-bg); 
+            color: var(--text-light); 
+            padding-bottom: 50px; 
+            padding-top: 80px;
+        }
+        #timeline .section-title { color: var(--text-light); }
+        .timeline-container { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline-container::after { 
+            content: ''; 
+            position: absolute; 
+            width: 6px; 
+            background-color: var(--secondary-color); 
+            top: 0; 
+            bottom: 0; 
+            left: 50%; 
+            margin-left: -3px; 
+        }
+        .timeline-item { padding: 10px 40px; position: relative; width: 50%; }
+        .timeline-item::after { 
+            content: ''; 
+            position: absolute; 
+            width: 20px; 
+            height: 20px; 
+            background-color: var(--primary-color); 
+            border: 3px solid var(--text-light); 
+            top: 25px; 
+            border-radius: 50%; 
+            z-index: 1; 
+        }
+        .timeline-item.right::after { left: -10px; }
+        .timeline-item.left::after { right: -10px; }
+        .timeline-content { 
+            padding: 20px; 
+            background-color: #083c6b; 
+            border-radius: 5px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4); 
+        }
+        .timeline-content h4 { 
+            color: var(--secondary-color); 
+            font-weight: 700; 
+            margin-bottom: 5px; 
+        }
+
+        /* 5. Issues Section - MODIFIED FOR NEW TRICOLOR BG */
+        #issues {
+            /* Setting the new Tricolor background image */
+            background-image: url('https://img.freepik.com/free-vector/elegant-independence-day-15-august-tricolor-theme-watercolor-texture-background_1035-27304.jpg?semt=ais_hybrid&w=740&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-bottom: 90px;
+            padding-top: 80px;
+            position: relative; 
+            color: var(--text-light);
+        }
+        #issues::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Using a lighter overlay to preserve the Tricolor look */
+            background: var(--issues-overlay); 
+            z-index: 1;
+        }
+        #issues .container, #issues .section-title {
+            position: relative;
+            z-index: 2;
+        }
+        #issues .section-title {
+            color: var(--text-light); 
+            text-shadow: 1px 1px 3px var(--dark-bg); /* Added shadow for contrast */
+        }
+
+        .issue-card {
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white card */
+            backdrop-filter: blur(5px); /* Stronger blur for visual separation */
+            padding: 30px 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+            transition: all 0.3s;
+            height: 100%;
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .issue-card:hover {
+            box-shadow: 0 5px 20px rgba(0, 132, 204, 0.7); 
+            background-color: rgba(255, 255, 255, 0.35);
+        }
+        .issue-card i {
+            color: var(--tertiary-color); /* Green icon to match Tricolor theme */
+            margin-bottom: 15px;
+        }
+        .issue-card h4 {
+            font-weight: 700;
+            color: var(--text-light);
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        /* 6. Footer */
+        footer { background-color: var(--primary-color); color: var(--text-light); padding: 50px 0; }
+        footer a { color: var(--text-light); text-decoration: none; }
+        .footer-logo { font-size: 2rem; font-weight: 900; margin-bottom: 20px; }
+        .contact-info-item { display: flex; align-items: flex-start; margin-bottom: 15px; }
+        .contact-info-item i { font-size: 1.2rem; margin-right: 15px; margin-top: 5px; }
+        .copyright-bar { background-color: var(--dark-bg); padding: 15px 0; font-size: 0.9rem; }
+        .copyright-bar a { color: var(--secondary-color); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <span class="navbar-text me-3" style="font-size: 1.5rem; color: var(--secondary-color);">
+                <i class="fas fa-hand-paper"></i> 
+            </span>
+            <a class="navbar-brand" href="#">विकास ठाकरे</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero-carousel">मुख्य पृष्ठ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">परिचय</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#timeline">घडामोडी</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#issues">मुद्दे</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">संपर्क</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-donate-nav ms-lg-3" href="#donate">योगदान (Donate)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://i.pinimg.com/originals/19/b7/57/19b7575a2baa88ab3e49a3f76b7449e6.jpg');">
+                <div class="carousel-caption container">
+                    <h1 class="text-uppercase">सत्ता नव्हे, सेवा</h1>
+                    <h3 class="mb-4">सर्वसमावेशक विकास, आमचे ध्येय.</h3>
+                    <a href="#about" class="btn btn-primary-custom btn-lg">आमच्याबद्दल अधिक जाणून घ्या</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: url('https://e1.pxfuel.com/desktop-wallpaper/1005/839/desktop-wallpaper-best-5-tri-indian-national-congress.jpg');">
+                <div class="carousel-caption container">
+                    <h1 class="text-uppercase">गरिबीवर वार</h1>
+                    <h3 class="mb-4">हाताला काम, विकासाला साथ.</h3>
+                    <a href="#contact" class="btn btn-primary-custom btn-lg">जनसेवेत सामील व्हा</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVvjhT8oowREnbS1ymZpkdPJaaYyljus5JnvM_evMk0ss4yqH46u5znHljij69qvnheQs&usqp=CAU');">
+                <div class="carousel-caption container">
+                    <h1 class="text-uppercase">न्याय आणि एकता</h1>
+                    <h3 class="mb-4">लोकशाहीसाठी संघर्ष, सामान्य माणसाचा आवाज.</h3>
+                    <a href="#issues" class="btn btn-primary-custom btn-lg">आमचे मुद्दे पहा</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    <hr>
+    
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">आमचा नेता, आमचे कार्य</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="https://static.toiimg.com/thumb/msid-71682380,width-1280,height-720,resizemode-72/71682380.jpg" alt="Shivesh Kadao" class="img-fluid">
+                </div>
+                <div class="col-lg-7">
+                    <h3>Name : काँग्रेसच्या विचारांचा वारस</h3>
+                    <p class="lead">भंडारा विधानसभा मतदारसंघाचे आमदार विकास ठाकरे यांचे राजकारण **सामाजिक न्याय आणि लोकशाही मूल्यांसाठी** समर्पित आहे.</p>
+                    <p>त्यांनी नेहमीच **समाजातील दुर्बळ घटकांना** न्याय मिळवून देण्यासाठी आवाज उठवला आहे. आरोग्य, शिक्षण, आणि कृषी क्षेत्राला सर्वोच्च प्राधान्य देत, त्यांनी मतदारसंघात अनेक महत्त्वपूर्ण विकास कामे यशस्वीपणे पूर्ण केली आहेत.</p>
+                    <p>त्यांची भूमिका **सत्य आणि अहिंसेच्या** मार्गावर चालणाऱ्या काँग्रेस पक्षाच्या विचारांशी सुसंगत आहे, ज्यामुळे सामान्य माणसाचे जीवनमान सुधारण्यास मदत झाली आहे.</p>
+                    <a href="#" class="btn btn-primary-custom">संपूर्ण चरित्र वाचा</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="timeline">
+        <div class="container timeline-container">
+            <h2 class="section-title">प्रमुख घडामोडी आणि कार्य</h2>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h4>२००९: प्रथम निवडणूक विजय (काँग्रेस)</h4>
+                    <small>भंडारा मतदारसंघातून आमदार म्हणून प्रथम निवड.</small>
+                    <p>काँग्रेस पक्षाचे सदस्य म्हणून राजकीय प्रवासाला सुरुवात, पक्षनिष्ठा व लोकसेवेवर भर.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h4>२०१०-२०१४: आरोग्य आणि शिक्षण</h4>
+                    <small>महिला आणि बाल आरोग्य सुधारणा योजनांवर लक्ष.</small>
+                    <p>जिल्ह्यातील गरीब विद्यार्थ्यांसाठी मोफत शैक्षणिक साहित्य उपलब्ध केले.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h4>२०१९: पुन्हा प्रचंड मतांनी निवड</h4>
+                    <small>लोकांच्या प्रेमामुळे पुन्हा एकदा मोठ्या मताधिक्याने विजयी.</small>
+                    <p>दलित आणि आदिवासींच्या समस्या सोडवण्यासाठी विशेष अभियाने राबवली.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h4>२०२०: रोजगार निर्मिती</h4>
+                    <small>स्थानिक तरुणांसाठी मोठ्या रोजगार मेळाव्यांचे आयोजन.</small>
+                    <p>लघु आणि मध्यम उद्योगांना सरकारी मदत मिळवून देण्यासाठी पाठपुरावा.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h4>सद्यस्थिती: शेतकरी कर्जमुक्तीचा पाठपुरावा</h4>
+                    <small>शेतकऱ्यांसाठी संपूर्ण कर्जमुक्ती आणि योग्य पीक विम्यासाठी संघर्ष.</small>
+                    <p>न्याय आणि समानतेच्या मूल्यांवर आधारित शासन व्यवस्थेसाठी कार्यरत.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="issues">
+        <div class="container">
+            <h2 class="section-title">काँग्रेसचे प्रमुख मुद्दे आणि संकल्प</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="issue-card">
+                        <i class="fas fa-hand-holding-usd fa-4x mb-3"></i>
+                        <h4>शेतकरी न्याय योजना</h4>
+                        <p>शेतकऱ्यांसाठी कर्जमुक्ती आणि उत्पन्न वाढीसाठी हमीभाव कायदे.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="issue-card">
+                        <i class="fas fa-user-graduate fa-4x mb-3"></i>
+                        <h4>बेरोजगारी आणि शिक्षण</h4>
+                        <p>शिक्षणानंतर १००% रोजगार हमीसाठी कठोर सरकारी धोरणे.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="issue-card">
+                        <i class="fas fa-shield-alt fa-4x mb-3"></i>
+                        <h4>महिला सुरक्षा आणि सबलीकरण</h4>
+                        <p>स्थानिक प्रशासनात महिलांना ५०% आरक्षण आणि सुरक्षित वातावरणाची निर्मिती.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="footer-logo text-uppercase">विकास ठाकरे</div>
+                    <p>सामाजिक न्याय आणि लोकशाही मूल्यांसाठी समर्पित. हात बदलेल, भविष्य बदलेल.</p>
+                </div>
+
+                <div class="col-md-2 mb-4">
+                    <h5 class="mb-3 text-uppercase">माहिती</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#about">चरित्र</a></li>
+                        <li><a href="#issues">विकासाचे मुद्दे</a></li>
+                        <li><a href="#">मीडिया कक्ष</a></li>
+                        <li><a href="#timeline">कार्य अहवाल</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <h5 class="mb-3 text-uppercase">संपर्क माहिती</h5>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            **मतदारसंघ कार्यालय:** सहकार नगर, बँक कॉलनी, किसान चौक, भंडारा, महाराष्ट्र ४४१९०४
+                            <br>
+                            **पक्षाचे कार्यालय:** (उदा. प्रदेश काँग्रेस कमिटी, मुंबई)
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@example.com">info@vikasthakre.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+९१ ९९९९ ९९९ ९९९ (Placeholder)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <div class="container d-flex justify-content-between align-items-center">
+                <p class="mb-0 text-white-50">&copy; २०२४ विकास ठाकरे अभियान. सर्व हक्क राखीव. | <a href="#">गोपनीयता धोरण</a></p>
+                <div class="social-icons">
+                    <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth Scrolling JS
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
