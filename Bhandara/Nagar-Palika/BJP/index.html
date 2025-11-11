@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रवीण दटके - भाजप नेते</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts for Marathi (Devanagari) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- AOS for animations (optional, to match original) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 0.5rem 1rem;
+            z-index: 1030;
+        }
+        .navbar-brand {
+            display: flex;
+            flex-direction: column; /* Stack name/logo row and subtitle vertically */
+            align-items: center; /* Center the entire content horizontally */
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #000;
+            position: relative;
+            text-align: center; /* Ensure overall centering */
+        }
+        .name-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.2rem; /* Space between name row and subtitle */
+        }
+        .navbar-brand .first-name {
+            color: #000;
+            margin-right: 0.5rem;
+        }
+        .navbar-brand .logo {
+            width: 40px;
+            height: 40px;
+            margin: 0 0.5rem;
+            flex-shrink: 0;
+            border-radius: 50%; /* Makes the logo circular */
+            object-fit: cover; /* Ensures the image fits nicely within the circle without distortion */
+            border: 2px solid #ff6b35; /* Optional: Adds a saffron border for BJP theme */
+        }
+        .navbar-brand .last-name {
+            color: #000;
+            margin-left: 0.5rem;
+        }
+        .navbar-brand .subtitle {
+            font-size: 0.7rem;
+            color: #6c757d;
+            margin-top: 0.1rem;
+            font-weight: 400;
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        .navbar-nav {
+            list-style: none !important; /* Explicitly remove bullets from nav list */
+            padding-left: 0; /* Remove any default padding that might cause indentation */
+        }
+        .navbar-nav .nav-link {
+            color: #000 !important; /* Black color for navbar text */
+            font-weight: 500;
+            font-size: 1rem !important; /* Medium text size */
+            margin: 0 0.5rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #333 !important; /* Darker black on hover */
+        }
+        .navbar-nav .nav-link.active {
+            color: #333 !important;
+            text-decoration: underline;
+        }
+        /* Arrows for menu items - keep orange for theme, but can change to black if needed */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            right: -0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .nav-link.home::after {
+            border-width: 0 4px 4px 4px;
+            border-color: #ff6b35 transparent transparent transparent;
+        }
+        .nav-link.contact::after {
+            border-width: 4px 4px 0 4px;
+            border-color: #ff6b35 transparent transparent transparent;
+        }
+        .nav-link.video::before,
+        .nav-link.public-service::before,
+        .nav-link.media::before,
+        .nav-link.marathi::before {
+            content: '';
+            position: absolute;
+            left: -0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 4px 4px 0 4px;
+            border-color: #ff6b35 transparent transparent transparent;
+        }
+        .dropdown-menu {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            border: 1px solid #000; /* Black border for dropdown */
+            border-radius: 0.25rem;
+            list-style: none !important; /* Remove any bullets in dropdown */
+            padding-left: 0; /* Remove padding for no indentation */
+        }
+        .dropdown-item {
+            color: #000; /* Black text */
+        }
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .social-icons .btn {
+            background-color: transparent;
+            border: 1px solid #000; /* Black border */
+            color: #000; /* Black icons */
+            margin-left: 0.25rem;
+            padding: 0.25rem;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        .social-icons .btn:hover {
+            background-color: #000; /* Black background on hover */
+            color: white; /* White icons on hover */
+            border-color: #000;
+        }
+        /* Center the navbar content */
+        .navbar-collapse {
+            justify-content: center !important; /* Center the menu items */
+        }
+        .social-icons {
+            margin-left: auto; /* Push social icons to the right */
+        }
+        /* Hero Section Styles (matching the provided React component) */
+        .hero-section {
+            min-height: 90dvh;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 2.5rem 2rem;
+            padding-bottom: 10rem;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        @media (min-width: 768px) {
+            .hero-section {
+                grid-template-columns: 1fr 1fr;
+                padding: 2.5rem 2rem;
+                padding-bottom: 5rem;
+                margin-bottom: 0;
+                gap: 2rem;
+            }
+        }
+        @media (min-width: 1200px) {
+            .hero-section {
+                padding-left: 10rem;
+                padding-right: 10rem;
+            }
+        }
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            filter: grayscale(1) brightness(0.5);
+            z-index: -1;
+        }
+        .hero-left {
+            padding-top: 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            position: relative;
+            z-index: 10;
+        }
+        @media (max-width: 767px) {
+            .hero-left {
+                padding-top: 2.5rem;
+            }
+        }
+        .hero-quote {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        @media (min-width: 768px) {
+            .hero-quote {
+                font-size: 2.5rem;
+            }
+        }
+        .hero-para {
+            color: white;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .hero-btn {
+            display: inline-block;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            background-color: var(--primary-clr, #ff6b35);
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        .hero-btn:hover {
+            background-color: #e55a2b;
+            color: white;
+            transform: translateX(5px);
+        }
+        .hero-btn i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        .hero-btn:hover i {
+            transform: translateX(5px);
+        }
+        .hero-mobile-img {
+            height: 350px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -70%;
+            margin: auto;
+            z-index: -1;
+            display: block;
+        }
+        @media (min-width: 768px) {
+            .hero-mobile-img {
+                display: none;
+            }
+        }
+        .hero-right {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .hero-right {
+                display: block;
+            }
+            .hero-right img {
+                max-height: 800px;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .subscribe-card {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            right: 0;
+            transform: translateY(50%) translateX(-50%);
+            width: fit-content;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .subscribe-card {
+                left: 10rem;
+                transform: translateY(10%);
+                margin: 0;
+            }
+        }
+        /* Simple SubscribeCard placeholder */
+        .subscribe-card-placeholder {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 300px;
+        }
+        /* Mobile adjustments for navbar */
+        @media (max-width: 991px) {
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            .navbar-brand .logo {
+                width: 30px;
+                height: 30px;
+            }
+            .navbar-nav .nav-link {
+                margin: 0.25rem 0;
+                font-size: 1rem !important; /* Keep medium size on mobile */
+            }
+            /* Hide arrows on mobile */
+            .nav-link::after,
+            .nav-link::before {
+                display: none;
+            }
+            .social-icons .btn {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+            }
+            .navbar-collapse {
+                justify-content: flex-start !important; /* Stack on mobile */
+            }
+            .social-icons {
+                margin-left: 0;
+                margin-top: 1rem; /* Space below menu on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <!-- Logo/Brand -->
+            <a class="navbar-brand" href="#">
+                <div class="name-row">
+                    <span class="first-name">प्रवीण</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7RFxfR_DLl_slWLo3AaID_Z4YgTzHl9QLg&s" alt="भाजप लोगो" class="logo"> <!-- Replace with your BJP/leader logo image path -->
+                    <span class="last-name">दटके</span>
+                </div>
+                <div class="subtitle">[नागपूर जिल्हा]</div>
+            </a>
+
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link home active" href="#home">मूळपत्र</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link video" href="#videos">व्हिडिओ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link public-service" href="#services">सेवाजनिक सेवा</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link media" href="#media">मीडिया कवरेज</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact" href="#contact">संपर्क</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle marathi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            मराठी
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('mr')">मराठी</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('en')">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/pravindatkebjp/" class="btn" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="btn" title="X (Twitter)">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="#" class="btn" title="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="btn" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Updated to match provided React design) -->
+    <section class="hero-section" id="home" data-aos="fade-up">
+        <!-- Background Image -->
+        <img src="https://media.assettype.com/sarkarnama%2F2025-04-17%2Ftl7m4rw9%2Fpravin-datke.jpg" alt="Hero Background" class="hero-bg"> <!-- Replace with your hero-bg.png URL/path -->
+
+        <!-- Left Column: Text Content -->
+        <div class="hero-left">
+            <h1 class="hero-quote" data-aos="fade-right"> <!-- Quote placeholder in Marathi -->
+                भारत माता की जय! विकास आणि समर्पणाची वाटचाल.
+            </h1>
+            <p class="hero-para" data-aos="fade-right" data-aos-delay="100">
+                नागपूर जिल्ह्यातील विकास आणि सेवाजनिक सेवेसाठी समर्पित. प्रवीण दटके यांच्या नेतृत्वाखालील भाजपच्या कल्पनेतून एक मजबूत आणि समृद्ध भारत घडवण्याचा संकल्प.
+            </p>
+            <br />
+            <a href="#biography" class="hero-btn" data-aos="fade-right" data-aos-delay="200">
+                अधिक जाणून घ्या <i class="bi bi-arrow-right"></i>
+                <!-- Mobile Hero Image (positioned behind button) -->
+                <img src="hero.png" alt="Hero Image Mobile" class="hero-mobile-img"> <!-- Replace with your hero.png URL/path -->
+            </a>
+        </div>
+
+        <!-- Right Column: Hero Image (Desktop Only) -->
+        <div class="hero-right" data-aos="fade-up">
+            <img src="hero.png" alt="Hero" class="img-fluid"> <!-- Replace with your hero.png URL/path -->
+        </div>
+
+        <!-- Subscribe Card Placeholder (Bottom) -->
+        
+    </section>
+
+    <!-- Additional sections can be added here, e.g., #videos, #services, etc. -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS for animations
+    </script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Language switch function (updated for hero texts)
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.documentElement.lang = 'en';
+                document.querySelector('.dropdown-toggle').textContent = 'English';
+                // Update hero content to English
+                document.querySelector('.hero-quote').textContent = "Jai Hind! Journey of Development and Dedication.";
+                document.querySelector('.hero-para').textContent = "Dedicated to development and public service in Nagpur district. Under the leadership of Pravin Datke, building a strong and prosperous India through BJP's vision.";
+                document.querySelector('.hero-btn').innerHTML = 'Learn More <i class="bi bi-arrow-right"></i>';
+                document.querySelector('.subscribe-card-placeholder h5').textContent = 'Subscribe';
+                document.querySelector('.subscribe-card-placeholder p').textContent = 'Get Updates';
+                document.querySelector('.subscribe-card-placeholder input').placeholder = 'Enter Email';
+                document.querySelector('.subscribe-card-placeholder button').textContent = 'Subscribe';
+                // Update menu items to English
+                document.querySelector('.home').textContent = 'Home';
+                document.querySelector('.video').textContent = 'Videos';
+                document.querySelector('.public-service').textContent = 'Public Service';
+                document.querySelector('.media').textContent = 'Media Coverage';
+                document.querySelector('.contact').textContent = 'Contact';
+            } else {
+                document.documentElement.lang = 'mr';
+                document.querySelector('.dropdown-toggle').textContent = 'मराठी';
+                // Update to Marathi
+                document.querySelector('.hero-quote').textContent = 'भारत माता की जय! विकास आणि समर्पणाची वाटचाल.';
+                document.querySelector('.hero-para').textContent = 'नागपूर जिल्ह्यातील विकास आणि सेवाजनिक सेवेसाठी समर्पित. प्रवीण दटके यांच्या नेतृत्वाखालील भाजपच्या कल्पनेतून एक मजबूत आणि समृद्ध भारत घडवण्याचा संकल्प.';
+                document.querySelector('.hero-btn').innerHTML = 'अधिक जाणून घ्या <i class="bi bi-arrow-right"></i>';
+                document.querySelector('.subscribe-card-placeholder h5').textContent = 'सदस्यता घ्या';
+                document.querySelector('.subscribe-card-placeholder p').textContent = 'अद्यतने मिळवा';
+                document.querySelector('.subscribe-card-placeholder input').placeholder = 'ईमेल टाका';
+                document.querySelector('.subscribe-card-placeholder button').textContent = 'सबस्क्राईब';
+                document.querySelector('.home').textContent = 'मूळपत्र';
+                document.querySelector('.video').textContent = 'व्हिडिओ';
+                document.querySelector('.public-service').textContent = 'सेवाजनिक सेवा';
+                document.querySelector('.media').textContent = 'मीडिया कवरेज';
+                document.querySelector('.contact').textContent = 'संपर्क';
+            }
+        }
+
+        // Adjust hero padding for fixed navbar
+        window.addEventListener('load', function() {
+            const navbar = document.querySelector('.navbar');
+            const hero = document.querySelector('.hero-section');
+            hero.style.paddingTop = navbar.offsetHeight + 'px';
+        });
+    </script>
+
+</body>
+</html>
