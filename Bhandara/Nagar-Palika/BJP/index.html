@@ -1,509 +1,262 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>प्रवीण दटके - भाजप नेते</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Google Fonts for Marathi (Devanagari) -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- AOS for animations (optional, to match original) -->
+    <title>Shri Nitin Gadkari - Official Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: 'Noto Sans Devanagari', sans-serif;
-            background-color: #f8f9fa;
-        }
-        .navbar {
-            background-color: white !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 0.5rem 1rem;
-            z-index: 1030;
-        }
-        .navbar-brand {
-            display: flex;
-            flex-direction: column; /* Stack name/logo row and subtitle vertically */
-            align-items: center; /* Center the entire content horizontally */
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: #000;
-            position: relative;
-            text-align: center; /* Ensure overall centering */
-        }
-        .name-row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.2rem; /* Space between name row and subtitle */
-        }
-        .navbar-brand .first-name {
-            color: #000;
-            margin-right: 0.5rem;
-        }
-        .navbar-brand .logo {
-            width: 40px;
-            height: 40px;
-            margin: 0 0.5rem;
-            flex-shrink: 0;
-            border-radius: 50%; /* Makes the logo circular */
-            object-fit: cover; /* Ensures the image fits nicely within the circle without distortion */
-            border: 2px solid #ff6b35; /* Optional: Adds a saffron border for BJP theme */
-        }
-        .navbar-brand .last-name {
-            color: #000;
-            margin-left: 0.5rem;
-        }
-        .navbar-brand .subtitle {
-            font-size: 0.7rem;
-            color: #6c757d;
-            margin-top: 0.1rem;
-            font-weight: 400;
-            display: block;
-            text-align: center;
-            width: 100%;
-        }
-        .navbar-nav {
-            list-style: none !important; /* Explicitly remove bullets from nav list */
-            padding-left: 0; /* Remove any default padding that might cause indentation */
-        }
-        .navbar-nav .nav-link {
-            color: #000 !important; /* Black color for navbar text */
-            font-weight: 500;
-            font-size: 1rem !important; /* Medium text size */
-            margin: 0 0.5rem;
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #333 !important; /* Darker black on hover */
-        }
-        .navbar-nav .nav-link.active {
-            color: #333 !important;
-            text-decoration: underline;
-        }
-        /* Arrows for menu items - keep orange for theme, but can change to black if needed */
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            right: -0.8rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        .nav-link.home::after {
-            border-width: 0 4px 4px 4px;
-            border-color: #ff6b35 transparent transparent transparent;
-        }
-        .nav-link.contact::after {
-            border-width: 4px 4px 0 4px;
-            border-color: #ff6b35 transparent transparent transparent;
-        }
-        .nav-link.video::before,
-        .nav-link.public-service::before,
-        .nav-link.media::before,
-        .nav-link.marathi::before {
-            content: '';
-            position: absolute;
-            left: -0.8rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 4px 4px 0 4px;
-            border-color: #ff6b35 transparent transparent transparent;
-        }
-        .dropdown-menu {
-            font-family: 'Noto Sans Devanagari', sans-serif;
-            border: 1px solid #000; /* Black border for dropdown */
-            border-radius: 0.25rem;
-            list-style: none !important; /* Remove any bullets in dropdown */
-            padding-left: 0; /* Remove padding for no indentation */
-        }
-        .dropdown-item {
-            color: #000; /* Black text */
-        }
-        .dropdown-item:hover {
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        .social-icons .btn {
-            background-color: transparent;
-            border: 1px solid #000; /* Black border */
-            color: #000; /* Black icons */
-            margin-left: 0.25rem;
-            padding: 0.25rem;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-        }
-        .social-icons .btn:hover {
-            background-color: #000; /* Black background on hover */
-            color: white; /* White icons on hover */
-            border-color: #000;
-        }
-        /* Center the navbar content */
-        .navbar-collapse {
-            justify-content: center !important; /* Center the menu items */
-        }
-        .social-icons {
-            margin-left: auto; /* Push social icons to the right */
-        }
-        /* Hero Section Styles (matching the provided React component) */
-        .hero-section {
-            min-height: 90dvh;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            padding: 2.5rem 2rem;
-            padding-bottom: 10rem;
-            margin-bottom: 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-        @media (min-width: 768px) {
-            .hero-section {
-                grid-template-columns: 1fr 1fr;
-                padding: 2.5rem 2rem;
-                padding-bottom: 5rem;
-                margin-bottom: 0;
-                gap: 2rem;
-            }
-        }
-        @media (min-width: 1200px) {
-            .hero-section {
-                padding-left: 10rem;
-                padding-right: 10rem;
-            }
-        }
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            filter: grayscale(1) brightness(0.5);
-            z-index: -1;
-        }
-        .hero-left {
-            padding-top: 5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            position: relative;
-            z-index: 10;
-        }
-        @media (max-width: 767px) {
-            .hero-left {
-                padding-top: 2.5rem;
-            }
-        }
-        .hero-quote {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-        @media (min-width: 768px) {
-            .hero-quote {
-                font-size: 2.5rem;
-            }
-        }
-        .hero-para {
-            color: white;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .hero-btn {
-            display: inline-block;
-            padding: 1rem 1.5rem;
-            border-radius: 0.75rem;
-            background-color: var(--primary-clr, #ff6b35);
-            color: white;
-            font-size: 1.25rem;
-            font-weight: 700;
-            text-decoration: none;
-            position: relative;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-        .hero-btn:hover {
-            background-color: #e55a2b;
-            color: white;
-            transform: translateX(5px);
-        }
-        .hero-btn i {
-            margin-left: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-        .hero-btn:hover i {
-            transform: translateX(5px);
-        }
-        .hero-mobile-img {
-            height: 350px;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: -70%;
-            margin: auto;
-            z-index: -1;
-            display: block;
-        }
-        @media (min-width: 768px) {
-            .hero-mobile-img {
-                display: none;
-            }
-        }
-        .hero-right {
-            display: none;
-        }
-        @media (min-width: 768px) {
-            .hero-right {
-                display: block;
-            }
-            .hero-right img {
-                max-height: 800px;
-                width: 100%;
-                object-fit: contain;
-            }
-        }
-        .subscribe-card {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            right: 0;
-            transform: translateY(50%) translateX(-50%);
-            width: fit-content;
-            margin: 0 auto;
-        }
-        @media (min-width: 768px) {
-            .subscribe-card {
-                left: 10rem;
-                transform: translateY(10%);
-                margin: 0;
-            }
-        }
-        /* Simple SubscribeCard placeholder */
-        .subscribe-card-placeholder {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 300px;
-        }
-        /* Mobile adjustments for navbar */
-        @media (max-width: 991px) {
-            .navbar-brand {
-                font-size: 1.2rem;
-            }
-            .navbar-brand .logo {
-                width: 30px;
-                height: 30px;
-            }
-            .navbar-nav .nav-link {
-                margin: 0.25rem 0;
-                font-size: 1rem !important; /* Keep medium size on mobile */
-            }
-            /* Hide arrows on mobile */
-            .nav-link::after,
-            .nav-link::before {
-                display: none;
-            }
-            .social-icons .btn {
-                width: 28px;
-                height: 28px;
-                font-size: 0.9rem;
-            }
-            .navbar-collapse {
-                justify-content: flex-start !important; /* Stack on mobile */
-            }
-            .social-icons {
-                margin-left: 0;
-                margin-top: 1rem; /* Space below menu on mobile */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="50">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-fluid">
-            <!-- Logo/Brand -->
-            <a class="navbar-brand" href="#">
-                <div class="name-row">
-                    <span class="first-name">प्रवीण</span>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7RFxfR_DLl_slWLo3AaID_Z4YgTzHl9QLg&s" alt="भाजप लोगो" class="logo"> <!-- Replace with your BJP/leader logo image path -->
-                    <span class="last-name">दटके</span>
-                </div>
-                <div class="subtitle">[नागपूर जिल्हा]</div>
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm py-2">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="https://rukminim2.flixcart.com/image/480/480/xif0q/poster/p/y/1/large-poster-bjp-logo-bhartiya-janta-party-sl-9485-large-poster-original-imah3jbsjsn4vfta.jpeg?q=90" alt="BJP Logo" class="bjp-logo me-2">
+                <span class="fw-bold text-dark-blue">Nitin Gadkari</span>
             </a>
-
-            <!-- Toggle button for mobile -->
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Nav Items -->
+            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link home active" href="#home">मूळपत्र</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link video" href="#videos">व्हिडिओ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link public-service" href="#services">सेवाजनिक सेवा</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link media" href="#media">मीडिया कवरेज</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link contact" href="#contact">संपर्क</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle marathi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            मराठी
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('mr')">मराठी</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('en')">English</a></li>
-                        </ul>
-                    </li>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home" data-lang-key="nav-home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#biography" data-lang-key="nav-bio">Biography</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements" data-lang-key="nav-achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vision" data-lang-key="nav-vision">Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#media" data-lang-key="nav-media">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-lang-key="nav-contact">Contact</a></li>
                 </ul>
-                <!-- Social Icons -->
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/pravindatkebjp/" class="btn" title="Facebook">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="#" class="btn" title="X (Twitter)">
-                        <i class="bi bi-twitter-x"></i>
-                    </a>
-                    <a href="#" class="btn" title="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="#" class="btn" title="YouTube">
-                        <i class="bi bi-youtube"></i>
-                    </a>
+
+                <div class="d-flex align-items-center mt-3 mt-lg-0">
+                    <div id="lang-toggle" class="lang-switch me-3" role="button">
+                        <span class="lang-option active" data-lang="en">EN</span> | 
+                        <span class="lang-option" data-lang="mr">मराठी</span>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="#" class="text-white mx-1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mx-1"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mx-1"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white mx-1"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section (Updated to match provided React design) -->
-    <section class="hero-section" id="home" data-aos="fade-up">
-        <!-- Background Image -->
-        <img src="https://media.assettype.com/sarkarnama%2F2025-04-17%2Ftl7m4rw9%2Fpravin-datke.jpg" alt="Hero Background" class="hero-bg"> <!-- Replace with your hero-bg.png URL/path -->
+    <header id="home" class="hero-section text-white d-flex align-items-center text-center">
+        <div class="hero-slider">
+            <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202409/66e64bf7cbefd-gadkari--who-has-won-the-nagpur-lok-sabha-seat-three-times--is-a-prominent-figure-in-the-bjp-155238554-16x9.jpg?size=948:533" alt="Nitin Gadkari Rally" class="hero-slide-img">
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202411/nitin-gadkari-on-political-crossovers-as-bjps-crop-grows--diseases-increase-090412853-16x9_0.jpg?VersionId=chQaeVG3Jjs7gDodHLErPCL2nFOLXZ9p&size=690:388" alt="Nitin Gadkari Portrait" class="hero-slide-img">
+            <img src="https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2019/02/13/Pictures/bjp-national-convention_02cd06da-2f76-11e9-8feb-c7253ea4083e.jpg" alt="Infrastructure Development" class="hero-slide-img">
+            <img src="https://www.shutterstock.com/image-photo/guwahati-india-29-april-2024-600nw-2464178207.jpg" alt="Green India Initiative" class="hero-slide-img">
+        </div>
+        <div class="hero-overlay"></div> 
 
-        <!-- Left Column: Text Content -->
-        <div class="hero-left">
-            <h1 class="hero-quote" data-aos="fade-right"> <!-- Quote placeholder in Marathi -->
-                भारत माता की जय! विकास आणि समर्पणाची वाटचाल.
+        <div class="container position-relative" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="display-3 fw-bold" data-lang-key="hero-headline" data-slide-key="headline">
+                Transforming India through Infrastructure and Innovation
             </h1>
-            <p class="hero-para" data-aos="fade-right" data-aos-delay="100">
-                नागपूर जिल्ह्यातील विकास आणि सेवाजनिक सेवेसाठी समर्पित. प्रवीण दटके यांच्या नेतृत्वाखालील भाजपच्या कल्पनेतून एक मजबूत आणि समृद्ध भारत घडवण्याचा संकल्प.
+            <p class="lead mt-4 mb-5" data-lang-key="hero-subtext" data-slide-key="subtext">
+                Union Minister of Road Transport & Highways, Government of India.
             </p>
-            <br />
-            <a href="#biography" class="hero-btn" data-aos="fade-right" data-aos-delay="200">
-                अधिक जाणून घ्या <i class="bi bi-arrow-right"></i>
-                <!-- Mobile Hero Image (positioned behind button) -->
-                <img src="hero.png" alt="Hero Image Mobile" class="hero-mobile-img"> <!-- Replace with your hero.png URL/path -->
+            <a href="#biography" class="btn btn-lg btn-saffron-outline" data-lang-key="hero-cta">
+                Know More
             </a>
         </div>
+    </header>
 
-        <!-- Right Column: Hero Image (Desktop Only) -->
-        <div class="hero-right" data-aos="fade-up">
-            <img src="hero.png" alt="Hero" class="img-fluid"> <!-- Replace with your hero.png URL/path -->
+    <section id="biography" class="py-5 py-md-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="https://www.baltana.com/files/wallpapers-39/Nitin-Gadkari-Campaign-Best-Wallpaper.jpg" alt="Shri Nitin Gadkari Portrait" class="profile-photo shadow-lg">
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <h2 class="section-title" data-lang-key="bio-title">Biography</h2>
+                    <p class="lead" data-lang-key="bio-text">
+                        Shri Nitin Jairam Gadkari is the Union Minister for Road Transport & Highways, Government of India. He has been instrumental in transforming India's road infrastructure and promoting sustainable development.
+                    </p>
+                    <p class="mt-4 text-muted">
+                        *Source: Official Website of Shri Nitin Gadkari
+                    </p>
+                </div>
+            </div>
         </div>
-
-        <!-- Subscribe Card Placeholder (Bottom) -->
-        
     </section>
 
-    <!-- Additional sections can be added here, e.g., #videos, #services, etc. -->
+    <section id="achievements" class="py-5 py-md-5 bg-light-orange">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-lang-key="achievements-title">Key Achievements</h2>
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card h-100 shadow-sm achievement-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-road fa-3x text-saffron mb-3"></i>
+                            <h5 class="card-title fw-bold" data-lang-key="card-1-title">World-Class Highways</h5>
+                            <p class="card-text" data-lang-key="card-1-text">Successfully spearheaded the construction of record-breaking lengths of national highways and expressways.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- AOS JS -->
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card h-100 shadow-sm achievement-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-leaf fa-3x text-green mb-3"></i>
+                            <h5 class="card-title fw-bold" data-lang-key="card-2-title">Green Energy & Ethanol</h5>
+                            <p class="card-text" data-lang-key="card-2-text">Championing the use of alternative fuels like Ethanol and Hydrogen to reduce pollution and imports.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card h-100 shadow-sm achievement-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-ship fa-3x text-saffron mb-3"></i>
+                            <h5 class="card-title fw-bold" data-lang-key="card-3-title">River Transport</h5>
+                            <p class="card-text" data-lang-key="card-3-text">Focused on developing inland waterways as an efficient and cost-effective mode of transport.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card h-100 shadow-sm achievement-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-city fa-3x text-green mb-3"></i>
+                            <h5 class="card-title fw-bold" data-lang-key="card-4-title">Smart City Projects</h5>
+                            <p class="card-text" data-lang-key="card-4-text">Integrated sustainable infrastructure and smart technology solutions into urban development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="vision-section text-center text-white d-flex align-items-center py-5 py-md-5">
+        <div class="container">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <h2 class="section-title text-white mb-4" data-lang-key="vision-title">Our Vision</h2>
+                <blockquote class="blockquote display-5 fw-light fst-italic">
+                    <p class="mb-0" data-lang-key="vision-quote">
+                        "My vision is to make India's infrastructure the best in the world."
+                    </p>
+                    <footer class="blockquote-footer text-white-50 mt-3">Shri Nitin Gadkari</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+   <section id="media" class="py-5 py-md-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5" data-lang-key="media-title">Media & Events</h2>
+        <div class="row g-4">
+            
+           <div class="col-md-6" data-aos="fade-up">
+    <div class="ratio ratio-16x9 shadow-lg">
+        <iframe 
+            src="https://www.youtube.com/embed/3kPZvcmsv20" 
+            title="YouTube video 1" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    <p class="text-center mt-2 text-muted small">Speech on Infrastructure Development</p>
+</div>
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="ratio ratio-16x9 shadow-lg">
+                    <iframe 
+                        src="https://www.youtube.com/embed/bOeFZs5ZNdY" 
+                        title="YouTube video 2" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="text-center mt-2 text-muted small">Interview on Green Mobility</p>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in">
+                <img src="https://www.tripurastarnews.com/wp-content/uploads/2024/09/image001KTY0.jpg" class="img-fluid rounded shadow-sm event-img" alt="Public Event 1">
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://www.newsonair.gov.in/wp-content/uploads/2025/04/nitin.jpg" class="img-fluid rounded shadow-sm event-img" alt="Public Event 2">
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://indiashippingnews.com/wp-content/uploads/2024/07/gadkari75.jpg" class="img-fluid rounded shadow-sm event-img" alt="Public Event 3">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="py-5 py-md-5 contact-section-bg">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-lang-key="contact-title">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg p-4 p-md-5 border-0" data-aos="fade-up">
+                        <form>
+                            <div class="mb-3">
+                                <label for="contactName" class="form-label text-muted" data-lang-key="contact-name">Your Name</label>
+                                <input type="text" class="form-control" id="contactName" data-lang-key="contact-name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactEmail" class="form-label text-muted" data-lang-key="contact-email">Your Email</label>
+                                <input type="email" class="form-control" id="contactEmail" data-lang-key="contact-email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label text-muted" data-lang-key="contact-message">Your Message</label>
+                                <textarea class="form-control" id="contactMessage" rows="5" data-lang-key="contact-message" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-saffron-filled w-100" data-lang-key="contact-send">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 text-center" data-aos="fade-up">
+                <div class="col-md-4 mb-4">
+                    <i class="fas fa-map-marker-alt fa-2x text-saffron mb-2"></i>
+                    <h5 data-lang-key="contact-office">Office Address</h5>
+                    <p data-lang-key="office-text">Ministry of Road Transport & Highways, New Delhi</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="fas fa-globe fa-2x text-saffron mb-2"></i>
+                    <h5>Official Website</h5>
+                    <p><a href="https://www.nitingadkari.org/" class="text-decoration-none text-saffron">www.nitingadkari.org</a></p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="fas fa-envelope fa-2x text-saffron mb-2"></i>
+                    <h5>Email</h5>
+                    <p>info@nitingadkari.org</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section text-white py-4">
+        <div class="container text-center">
+            <!--<img src="https://i.pinimg.com/474x/97/74/95/977495bf53ef11fa631c65382688861f.jpg" alt="BJP Logo" class="bjp-logo footer-logo mb-3">
+            <-->
+            <p class="mb-2" data-lang-key="footer-text">GBJ BUZZ | All Rights Reserved</p>
+            <div class="social-icons social-icons-footer">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init(); // Initialize AOS for animations
-    </script>
-    
-    <!-- Custom JS -->
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Language switch function (updated for hero texts)
-        function switchLanguage(lang) {
-            if (lang === 'en') {
-                document.documentElement.lang = 'en';
-                document.querySelector('.dropdown-toggle').textContent = 'English';
-                // Update hero content to English
-                document.querySelector('.hero-quote').textContent = "Jai Hind! Journey of Development and Dedication.";
-                document.querySelector('.hero-para').textContent = "Dedicated to development and public service in Nagpur district. Under the leadership of Pravin Datke, building a strong and prosperous India through BJP's vision.";
-                document.querySelector('.hero-btn').innerHTML = 'Learn More <i class="bi bi-arrow-right"></i>';
-                document.querySelector('.subscribe-card-placeholder h5').textContent = 'Subscribe';
-                document.querySelector('.subscribe-card-placeholder p').textContent = 'Get Updates';
-                document.querySelector('.subscribe-card-placeholder input').placeholder = 'Enter Email';
-                document.querySelector('.subscribe-card-placeholder button').textContent = 'Subscribe';
-                // Update menu items to English
-                document.querySelector('.home').textContent = 'Home';
-                document.querySelector('.video').textContent = 'Videos';
-                document.querySelector('.public-service').textContent = 'Public Service';
-                document.querySelector('.media').textContent = 'Media Coverage';
-                document.querySelector('.contact').textContent = 'Contact';
-            } else {
-                document.documentElement.lang = 'mr';
-                document.querySelector('.dropdown-toggle').textContent = 'मराठी';
-                // Update to Marathi
-                document.querySelector('.hero-quote').textContent = 'भारत माता की जय! विकास आणि समर्पणाची वाटचाल.';
-                document.querySelector('.hero-para').textContent = 'नागपूर जिल्ह्यातील विकास आणि सेवाजनिक सेवेसाठी समर्पित. प्रवीण दटके यांच्या नेतृत्वाखालील भाजपच्या कल्पनेतून एक मजबूत आणि समृद्ध भारत घडवण्याचा संकल्प.';
-                document.querySelector('.hero-btn').innerHTML = 'अधिक जाणून घ्या <i class="bi bi-arrow-right"></i>';
-                document.querySelector('.subscribe-card-placeholder h5').textContent = 'सदस्यता घ्या';
-                document.querySelector('.subscribe-card-placeholder p').textContent = 'अद्यतने मिळवा';
-                document.querySelector('.subscribe-card-placeholder input').placeholder = 'ईमेल टाका';
-                document.querySelector('.subscribe-card-placeholder button').textContent = 'सबस्क्राईब';
-                document.querySelector('.home').textContent = 'मूळपत्र';
-                document.querySelector('.video').textContent = 'व्हिडिओ';
-                document.querySelector('.public-service').textContent = 'सेवाजनिक सेवा';
-                document.querySelector('.media').textContent = 'मीडिया कवरेज';
-                document.querySelector('.contact').textContent = 'संपर्क';
-            }
-        }
-
-        // Adjust hero padding for fixed navbar
-        window.addEventListener('load', function() {
-            const navbar = document.querySelector('.navbar');
-            const hero = document.querySelector('.hero-section');
-            hero.style.paddingTop = navbar.offsetHeight + 'px';
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

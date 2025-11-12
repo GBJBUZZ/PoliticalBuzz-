@@ -1,0 +1,277 @@
+/* Custom Fonts (Optional, using system font for Vercel simplicity) */
+:root {
+    --bjp-saffron: #FF9933;
+    --bjp-green: #138808;
+    --bjp-white: #FFFFFF;
+    --dark-blue: #002244; /* For contrast on a white background */
+}
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--dark-blue);
+    background-color: var(--bjp-white);
+    margin: 0; /* Important: removes default body margin */
+    padding: 0; /* Important: removes default body padding */
+    box-sizing: border-box;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--bjp-saffron);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: var(--bjp-white) !important;
+    border-bottom: 1px solid #eee;
+    z-index: 1000; /* Ensure navbar is always on top */
+}
+
+.navbar-brand .bjp-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--bjp-saffron);
+    padding: 2px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--dark-blue) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--bjp-saffron) !important;
+}
+
+.social-icons a {
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--bjp-saffron);
+}
+
+/* Language Switch */
+.lang-switch {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--dark-blue);
+}
+
+.lang-option {
+    padding: 0 5px;
+    transition: color 0.3s;
+}
+
+.lang-option.active {
+    color: var(--bjp-saffron);
+}
+
+/* 🚀 HERO SECTION FIXES: FULL-SCREEN IMAGE & FLUID SLIDE 🚀 */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden; 
+    padding-top: 56px; /* Space for fixed navbar */
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Slider container is 4x the viewport width for 4 slides */
+    width: 400vw; 
+    height: 100%;
+    display: flex;
+    /* 32s total duration / 4 slides = 8s per slide. */
+    animation: slideBackground 32s infinite linear; 
+}
+
+.hero-slide-img {
+    /* Each image is exactly 100% of the viewport width and height */
+    width: 100vw; 
+    height: 100%;
+    object-fit: cover;
+    /* Fixes any minor rendering gap issues */
+    display: block; 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Darken the image for better text readability */
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1,
+.hero-section p.lead {
+    color: var(--bjp-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Removed opacity transition here for instant text change in JS */
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+}
+
+/* 🔑 KEYFRAMES FOR SLIDING ANIMATION 🔑 */
+@keyframes slideBackground {
+    /* SLIDE 1: 0% to 24% */
+    0% { transform: translateX(0); } 
+    24% { transform: translateX(0); } 
+    /* SLIDE 2: 25% to 49% */
+    25% { transform: translateX(-100vw); } /* Transition to Slide 2 */
+    49% { transform: translateX(-100vw); } 
+    /* SLIDE 3: 50% to 74% */
+    50% { transform: translateX(-200vw); } /* Transition to Slide 3 */
+    74% { transform: translateX(-200vw); } 
+    /* SLIDE 4: 75% to 99% */
+    75% { transform: translateX(-300vw); } /* Transition to Slide 4 */
+    99% { transform: translateX(-300vw); } 
+    /* LOOP: 100% (Instant jump back) */
+    100% { transform: translateX(0); } 
+}
+
+
+/* Custom Saffron Buttons */
+.btn-saffron-outline {
+    color: var(--bjp-white);
+    border-color: var(--bjp-saffron);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-saffron-outline:hover {
+    color: var(--dark-blue);
+    background-color: var(--bjp-saffron);
+    border-color: var(--bjp-saffron);
+}
+
+.btn-saffron-filled {
+    color: var(--bjp-white);
+    background-color: var(--bjp-saffron);
+    border-color: var(--bjp-saffron);
+    transition: all 0.3s ease;
+}
+
+.btn-saffron-filled:hover {
+    background-color: #e68a00; /* Darker saffron */
+    border-color: #e68a00;
+}
+
+/* Biography Section */
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--bjp-saffron);
+}
+
+/* Achievements Section */
+.bg-light-orange {
+    background-color: #fff8f0; /* Very light orange tint */
+}
+
+.achievement-card {
+    border-top: 5px solid var(--bjp-saffron);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.text-saffron { color: var(--bjp-saffron) !important; }
+.text-green { color: var(--bjp-green) !important; }
+
+/* Vision Section - Tricolor Gradient */
+.vision-section {
+    background: linear-gradient(
+        90deg, 
+        var(--bjp-saffron) 0%, 
+        var(--bjp-white) 50%, 
+        var(--bjp-green) 100%
+    );
+    /* Adding a dark overlay for text readability */
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 100px 0;
+}
+
+/* Media Section */
+.event-img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+/* Footer Section */
+.footer-section {
+    background: linear-gradient(to right, #FF9933, #e68a00);
+}
+
+/* NEW: Container for the circular effect (White Background, Saffron Border) */
+.bjp-logo-circle {
+    width: 60px; /* Define the size of the circle */
+    height: 60px; 
+    border-radius: 50%; /* Make the container a circle */
+    background-color: var(--bjp-white); /* Ensures white background */
+    border: 3px solid var(--bjp-saffron); /* Optional Saffron border */
+    margin: 10px auto; /* Centers the circle and adds space */
+    display: flex; /* Centers the logo image inside */
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    /* Make image smaller than the container to fit inside the circle */
+    width: 40px; 
+    height: 40px;
+    /* CRITICAL FIX: Remove the filter that was inverting the colors */
+    filter: none; 
+}
+
+.social-icons-footer a {
+    color: var(--bjp-white);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .hero-section {
+        height: 80vh;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .navbar-collapse {
+        background-color: var(--bjp-white);
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    
+}
