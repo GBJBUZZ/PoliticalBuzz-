@@ -221,6 +221,128 @@ body {
     padding: 100px 0;
 }
 
+/* Vision Section Enhancements */
+.vision-cards-container {
+    position: relative;
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+.vision-cards-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.vision-card {
+    min-width: 100%;
+    padding: 20px;
+}
+
+.vision-card-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.vision-card-content:hover {
+    transform: translateY(-5px);
+}
+
+.vision-card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.vision-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+.vision-card-text {
+    color: #666;
+    line-height: 1.6;
+}
+
+.vision-slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.vision-slider-btn {
+    background: var(--bjp-white);
+    color: var(--dark-blue);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.vision-slider-btn:hover {
+    background: var(--bjp-saffron);
+    color: var(--bjp-white);
+}
+
+.vision-slider-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.vision-slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.vision-slider-dot.active {
+    background: var(--bjp-white);
+    transform: scale(1.2);
+}
+
+.vision-stats {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--bjp-white);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-text {
+    color: var(--bjp-white);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
 /* Media Section */
 .event-img {
     aspect-ratio: 4/3;
@@ -273,5 +395,70 @@ body {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 
+    /* Vision Section Responsive */
+    .vision-card-content {
+        padding: 30px 20px;
+    }
     
+    .vision-card-icon {
+        font-size: 2.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .vision-stats {
+        padding: 30px 20px;
+    }
+    
+    .vision-slider-controls {
+        gap: 15px;
+    }
+    
+    .vision-slider-btn {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .vision-card-title {
+        font-size: 1.3rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .vision-cards-container {
+        margin: 30px 0;
+    }
+    
+    .vision-card {
+        padding: 10px;
+    }
+    
+    .vision-card-content {
+        padding: 25px 15px;
+    }
+    
+    .vision-stats {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+    
+    .stat-item {
+        padding: 15px 10px;
+    }
 }
