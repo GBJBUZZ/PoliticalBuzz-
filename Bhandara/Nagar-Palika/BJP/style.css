@@ -349,6 +349,104 @@ body {
     object-fit: cover;
 }
 
+/* Contact Section with Background Image */
+.contact-section-bg {
+    background: linear-gradient(rgba(0, 34, 68, 0.8), rgba(0, 34, 68, 0.8)), 
+                url('https://wallpapers.com/images/hd/bjp-background-9o5jfnq06htb9inl.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.contact-section-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 153, 51, 0.1); /* Saffron tint overlay */
+    z-index: 0;
+}
+
+.contact-section-bg .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Form Styling */
+.contact-form-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--bjp-saffron);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-form-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 153, 51, 0.3);
+}
+
+.contact-form-card .form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-form-card .form-control:focus {
+    border-color: var(--bjp-saffron);
+    box-shadow: 0 0 0 0.2rem rgba(255, 153, 51, 0.25);
+}
+
+.contact-info-item {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.contact-info-item:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: var(--bjp-saffron);
+    transform: translateY(-3px);
+}
+
+/* Social Media Contact Buttons */
+.social-icons-contact .btn {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icons-contact .btn:hover {
+    transform: scale(1.1);
+    background-color: var(--dark-blue) !important;
+    border-color: var(--dark-blue) !important;
+}
+
+/* Contact Form Enhancements */
+.contact-form-card .form-label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-form-card .form-control {
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.contact-form-card .btn {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+}
+
 /* Footer Section */
 .footer-section {
     background: linear-gradient(to right, #FF9933, #e68a00);
@@ -420,6 +518,19 @@ body {
         width: 45px;
         height: 45px;
     }
+
+    /* Contact Section Responsive */
+    .contact-section-bg {
+        background-attachment: scroll;
+    }
+    
+    .contact-form-card {
+        margin: 0 10px;
+    }
+    
+    .contact-info-item {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -460,5 +571,15 @@ body {
     
     .stat-item {
         padding: 15px 10px;
+    }
+    
+    .contact-form-card {
+        padding: 20px 15px !important;
+    }
+    
+    .social-icons-contact .btn {
+        width: 45px;
+        height: 45px;
+        margin: 5px;
     }
 }

@@ -138,6 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
             'contact-send': 'Send Message',
             'contact-office': 'Office Address',
             'office-text': 'MLA Bungalow, Bhandara District, Maharashtra',
+            'contact-phone': 'Phone Number',
+            'contact-subject': 'Subject',
+            'office-hours': 'Office Hours',
+            'connect-with-us': 'Connect With Us',
             
             // Footer
             'footer-text': 'GBJ BUZZ | All Rights Reserved',
@@ -229,6 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
             'contact-send': 'संदेश पाठवा',
             'contact-office': 'कार्यालयाचा पत्ता',
             'office-text': 'आमदार बंगला, भंडारा जिल्हा, महाराष्ट्र',
+            'contact-phone': 'फोन नंबर',
+            'contact-subject': 'विषय',
+            'office-hours': 'कार्यालयीन वेळ',
+            'connect-with-us': 'आमच्याशी संपर्क साधा',
             
             // Footer
             'footer-text': 'GBJ BUZZ | सर्व हक्क राखीव',
