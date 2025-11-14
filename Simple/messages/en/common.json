@@ -1,0 +1,317 @@
+{
+  "lang": "English",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "biography": "Biography",
+    "political journey": "Political Journey",
+    "government schemes": "Government Schemes",
+    "development works": "Development Works",
+    "public services": "Public Services",
+    "sports": "Sports",
+    "agriculture": "Agriculture",
+    "education": "Education",
+    "employment": "Employment",
+    "healthcare": "Healthcare",
+    "media coverage": "Media Coverage",
+    "news": "News",
+    "gallery": "Gallery",
+    "assets": "Assets",
+    "contact": "Contact",
+    "marathi": "Marathi",
+    "english": "English"
+  },
+  "main": {
+    "hero": {
+      "quote": "Empowering the Youth: Narendra Bhondekar's Vision for the Next Generation",
+      "para": "Narendra Bhojraj Bhondekar's journey from Bhandara to the political forefront of Maharashtra exemplifies dedication and service. With a profound understanding of the challenges faced by the common man, he has tirelessly worked to implement solutions that foster community development and empowerment.",
+      "learn more": "Learn More",
+      "get more news": "Get Our News",
+      "subscribe": "Subscribe to Our News !",
+      "input": "Your Phone Number"
+    },
+    "about": {
+      "title": "A Strong Politician with great Vision",
+      "sub-title": "Early Life and Education",
+      "para1": "Narendra Bhojraj Bhondekar is a prominent politician and dedicated public servant from Bhandara district, Maharashtra. Born on June 28, 1979, in Bhandara, he has risen to become a significant figure in Maharashtra's political landscape, known for his unwavering commitment to solving the problems of the common man.",
+      "para2": "Narendra Bhondekar was born into a family with a farming background. His early life was marked by the values of hard work and dedication, which he carried forward into his professional life. He pursued his education in Bhandara, where he developed a keen interest in social activism and public service. His educational background laid a strong foundation for his future endeavors in politics and community service.",
+      "mission": "Our mission is to provide executive leadership, as well as set priorities and goals for the City and its Neighborhood.",
+      "name": "Narendra Bhondekar"
+    },
+    "video": {
+      "title": "The Ever-Present Pillar: Supporting Students in Education and Sports"
+    },
+    "facts": {
+      "title": "Facts",
+      "title2": "Interesting & Amazing Facts About Him",
+      "experience": {
+        "number": "12",
+        "text": "Years of Experience"
+      },
+      "constituency": {
+        "number": "2",
+        "text": "Constituencies"
+      },
+      "voters": {
+        "number": "3.89",
+        "amount": "k",
+        "text": "Voters"
+      },
+      "projects": {
+        "number": "100",
+        "text": "Projects Done"
+      }
+    },
+    "services": {
+      "title": "Public Services",
+      "sports": "Sports",
+      "agriculture": "Agriculture",
+      "education": "Education",
+      "employment": "Employment",
+      "healthcare": "Healthcare"
+    },
+    "political journey": {
+      "title": "Political Journey",
+      "sub-title": "SHORT BIOGRAPHY",
+      "2009": {
+        "title": "First Election",
+        "para": "He contested the Maharashtra Legislative Assembly elections as an independent candidate from the Bhandara constituency."
+      },
+      "2014": {
+        "title": "Development Initiatives",
+        "para": "Bhondekar focused on infrastructural development, including road construction, electrification of villages, and improving water supply systems."
+      },
+      "2019": {
+        "title": "Re-election",
+        "para": "Bhondekar was re-elected in 2019, reflecting the continued trust and support of the people of Bhandara."
+      },
+      "2024": {
+        "title": "Ongoing Efforts",
+        "para": "His ongoing projects include setting up skill development centres, enhancing healthcare facilities, and promoting digital literacy."
+      },
+      "contact": {
+        "text": "Contact us? Consult with us for any Help.",
+        "number": "+91 99230 54245"
+      }
+    },
+    "members": {
+      "title": "Meet Our Officers",
+      "sub-title": "TEAM MEMBERS"
+    }
+  },
+  "footer": {
+    "text": "Narendra Bhondekar is a politician from Bhandara district, Maharashtra. He is current Member of Maharashtra Legislative Assembly from Bhandara Vidhan Sabha constituency.",
+    "explore": "Explore",
+    "services": "Services",
+    "contact us": "Contact Us",
+    "location": "Location",
+    "address": "Sahkar Nagar, Bank Colony, Kisan Chowk, Bhandara, Maharashtra 441904",
+    "mail us": "Mail Us",
+    "email": "mlabhondekaroffice@gmail.com",
+    "socials": "Socials"
+  },
+  "biography": {
+    "name": "Narendra Bhojraj Bhondekar",
+    "title": "Biography",
+    "section1": {
+      "title": "Political Career",
+      "para": "Narendra Bhondekar's political journey began with his election to the Maharashtra Legislative Assembly in 2009, representing the Bhandara Vidhan Sabha constituency. His tenure was marked by a focus on grassroots development, addressing local issues, and implementing policies that benefited his constituents. Recognizing his dedication and effectiveness, the people of Bhandara re-elected him in 2019, reaffirming their trust in his leadership."
+    },
+    "section2": {
+      "title": "Commitment to Public Service",
+      "para": "Throughout his political career, Bhondekar has been a relentless advocate for the common man. He has championed various initiatives aimed at improving the quality of life in his constituency, including infrastructure development, healthcare, education, and agricultural support. His background in farming gives him a unique perspective on the challenges faced by the agrarian community, and he has worked tirelessly to implement sustainable farming practices and support local farmers."
+    },
+    "section3": {
+      "title": "Legacy and Impact",
+      "para": "Narendra Bhojraj Bhondekar's legacy is one of dedication, hard work, and an unrelenting commitment to the betterment of his community. His efforts have brought significant positive changes to Bhandara, improving the lives of its residents and setting a benchmark for other politicians. As he continues to serve his constituency, his impact is felt not only in Bhandara but also across Maharashtra, inspiring future generations of leaders."
+    }
+  },
+  "political journey": {
+    "title": "Political Journey",
+    "para1": "Narendra Bhondekar's political journey is marked by his dedication to public service and consistent efforts to address the issues faced by his constituency:",
+    "para2": "Bhondekar started his political career with a strong commitment to social work, actively participating in community development activities in Bhandara. His grassroots involvement and understanding of local issues laid the foundation for his political aspirations.",
+    "journey": {
+      "2009": {
+        "title": "First Election (2009)",
+        "para": "In 2009, Bhondekar contested the Maharashtra Legislative Assembly elections as an independent candidate from the Bhandara constituency. His victory marked the beginning of his formal political career, driven by his promise to bring about significant developmental changes in the region."
+      },
+      "2014": {
+        "title": "Development Initiatives (2009-2014)",
+        "para": "During his first term, Bhondekar focused on infrastructural development, including road construction, electrification of villages, and improving water supply systems. He initiated various social welfare programs aimed at improving healthcare and education in rural areas."
+      },
+      "2019": {
+        "title": "Re-election (2019)",
+        "para": "Bhondekar was re-elected in 2019, reflecting the continued trust and support of the people of Bhandara. His second term saw an intensified focus on sustainable development, digital literacy, and employment generation."
+      },
+      "2024": {
+        "title": "Ongoing Efforts",
+        "para": "Bhondekar continues to work towards his vision of a prosperous Bhandara-Paoni. His ongoing projects include setting up skill development centres, enhancing healthcare facilities, and promoting digital literacy. He remains committed to addressing the needs of his constituents and ensuring that the benefits of development reach every corner of his constituency."
+      }
+    }
+  },
+  "services": {
+    "sports": {
+      "title": "Sports",
+      "para1": "He was a passionate advocate for student involvement in sports, believing in its power to instill discipline, teamwork, and resilience. He actively supported various sports programs at schools, ensuring that every student had the opportunity to participate regardless of their background.",
+      "para2": "Narendra worked tirelessly to secure funding for sports equipment and facilities, understanding that proper resources were crucial for success. He organized regular sports events and competitions, encouraging students to showcase their talents and learn from one another. His efforts extended to mentoring young athletes, offering guidance and inspiration to help them reach their full potential.",
+      "para3": "Narendra also emphasized the importance of balancing academics and athletics, promoting a holistic approach to education. His commitment to inclusivity meant that he supported not just mainstream sports but also niche and emerging ones, broadening students' horizons. Under his leadership, the participation rate in school sports significantly increased, fostering a vibrant and active student community. Narendra's legacy lives on in the numerous students who have pursued their passion for sports, achieving excellence both on and off the field. His dedication to student sports development has left an indelible mark, creating a culture of support and encouragement that continues to thrive.",
+      "para4": "Narendra's efforts went beyond just providing resources; he actively engaged with students, understanding their needs and aspirations. He established partnerships with local sports clubs and organizations to offer students additional training opportunities. Narendra believed in recognizing and celebrating achievements, organizing award ceremonies and appreciation events for young athletes. His approach was holistic, focusing on physical fitness, mental well-being, and character building through sports.",
+      "para5": "He also initiated programs to educate parents and the community about the benefits of sports participation, creating a supportive environment for students. Narendra's vision included developing leadership skills among students, encouraging them to take on roles such as team captains and event organizers. This empowerment helped students build confidence and develop a sense of responsibility. His inclusive approach ensured that students of all abilities and interests felt valued and had opportunities to excel.",
+      "para6": "Narendra's influence extended to curriculum development, where he advocated for integrating sports and physical education into the academic framework. He collaborated with educators to design programs that complemented classroom learning with physical activities. This integration aimed to create a balanced and enriching educational experience for students."
+    },
+    "agriculture": {
+      "title": "Agriculture",
+      "para1": "Narendra Bhojraj Bhondekar has made significant contributions to the agricultural sector, particularly in aiding farmers. His efforts have focused on several key areas:",
+      "section1": {
+        "title": "Innovative Techniques",
+        "para": "Bhondekar introduced modern agricultural techniques, helping farmers increase crop yields and improve soil health. By implementing advanced methods such as precision farming, he enabled farmers to optimize resource usage and maximize productivity. His introduction of high-yield crop varieties and improved irrigation techniques revolutionized traditional farming practices."
+      },
+      "section2": {
+        "title": "Sustainable Practices",
+        "para": "He advocated for sustainable farming practices, emphasizing the importance of crop rotation and organic farming. Bhondekar's initiatives aimed at reducing dependency on chemical fertilizers and pesticides, promoting healthier and more environmentally friendly farming methods. His focus on sustainability also included encouraging the use of renewable energy sources, such as solar-powered irrigation systems."
+      },
+      "section3": {
+        "title": "Water Management",
+        "para": "Recognizing the critical role of water in agriculture, he implemented effective water management systems to combat scarcity and promote efficient usage. Bhondekar's efforts included the construction of check dams, rainwater harvesting structures, and drip irrigation systems. These measures significantly improved water availability and usage efficiency, ensuring that farmers could maintain consistent crop production even during dry seasons."
+      },
+      "section4": {
+        "title": "Education and Training",
+        "para": "Bhondekar organized workshops and training programs to educate farmers on best practices, new technologies, and market trends. These educational initiatives equipped farmers with the knowledge and skills necessary to adopt modern agricultural practices. By fostering a culture of continuous learning, Bhondekar ensured that farmers stayed updated on the latest advancements in agriculture."
+      },
+      "section5": {
+        "title": "Financial Assistance",
+        "para": "He facilitated access to financial resources, including low-interest loans and government subsidies, to support farmers' needs. Bhondekar's efforts helped farmers invest in new equipment, seeds, and infrastructure improvements. By providing financial stability, he enabled farmers to take calculated risks and innovate, ultimately leading to increased productivity and profitability."
+      },
+      "para2": "Bhondekar's contributions have had a transformative impact on the agricultural sector. His emphasis on innovation, sustainability, water management, education, and financial support has empowered farmers to overcome challenges and achieve greater success. Through his leadership, Bhondekar has fostered a resilient and prosperous farming community, ensuring a brighter future for agriculture. His legacy continues to inspire and guide farmers towards sustainable and productive agricultural practices."
+    },
+    "employment": {
+      "title": "Employment",
+      "para1": "Narendra Bhojraj Bhondekar was a dedicated individual who made significant contributions to education, particularly in helping students achieve their academic goals. He was known for his unwavering commitment to providing support and guidance to students from various backgrounds. Bhondekar believed in the transformative power of education and worked tirelessly to ensure that every student had access to quality learning opportunities. His approach was holistic, focusing not just on academic excellence but also on personal development and well-being.",
+      "para2": "He organized numerous educational programs, workshops, and seminars aimed at enhancing students' skills and knowledge. These initiatives covered a wide range of subjects, from academic tutoring to life skills and career counseling. Bhondekar's mentorship was instrumental in shaping the careers of many young individuals, helping them realize their full potential. He took a personal interest in each student's journey, offering tailored advice and encouragement.",
+      "para3": "His compassionate nature and genuine interest in student welfare made him a beloved figure in the educational community. Bhondekar was also an advocate for inclusive education, striving to bridge gaps and create a more equitable learning environment. He championed initiatives to support underprivileged and marginalized students, ensuring they had the resources and opportunities needed to succeed.",
+      "para4": "Bhondekar's efforts extended to improving educational infrastructure, securing funding for libraries, laboratories, and technology in schools. He believed in the power of community involvement and often collaborated with parents, teachers, and local organizations to enhance educational outcomes. His dedication to continuous improvement in education inspired many educators to adopt innovative teaching methods and student-centric approaches.",
+      "para5": "Bhondekar's legacy continues to inspire educators and students alike, reflecting his lifelong dedication to the betterment of society through education. His work has left an indelible mark on the community, fostering a culture of learning and personal growth. His vision for an inclusive, supportive, and empowering educational environment continues to influence educational policies and practices."
+    },
+    "education": {
+      "title": "Education",
+      "para1": "Narendra Bhojraj Bhondekar was a dedicated individual who made significant contributions to education, particularly in helping students achieve their academic goals. He was known for his unwavering commitment to providing support and guidance to students from various backgrounds. Bhondekar believed in the transformative power of education and worked tirelessly to ensure that every student had access to quality learning opportunities. His approach was holistic, focusing not just on academic excellence but also on personal development and well-being.",
+      "para2": "He organized numerous educational programs, workshops, and seminars aimed at enhancing student's skills and knowledge. These initiatives covered a wide range of subjects, from academic tutoring to life skills and career counseling. Bhondekar's mentorship was instrumental in shaping the careers of many young individuals, helping them realize their full potential. He took a personal interest in each student's journey, offering tailored advice and encouragement.",
+      "para3": "His compassionate nature and genuine interest in student welfare made him a beloved figure in the educational community. Bhondekar was also an advocate for inclusive education, striving to bridge gaps and create a more equitable learning environment. He championed initiatives to support underprivileged and marginalized students, ensuring they had the resources and opportunities needed to succeed.",
+      "para4": "Bhondekar's efforts extended to improving educational infrastructure, securing funding for libraries, laboratories, and technology in schools. He believed in the power of community involvement and often collaborated with parents, teachers, and local organizations to enhance educational outcomes. His dedication to continuous improvement in education inspired many educators to adopt innovative teaching methods and student-centric approaches.",
+      "para5": "Bhondekar's legacy continues to inspire educators and students alike, reflecting his lifelong dedication to the betterment of society through education. His work has left an indelible mark on the community, fostering a culture of learning and personal growth. His vision for an inclusive, supportive, and empowering educational environment continues to influence educational policies and practices."
+    },
+    "healthcare": {
+      "title": "HealthCare",
+      "section1": {
+        "title": "Medical Facilities Enhancement",
+        "para": "Narendra Bhojraj Bhondekar has worked tirelessly towards upgrading healthcare infrastructure, including the construction and renovation of hospitals, clinics, and primary health centers. His initiatives aimed to ensure that quality medical services were accessible to all, especially in rural and underserved areas. Bhondekar's efforts led to the establishment of new medical facilities equipped with modern technology and essential medical supplies, significantly improving the healthcare standards in the region."
+      },
+      "section2": {
+        "title": "Health Camps and Free Medical Services",
+        "para": "To address immediate healthcare needs, Bhondekar organized regular health camps, providing free medical check-ups and treatment for common ailments. These camps were strategically conducted in remote and economically disadvantaged areas, ensuring that even the most vulnerable populations received necessary medical attention. In addition to treatment, these camps offered diagnostic services and minor surgical procedures, bringing comprehensive healthcare to the doorsteps of those in need."
+      },
+      "section3": {
+        "title": "Preventive Healthcare Programs",
+        "para": "Understanding the importance of prevention, Bhondekar's health camps also included awareness programs on preventive healthcare measures. These programs educated the community on the importance of hygiene, sanitation, and early detection of diseases. Bhondekar collaborated with healthcare professionals to deliver informative sessions, helping individuals adopt healthier lifestyles and reduce the incidence of preventable diseases."
+      },
+      "section4": {
+        "title": "Legacy of Compassionate Healthcare",
+        "para": "Narendra Bhojraj Bhondekar's contributions to healthcare have left an enduring legacy of compassion and service. His multifaceted approach, combining infrastructure development, free medical services, preventive healthcare, and awareness campaigns, has significantly improved healthcare outcomes in his region. Bhondekar's dedication to creating accessible and equitable healthcare continues to inspire efforts towards improving public health and well-being."
+      },
+      "section5": {
+        "title": "Immunization Drives",
+        "para": "Bhondekar launched extensive campaigns to raise awareness about immunization, emphasizing its critical role in preventing infectious diseases. These campaigns targeted parents, educating them on the importance of vaccinating their children against diseases such as polio, measles, and hepatitis. Through door-to-door outreach and community meetings, Bhondekar's initiatives ensured high vaccination coverage and contributed to the overall health and well-being of the community."
+      }
+    }
+  },
+  "news": {
+    "title": "Media and Coverage",
+    "line": "Please review the media coverage of Narendra Bhojraj Bhondekar to gain more insights about him.",
+    "articles": {
+      "1": {
+        "title": "The beautification work of the pole lake in Bhandara city is underway. Under beautification, a huge 51 feet statue of Lord Shrirama is being built on the bank of the lake."
+      },
+      "2": {
+        "title": "Maharashtra's beloved Chief Minister Hon. No. Mr. Bhumipujan ceremony of the first phase of water tourism worth Rs 102 crore in Bhandara assembly constituency was held today by Eknathji Shinde Saheb."
+      },
+      "3": {
+        "title": "Workers from various parties in Bhandara district made public entry in Shiv Sena under the initiative of Bhandara Legislative Assembly constituency."
+      },
+      "4": {
+        "title": "In today. Narendra Bhau met Union Railway Minister Ashwini Vaishnav and requested Rack Point at Bhandara."
+      },
+      "5": {
+        "title": "Reviewing the construction of a 100 bed government sub-district hospital building approved at Pawani and instructed to speed up the work."
+      },
+      "6": {
+        "title": "Ad in today's tour of Bhandara city. Visited Shri Swami Samarth temple near Prabhat Mishra's house. This time interacted with the citizens of the area and learned about their problems."
+      }
+    },
+    "read more": "Read More"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "sub-title": "Explore Main Information"
+  },
+  "contact us": {
+    "title": "Contact Us",
+    "msg": "Send Your Message",
+    "line": "Fill out this form to send your inquires or complaints.",
+    "phone": "+91 99230 54245",
+    "address": "Sahkar Nagar, Bank Colony, Kisan Chowk, Bhandara, Maharashtra 441904",
+    "form": {
+      "first name": "First Name",
+      "last name": "Last Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Message",
+      "send message": "Send Message",
+      "sending": "Sending...",
+      "city": "City"
+    }
+  },
+  "government schemes": {
+    "title": "Government Schemes",
+    "para1": "Narendra Bhondekar, a prominent politician from Maharashtra, has implemented a range of government schemes and initiatives aimed at fostering development in his constituency of Bhandara-Paoni. As a dedicated member of the Maharashtra Legislative Assembly, Bhondekar has channeled his efforts into various sectors, focusing on holistic development and improving the quality of life for his constituents.",
+    "para2": "Under his tenure, numerous infrastructure projects have been launched to enhance connectivity and public amenities. This includes the construction of new roads and bridges, improving transportation, and boosting local commerce. Bhondekar has also prioritized the development of water supply and sanitation facilities to ensure clean water and proper sanitation, thus enhancing public health.",
+    "para3": "The Maharashtra government has introduced a stipend scheme aimed at providing financial assistance to students who have successfully passed their 12th grade. This initiative is designed to support students in pursuing higher education and alleviate some of the financial burdens associated with continuing their studies.",
+    "small-title": "Some notable schemes and projects under his tenure include:",
+    "main-scheme": "Student stipend scheme: Maharashtra govt to give Rs 6,000 to 12th pass students",
+    "scheme1": "Student stipend scheme: Maharashtra govt to give Rs 6,000 to 12th pass students",
+    "scheme2": "Infrastructure Development scheme",
+    "scheme3": "Healthcare Projects",
+    "scheme4": "Maharashtra Launches Free Comprehensive Health Insurance Scheme For All Residents",
+    "scheme5": "Minister Of Agriculuture"
+  },
+  "development works": {
+    "title": "Development Works",
+    "title2": "Empowering Our Community for a Better Tomorrow",
+    "para1": "We are committed to enhancing living standards and fostering national development. By implementing innovative policies and community-driven initiatives, we aim to create sustainable growth and prosperity for all. Our focus is on holistic development, ensuring every citizen has access to quality healthcare, education, and infrastructure. Join us in our mission to build a brighter and more inclusive future for everyone. Together, we can achieve remarkable progress and transform our country.",
+    "movement": "Our Movement is Expanding",
+    "para2": "We are witnessing incredible growth, welcoming new members dedicated to our vision. Together, we strive for a brighter future with inclusive progress and sustainable development.",
+    "care": "We care about Issues",
+    "para3": "To make sure all Citizen rights, you have to work together better country for our child. So we have to take initiative way ensure the all right and make the country better for living",
+    "para4": "Narendra Bhondekar, a dedicated politician from Maharashtra, has initiated numerous development projects aimed at improving the quality of life for residents in his constituency, Bhandara-Paoni. His efforts have focused on several key areas:",
+    "development": {
+      "1": {
+        "title1": "Infrastructure Development",
+        "title2": "Road and Bridge Construction:",
+        "title3": "Water Supply and Sanitation:",
+        "para1": "Bhondekar has overseen the construction and widening of roads and bridges to enhance connectivity and reduce travel time, fostering economic growth in the region.",
+        "para2": "Significant improvements have been made in water supply systems and sanitation facilities, ensuring access to clean water and better hygiene for all residents."
+      },
+      "2": {
+        "title1": "Healthcare Improvements",
+        "title2": "Health Care Facilites:",
+        "para1": "Narendra Bhondekar has focused on significantly improving healthcare in Bhandara-Paoni by establishing new healthcare centers and upgrading existing ones. These initiatives have provided quality medical services closer to residents, reducing the need for long-distance travel for medical care. Bhondekar's efforts have also helped alleviate the burden on major hospitals by ensuring that primary healthcare needs are met locally. This strategic enhancement of healthcare infrastructure has resulted in better health outcomes and increased accessibility for all community members."
+      },
+      "3": {
+        "title1": "Agricultural Support",
+        "para1": "Agricultural support encompasses various initiatives aimed at enhancing farming productivity and sustainability. It includes financial assistance, such as subsidies or grants, to help farmers invest in modern equipment or technologies. Technical support provides expertise on best practices, crop management, and pest control. Training programs educate farmers on innovative techniques and sustainable practices. Additionally, agricultural support often involves research and development to improve crop varieties and farming methods."
+      }
+    }
+  },
+  "quote1": "Determined for public service... Always ready for the people",
+  "quote2": "Yodha of Narendra Bhau",
+  "join": "Join Us"
+}
