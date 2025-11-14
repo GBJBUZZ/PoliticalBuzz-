@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narendra Bhondekar - Shiv Sena</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Official Shiv Sena Saffron/Orange */
+            --primary-color: #FF6600; 
+            /* Deep Black/Dark Grey for contrast */
+            --secondary-color: #222222; 
+            --light-bg: #fdf2e9; 
+            --dark-bg: #111111; /* Very dark/black */
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --hero-overlay: rgba(0, 0, 0, 0.75); 
+            /* New Overlay for Issues Section */
+            --issues-overlay: rgba(17, 17, 17, 0.85); /* Dark transparent overlay */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Navbar & Header */
+        .navbar {
+            background-color: var(--dark-bg);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+        }
+        .navbar-brand {
+            color: var(--primary-color) !important;
+            font-weight: 900;
+            font-size: 1.8rem;
+        }
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        .btn-donate-nav {
+            background-color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            color: var(--text-light) !important;
+            padding: 8px 20px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-donate-nav:hover {
+            background-color: #e05e00;
+        }
+
+        /* 2. Hero Carousel Section */
+        #hero-carousel {
+            height: 85vh; /* Fixed height for the carousel */
+            margin-top: 66px; /* Space for the fixed navbar */
+            overflow: hidden;
+        }
+        .carousel-item {
+            height: 85vh;
+            background-color: var(--dark-bg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hero-overlay);
+        }
+        .carousel-caption {
+            bottom: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+            padding-bottom: 0;
+            color: var(--text-light);
+        }
+        .carousel-caption h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+        }
+        .carousel-caption h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .btn-primary-custom:hover {
+            background-color: #e05e00;
+            border-color: #e05e00;
+            transform: translateY(-2px);
+        }
+
+        /* Sections General Styling */
+        #about { padding: 80px 0; background-color: var(--text-light); }
+        #about img { border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 4px solid var(--primary-color); }
+        #about h3 { color: var(--primary-color); font-weight: 700; font-size: 2.2rem; margin-bottom: 20px; }
+        .section-title { text-align: center; margin-bottom: 70px; font-size: 3rem; font-weight: 800; color: var(--secondary-color); text-transform: uppercase; }
+        .section-title::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--primary-color); margin: 20px auto 0; }
+        #timeline { background-color: var(--dark-bg); color: var(--text-light); padding-bottom: 50px; }
+        #timeline .section-title { color: var(--text-light); }
+        .timeline-container { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline-container::after { content: ''; position: absolute; width: 6px; background-color: var(--primary-color); top: 0; bottom: 0; left: 50%; margin-left: -3px; }
+        .timeline-item { padding: 10px 40px; position: relative; width: 50%; }
+        .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; background-color: var(--primary-color); border: 3px solid var(--text-light); top: 25px; border-radius: 50%; z-index: 1; }
+        .timeline-item.right::after { left: -10px; }
+        .timeline-item.left::after { right: -10px; }
+        .timeline-content { padding: 20px; background-color: var(--secondary-color); border-radius: 5px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); transition: transform 0.3s; }
+        .timeline-content h4 { color: var(--primary-color); font-weight: 700; margin-bottom: 5px; }
+        
+        /* 5. Issues Section - MODIFIED for Background Image */
+        #issues {
+            /* Setting the provided background image */
+            background-image: url('https://t4.ftcdn.net/jpg/02/86/03/35/360_F_286033518_2dJetaaAKYOXTK5doCtfc7VjE6GmlPOd.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Optional: for parallax effect */
+            padding-bottom: 90px;
+            padding-top: 80px; /* Added padding top for consistency */
+            position: relative; 
+            color: var(--text-light); /* Ensure default text color is light */
+        }
+        /* Adding a dark overlay for readability */
+        #issues::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--issues-overlay); /* Dark transparent color */
+            z-index: 1;
+        }
+        #issues .container, #issues .section-title {
+            position: relative; /* Bring content above the overlay */
+            z-index: 2;
+        }
+        #issues .section-title {
+            color: var(--text-light); /* Change title color to white */
+        }
+
+        /* Issue Card Styling within the new background */
+        .issue-card {
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white/light box */
+            backdrop-filter: blur(2px); /* Subtle blur for modern look */
+            padding: 30px 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            height: 100%;
+            color: var(--text-light); /* Text inside card is light */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .issue-card:hover {
+            box-shadow: 0 5px 15px rgba(255,102,0,0.5);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .issue-card i {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .issue-card h4 {
+            font-weight: 700;
+            color: var(--text-light); /* Title inside card is light */
+        }
+
+        /* Footer */
+        footer { background-color: var(--primary-color); color: var(--text-light); padding: 50px 0; }
+        footer a { color: var(--text-light); text-decoration: none; }
+        .footer-logo { font-size: 2rem; font-weight: 900; margin-bottom: 20px; }
+        .contact-info-item { display: flex; align-items: flex-start; margin-bottom: 15px; }
+        .contact-info-item i { font-size: 1.2rem; margin-right: 15px; margin-top: 5px; }
+        .copyright-bar { background-color: var(--dark-bg); padding: 15px 0; font-size: 0.9rem; }
+        .copyright-bar a { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">शिवेश कडाव</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero-carousel">मुख्य पृष्ठ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">परिचय</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#timeline">घडामोडी</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#issues">मुद्दे</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">संपर्क</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-donate-nav ms-lg-3" href="#donate">देणगी</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://tfipost.com/wp-content/uploads/2017/01/Bal-Thakre-HD-Pictures-540x338.jpg');">
+                <div class="carousel-caption container">
+                    <h1 class="text-uppercase">गर्व से कहो</h1>
+                    <h3 class="mb-4">हम हिंदू हैं! जय महाराष्ट्रा!</h3>
+                    <a href="#about" class="btn btn-primary-custom btn-lg">आमच्याबद्दल अधिक जाणून घ्या</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: url('https://pbs.twimg.com/media/CZsmrCIW0AI-F2Q.jpg');">
+                <div class="carousel-caption container">
+                    <h1 class="text-uppercase">भंडारा जिल्ह्याच्या</h1>
+                    <h3 class="mb-4">विकासासाठी कटिबद्ध.</h3>
+                    <a href="#contact" class="btn btn-primary-custom btn-lg">जनसेवेत सामील व्हा</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: url('https://m.media-amazon.com/images/I/51yy+7BmHWS._AC_UF894,1000_QL80_.jpg');">
+                <div class="carousel-caption container">
+                    <h1 class="text-uppercase">जनसेवा हीच</h1>
+                    <h3 class="mb-4">ईश्वर सेवा. Strong Alliance, Strong Maharashtra.</h3>
+                    <a href="#issues" class="btn btn-primary-custom btn-lg">आमचे मुद्दे पहा</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    <hr>
+    
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">आमचा नेता, आमचे कार्य</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="./shivesh.jpg" alt="Shivesh Kadao" class="img-fluid">
+                </div>
+                <div class="col-lg-7">
+                    <h3>शिवेश कडाव : जनसेवेचा वसा</h3>
+                    <p class="lead">भंडारा विधानसभा मतदारसंघाचे आमदार शिवेश कडाव यांचे राजकारण समाजकारण आणि राष्ट्रकार्यासाठी समर्पित आहे.</p>
+                    <p>शेतकरी कुटुंबातून आलेल्या भोंडेकर यांना ग्रामीण भागातील समस्यांची सखोल जाण आहे. २००९ आणि २०१९ मध्ये निवडून आल्यानंतर, त्यांनी मतदारसंघात आरोग्य, शिक्षण, आणि कृषी क्षेत्राला सर्वोच्च प्राधान्य दिले आहे.</p>
+                    <p>त्यांनी अनेक महत्त्वाच्या योजना आणि विकास कामे यशस्वीपणे पूर्ण केली आहेत, ज्यामुळे सामान्य माणसाचे जीवनमान सुधारण्यास मदत झाली आहे. त्यांची भूमिका नेहमीच लोकांच्या बाजूने राहिली आहे.</p>
+                    <a href="#" class="btn btn-primary-custom">संपूर्ण चरित्र वाचा</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="timeline">
+        <div class="container timeline-container">
+            <h2 class="section-title">प्रमुख घडामोडी आणि कार्य</h2>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h4>२००९: प्रथम निवडणूक विजय</h4>
+                    <small>भंडारा मतदारसंघातून आमदार म्हणून प्रथम निवड.</small>
+                    <p>राजकीय प्रवासाला सुरुवात, स्थानिक प्रश्नांवर लक्ष केंद्रित करून लोकांचा विश्वास संपादन केला.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h4>२०१०-२०१४: आरोग्य आणि शिक्षण</h4>
+                    <small>ग्रामीण भागातील प्राथमिक आरोग्य केंद्रांचे आधुनिकीकरण.</small>
+                    <p>जिल्ह्यातील शाळांच्या पायाभूत सुविधा सुधारण्यासाठी विशेष निधी मंजूर करून घेतला.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h4>२०१९: पुन्हा प्रचंड मतांनी निवड</h4>
+                    <small>भंडारा मतदारसंघातील जनतेने पुन्हा एकदा नेतृत्वावर विश्वास दाखवला.</small>
+                    <p>अपक्ष उमेदवार म्हणून निवडणूक जिंकून आपली ताकद सिद्ध केली आणि लगेच शिवसेना पक्षात सामील झाले.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h4>२०२०: जलसंधारणाचे काम</h4>
+                    <small>पाणीटंचाईवर मात करण्यासाठी महत्त्वपूर्ण योजनांची अंमलबजावणी.</small>
+                    <p>अनेक गावांमध्ये तलाव आणि बंधारे बांधण्याचे काम सुरू केले, ज्यामुळे शेतीला फायदा झाला.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h4>सद्यस्थिती: युवा आणि रोजगार</h4>
+                    <small>युवकांसाठी कौशल्य विकास केंद्रे (Skill Development Centers) उघडण्यावर भर.</small>
+                    <p>स्थानिक उद्योगांना प्रोत्साहन देऊन रोजगार निर्मितीसाठी प्रयत्नशील.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="issues">
+        <div class="container">
+            <h2 class="section-title">आमचे प्रमुख मुद्दे आणि संकल्प</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="issue-card">
+                        <i class="fas fa-hand-holding-usd fa-4x mb-3"></i>
+                        <h4>शेतकरी आणि कृषी</h4>
+                        <p>उत्पादन खर्च कमी करणे आणि शेतमालाला योग्य भाव मिळवून देणे.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="issue-card">
+                        <i class="fas fa-user-graduate fa-4x mb-3"></i>
+                        <h4>बेरोजगारी आणि शिक्षण</h4>
+                        <p>युवकांना नोकरीक्षम बनवण्यासाठी तांत्रिक आणि व्यावसायिक शिक्षण.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="issue-card">
+                        <i class="fas fa-heartbeat fa-4x mb-3"></i>
+                        <h4>आरोग्य सेवा सुधारणा</h4>
+                        <p>प्रत्येक गावात उत्तम आरोग्य सुविधा आणि स्वस्त उपचार उपलब्ध करणे.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="footer-logo text-uppercase">शिवेश कडाव</div>
+                    <p>जनसेवेतून राष्ट्र उभारणी. महाराष्ट्राच्या अस्मितेसाठी आणि विकासासाठी कटिबद्ध.</p>
+                </div>
+
+                <div class="col-md-2 mb-4">
+                    <h5 class="mb-3 text-uppercase">माहिती</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#about">चरित्र</a></li>
+                        <li><a href="#issues">विकासाचे मुद्दे</a></li>
+                        <li><a href="#">प्रेस रिलीज</a></li>
+                        <li><a href="#timeline">कार्य अहवाल</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <h5 class="mb-3 text-uppercase">संपर्क माहिती</h5>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            **मतदारसंघ कार्यालय:** सहकार नगर, बँक कॉलनी, किसान चौक, भंडारा, महाराष्ट्र ४४१९०४
+                            <br>
+                            **पक्षाचे कार्यालय:** (उदा. शिवसेना भवन, दादर, मुंबई)
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@example.com">info@shiveshkadao.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+९१ ९९९९ ९९९ ९९९ (Placeholder)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <div class="container d-flex justify-content-between align-items-center">
+                <p class="mb-0 text-white-50">&copy; २०२४ शिवेश कडाव  अभियान. सर्व हक्क राखीव. | <a href="#">गोपनीयता धोरण</a></p>
+                <div class="social-icons">
+                    <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth Scrolling JS
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+:root {
+  /* Official Shiv Sena Saffron/Orange */
+  --primary-color: #FF6600; 
+  /* Deep Black/Dark Grey for contrast */
+  --secondary-color: #222222; 
+  --light-bg: #fdf2e9; 
+  --dark-bg: #111111; /* Very dark/black */
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --hero-overlay: rgba(0, 0, 0, 0.75); 
+  /* New Overlay for Issues Section */
+  --issues-overlay: rgba(17, 17, 17, 0.85); /* Dark transparent overlay */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* Navbar & Header */
+.navbar {
+  background-color: var(--dark-bg);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+.nav-link {
+  color: var(--text-light) !important;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+.btn-donate-nav {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--text-light) !important;
+  padding: 8px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.btn-donate-nav:hover {
+  background-color: #e05e00;
+}
+
+/* 2. Hero Carousel Section */
+#hero-carousel {
+  height: 85vh; /* Fixed height for the carousel */
+  margin-top: 66px; /* Space for the fixed navbar */
+  overflow: hidden;
+}
+.carousel-item {
+  height: 85vh;
+  background-color: var(--dark-bg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--hero-overlay);
+}
+.carousel-caption {
+  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+  padding-bottom: 0;
+  color: var(--text-light);
+}
+.carousel-caption h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+.carousel-caption h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.btn-primary-custom:hover {
+  background-color: #e05e00;
+  border-color: #e05e00;
+  transform: translateY(-2px);
+}
+
+/* Sections General Styling */
+#about { padding: 80px 0; background-color: var(--text-light); }
+#about img { border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 4px solid var(--primary-color); }
+#about h3 { color: var(--primary-color); font-weight: 700; font-size: 2.2rem; margin-bottom: 20px; }
+.section-title { text-align: center; margin-bottom: 70px; font-size: 3rem; font-weight: 800; color: var(--secondary-color); text-transform: uppercase; }
+.section-title::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--primary-color); margin: 20px auto 0; }
+#timeline { background-color: var(--dark-bg); color: var(--text-light); padding-bottom: 50px; }
+#timeline .section-title { color: var(--text-light); }
+.timeline-container { position: relative; max-width: 900px; margin: 0 auto; }
+.timeline-container::after { content: ''; position: absolute; width: 6px; background-color: var(--primary-color); top: 0; bottom: 0; left: 50%; margin-left: -3px; }
+.timeline-item { padding: 10px 40px; position: relative; width: 50%; }
+.timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; background-color: var(--primary-color); border: 3px solid var(--text-light); top: 25px; border-radius: 50%; z-index: 1; }
+.timeline-item.right::after { left: -10px; }
+.timeline-item.left::after { right: -10px; }
+.timeline-content { padding: 20px; background-color: var(--secondary-color); border-radius: 5px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); transition: transform 0.3s; }
+.timeline-content h4 { color: var(--primary-color); font-weight: 700; margin-bottom: 5px; }
+
+/* 5. Issues Section - MODIFIED for Background Image */
+#issues {
+  /* Setting the provided background image */
+  background-image: url('https://t4.ftcdn.net/jpg/02/86/03/35/360_F_286033518_2dJetaaAKYOXTK5doCtfc7VjE6GmlPOd.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: for parallax effect */
+  padding-bottom: 90px;
+  padding-top: 80px; /* Added padding top for consistency */
+  position: relative; 
+  color: var(--text-light); /* Ensure default text color is light */
+}
+/* Adding a dark overlay for readability */
+#issues::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--issues-overlay); /* Dark transparent color */
+  z-index: 1;
+}
+#issues .container, #issues .section-title {
+  position: relative; /* Bring content above the overlay */
+  z-index: 2;
+}
+#issues .section-title {
+  color: var(--text-light); /* Change title color to white */
+}
+
+/* Issue Card Styling within the new background */
+.issue-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white/light box */
+  backdrop-filter: blur(2px); /* Subtle blur for modern look */
+  padding: 30px 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+  height: 100%;
+  color: var(--text-light); /* Text inside card is light */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.issue-card:hover {
+  box-shadow: 0 5px 15px rgba(255,102,0,0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.issue-card i {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+.issue-card h4 {
+  font-weight: 700;
+  color: var(--text-light); /* Title inside card is light */
+}
+
+/* Footer */
+footer { background-color: var(--primary-color); color: var(--text-light); padding: 50px 0; }
+footer a { color: var(--text-light); text-decoration: none; }
+.footer-logo { font-size: 2rem; font-weight: 900; margin-bottom: 20px; }
+.contact-info-item { display: flex; align-items: flex-start; margin-bottom: 15px; }
+.contact-info-item i { font-size: 1.2rem; margin-right: 15px; margin-top: 5px; }
+.copyright-bar { background-color: var(--dark-bg); padding: 15px 0; font-size: 0.9rem; }
+.copyright-bar a { color: var(--primary-color); }
+
+/* Timeline positioning */
+.timeline-item {
+  box-sizing: border-box;
+}
+.timeline-item.left {
+  left: 0;
+}
+.timeline-item.right {
+  left: 50%;
+}
+
+/* Remove default React styles */
+.App {
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+    font-size: 3rem;
+  }
+  .carousel-caption h3 {
+    font-size: 1.8rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .timeline-item::after {
+    left: 40px !important;
+    right: auto !important;
+  }
+  .timeline-container::after {
+    left: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption h1 {
+    font-size: 2.2rem;
+  }
+  .carousel-caption h3 {
+    font-size: 1.4rem;
+  }
+  .btn-primary-custom {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+/* Add these styles to your existing App.css */
+
+/* Language Switcher Styles */
+.language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.language-switcher .btn-group {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.language-switcher .btn {
+  border: 1px solid var(--primary-color);
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.language-switcher .btn-outline-secondary {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+.language-switcher .btn-outline-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-color: var(--primary-color);
+}
+
+/* Responsive adjustments for language switcher */
+@media (max-width: 768px) {
+  .language-switcher {
+    margin-bottom: 10px;
+  }
+  
+  .language-switcher .btn-group {
+    width: 100%;
+  }
+  
+  .language-switcher .btn {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* Ensure navbar items are properly spaced with language switcher */
+.navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .language-switcher {
+    order: -1;
+    margin-bottom: 15px;
+    align-self: flex-end;
+  }
+}
