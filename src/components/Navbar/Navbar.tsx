@@ -26,6 +26,8 @@ export default function Navbar() {
       link: "/",
       more: [],
     },
+
+    
     {
       name: "about",
       link: "/about",
