@@ -12,8 +12,8 @@ export default function About() {
         <div data-aos="fade-in">
           <div className="pt-6 md:pb-20 md:px-8 relative">
             <Image
-              src={"/assets/About/Amadar.jpg"}
-              alt="Narendra Profile"
+              src={"/assets/madhuritai/madhuritai7.png"}
+              alt="madhuritai Mandakar"
               width={500}
               height={500}
               className="md:max-w-[500px] md:max-h-[600px] object-cover object-top md:rounded-xl"

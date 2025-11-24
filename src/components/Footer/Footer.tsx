@@ -14,6 +14,24 @@ export default function Footer() {
   const t1 = useTranslations("nav");
   const t2 = useTranslations("footer");
   const t3 = useTranslations();
+  
+  // --- START: Madhuritai Mandakar Name Logic (same as navbar) ---
+  // Define names for English and Marathi.
+  const nameTranslations = {
+    english: "Madhuritai",
+    marathi: "माधुरीताई", 
+  };
+  const surnameTranslations = {
+    english: "Mandakar",
+    marathi: "मंदाकार", 
+  };
+
+  // Get current language from translations and determine display name
+  const currentLang = t3("lang");
+  const displayName = currentLang === "English" ? nameTranslations.english : nameTranslations.marathi;
+  const displaySurname = currentLang === "English" ? surnameTranslations.english : surnameTranslations.marathi;
+  // --- END: Madhuritai Mandakar Name Logic ---
+
   return (
     <section className="px-8 xl:px-40 py-10 md:py-20 mt-20 relative bg-[var(--primary-clr)]">
       <div className="bg-white rounded-xl w-fit mx-auto shadow-custom overflow-hidden absolute top-0 left-0 right-0 translate-y-[-50%]">
@@ -53,25 +71,24 @@ export default function Footer() {
       </div>
       <footer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 text-white gap-4 py-20">
         <div>
-          <Link href={"/"}>
-            {t3("lang") === "English" ? (
-              <Image
-                src={"/logo-english.svg"}
-                alt="instagram"
-                width={500}
-                height={500}
-                className="max-w-[300px]"
-              />
-            ) : (
-              <Image
-                src={"/logo-marathi.svg"}
-                alt="instagram"
-                width={500}
-                height={500}
-                className="max-w-[300px]"
-              />
-            )}
+          {/* --- UPDATED LOGO AND NAME SECTION (same style as navbar) --- */}
+          <Link href="/" className="flex items-center gap-2 mb-4">
+            <Image
+              src="/assets/bjplotuslogo.svg" // Same BJP logo as navbar
+              alt="BJP Logo"
+              width={100}
+              height={100}
+              className="h-10 w-auto"
+            />
+            <h1 className="text-xl font-[700] uppercase leading-tight text-white">
+              {displayName} {/* Dynamic name based on language */}
+              <br />
+              <span className="text-white">
+                {displaySurname} {/* Dynamic surname based on language */}
+              </span>
+            </h1>
           </Link>
+          {/* --- END UPDATED SECTION --- */}
           <p className="mt-8">{t2("text")}</p>
         </div>
         <div className="md:pl-8">
@@ -178,15 +195,15 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-          <div className="flex justify-center text-xl text-white">
-          <a
-              href="https://www.gbjbuzz.com/"
-              className="underline"
-              target="_blank"
-            >
-              GBJ BUZZ PRIVATE LIMITED
-            </a>
-          </div>
+      <div className="flex justify-center text-xl text-white">
+        <a
+          href="https://www.gbjbuzz.com/"
+          className="underline"
+          target="_blank"
+        >
+          GBJ BUZZ PRIVATE LIMITED
+        </a>
+      </div>
     </section>
   );
 }

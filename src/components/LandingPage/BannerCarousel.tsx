@@ -52,9 +52,9 @@ export default function BannerCarousel() {
   );
 
   const bannerImages = [
-    "/assets/Banner/banner1.jpg",
-    "/assets/Banner/banner2.jpg",
-    "/assets/Banner/banner3.jpg",
+    "/assets/madhuritai/img1.jpg",
+    "/assets/madhuritai/img3.jpg",
+    "/assets/madhuritai/img2.jpg",
   ];
 
   return (

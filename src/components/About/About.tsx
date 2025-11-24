@@ -14,7 +14,7 @@ export default function About() {
         <div>
           <div className="pt-6 md:pb-20 md:px-8 relative">
             <Image
-              src={"/assets/LandingPage/narendra-profile.png"}
+              src={"/assets/madhuritai/madhuritai1.png"}
               alt="Narendra Profile"
               width={500}
               height={500}
@@ -28,7 +28,7 @@ export default function About() {
                   priorities and goals for the City and its neighbourhoods.
                 </p>
                 <p className="font-[700] rufina text-right text-black">
-                  Narendra Bhojraj Bhondekar
+                  Madhuritai Milindji Manadakar
                 </p>
               </div>
             </div>

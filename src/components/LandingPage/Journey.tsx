@@ -67,7 +67,7 @@ export default function Journey() {
             <div className="space-y-2 journey-card">
               <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-primary grid grid-row-2">
                 <Image
-                  src={"/assets/Banner/banner1.jpg"}
+                  src={"/assets/madhuritai/Banner1.jpg"}
                   alt="background"
                   width={1080}
                   height={1000}
@@ -79,7 +79,7 @@ export default function Journey() {
                     className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
                   >
                     <Image
-                      src={"/assets/LandingPage/Journey/calci.svg"}
+                      src={"/assets/calci.svg"}
                       width={30}
                       height={30}
                       alt="Calculator"
@@ -107,7 +107,7 @@ export default function Journey() {
               </div>
               <div className="w-full aspect-video rounded-xl overflow-clip relative">
                 <Image
-                  src={"/assets/Banner/banner5.jpg"}
+                  src={"/assets/madhuritai/img1.jpg"}
                   alt="background"
                   width={1080}
                   height={1000}
@@ -127,7 +127,7 @@ export default function Journey() {
             <div className="space-y-2 journey-card">
               <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-primary grid grid-row-2">
                 <Image
-                  src={"/assets/Banner/banner2.jpg"}
+                  src={"/assets/madhuritai/img3.jpg"}
                   alt="background"
                   width={1080}
                   height={1000}
@@ -140,7 +140,7 @@ export default function Journey() {
                     className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
                   >
                     <Image
-                      src={"/assets/LandingPage/Journey/calendar.svg"}
+                      src={"/assets/calendar.svg"}
                       width={30}
                       height={30}
                       alt="Calculator"
@@ -168,7 +168,7 @@ export default function Journey() {
               </div>
               <div className="w-full aspect-video rounded-xl overflow-clip relative">
                 <Image
-                  src={"/assets/Banner/banner5.jpg"}
+                  src={"/assets/madhuritai/img1.jpg"}
                   alt="background"
                   width={1080}
                   height={1000}
@@ -188,7 +188,7 @@ export default function Journey() {
             <div className="space-y-2 journey-card">
               <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-primary grid grid-row-2">
                 <Image
-                  src={"/assets/Banner/banner3.jpg"}
+                  src={"/assets/madhuritai/img1.jpg"}
                   alt="background"
                   width={1080}
                   height={1000}
@@ -201,7 +201,7 @@ export default function Journey() {
                     className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
                   >
                     <Image
-                      src={"/assets/LandingPage/Journey/checklist.svg"}
+                      src={"/assets/checklist.svg"}
                       width={30}
                       height={30}
                       alt="Calculator"
@@ -229,7 +229,7 @@ export default function Journey() {
               </div>
               <div className="w-full aspect-video rounded-xl overflow-clip relative">
                 <Image
-                  src={"/assets/Banner/banner5.jpg"}
+                  src={"/assets/madhuritai/img3.jpg"}
                   alt="background"
                   width={1080}
                   height={1000}
@@ -249,7 +249,7 @@ export default function Journey() {
             <div className="space-y-2 journey-card">
               <div className="relative w-full aspect-square p-4 rounded-xl overflow-clip text-center shadow-primary grid grid-row-2">
                 <Image
-                  src={"/assets/Banner/banner3.jpg"}
+                  src={"/assets/madhuritai/img2.jpg"}
                   alt="background"
                   width={1080}
                   height={1000}
@@ -262,7 +262,7 @@ export default function Journey() {
                     className="w-fit aspect-square rounded-full p-4 border-[0.8rem] border-[#F4F1F1] hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white"
                   >
                     <Image
-                      src={"/assets/LandingPage/Journey/calendar.svg"}
+                      src={"/assets/calendar.svg"}
                       width={30}
                       height={30}
                       alt="Calculator"
@@ -290,7 +290,7 @@ export default function Journey() {
               </div>
               <div className="w-full aspect-video rounded-xl overflow-clip relative">
                 <Image
-                  src={"/assets/Banner/banner5.jpg"}
+                  src={"/assets/madhuritai/Banner1.jpg"}
                   alt="background"
                   width={1080}
                   height={1000}
@@ -326,14 +326,14 @@ export default function Journey() {
       </div>
 
       <Image
-        src={"/assets/LandingPage/dotted-circle.png"}
+        src={"/assets/dotted-circle.png"}
         width={200}
         height={200}
         alt="Dotted Circle"
         className="absolute top-2 left-0 transform -translate-x-1/2 -z-1"
       />
       <Image
-        src={"/assets/LandingPage/dotted-circle.png"}
+        src={"/assets/dotted-circle.png"}
         width={200}
         height={200}
         alt="Dotted Circle"

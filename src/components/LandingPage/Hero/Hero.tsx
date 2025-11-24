@@ -15,7 +15,7 @@ export default function Hero() {
     <section className="xl:min-h-[90dvh] grid grid-cols-1 md:grid-cols-2 px-8 xl:px-40 py-10 pb-40 md:pb-20 mb-16 md:mb-0 gap-8 relative">
       <Image
         data-aos="fade-in"
-        src={"/assets/LandingPage/hero-bg.png"}
+        src={"/assets/Banner2.jpg"}
         alt="hero background"
         height={1000}
         width={1000}
@@ -47,7 +47,7 @@ export default function Hero() {
             <FaArrowRight className="inline" size={24} />
           </span>
           <Image
-            src={"/assets/LandingPage/hero.png"}
+            src={"/assets/madhuritai/madhuritai1.png"}
             alt="hero"
             height={1000}
             width={1000}
@@ -57,7 +57,7 @@ export default function Hero() {
       </div>
       <div data-aos="fade-up" className="hidden md:block">
         <Image
-          src={"/assets/LandingPage/hero.png"}
+          src={"/assets/madhuritai/madhuritai1.png"}
           alt="hero"
           height={1000}
           width={1000}

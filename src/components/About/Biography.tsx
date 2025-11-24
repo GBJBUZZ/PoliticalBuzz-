@@ -9,7 +9,7 @@ export default function Biography() {
     <>
       <section className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 relative">
         <Image
-          src={"/assets/About/bg.png"}
+          src={"/assets//bg.png"}
           alt="Biography bg"
           width={1000}
           height={1000}

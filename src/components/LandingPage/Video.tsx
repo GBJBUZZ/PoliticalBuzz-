@@ -10,7 +10,7 @@ export default function Video() {
   return (
     <section className="px-8 xl:px-40 py-10 md:py-28 xl:py-60 space-y-8 relative">
       <Image
-        src={"/assets/Banner/banner1.jpg"}
+        src={"/assets/madhuritai/Banner1.jpg"}
         alt="background"
         width={1080}
         height={1000}

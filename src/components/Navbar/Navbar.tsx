@@ -19,7 +19,24 @@ export default function Navbar() {
   const t = useTranslations("nav");
   const t2 = useTranslations();
   const t3 = useTranslations("footer");
-  // const {  } = useRouter();
+  
+  // --- START: Madhuritai Mandakar Name Logic ---
+  // Define names for English and Marathi.
+  const nameTranslations = {
+    english: "Madhuritai",
+    marathi: "माधुरीताई", 
+  };
+  const surnameTranslations = {
+    english: "Mandakar",
+    marathi: "मंदाकार", 
+  };
+
+  // Get current language from translations and determine display name
+  const currentLang = t2("lang");
+  const displayName = currentLang === "English" ? nameTranslations.english : nameTranslations.marathi;
+  const displaySurname = currentLang === "English" ? surnameTranslations.english : surnameTranslations.marathi;
+  // --- END: Madhuritai Mandakar Name Logic ---
+
   const links = [
     {
       name: "home",
@@ -114,25 +131,24 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40">
       <nav className="flex items-center justify-between bg-white py-2 px-4 md:px-16 shadow-lg">
-        <Link href={"/"}>
-          {t2("lang") === "English" ? (
-            <Image
-              src={"/logo-english.svg"}
-              alt="instagram"
-              width={500}
-              height={500}
-              className="max-w-[200px] md:max-w-[300px]"
-            />
-          ) : (
-            <Image
-              src={"/logo-marathi.svg"}
-              alt="instagram"
-              width={500}
-              height={500}
-              className="max-w-[150px] md:max-w-[200px]"
-            />
-          )}
+        {/* --- UPDATED LOGO AND NAME SECTION --- */}
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/assets/bjplotuslogo.svg" // Static BJP logo as requested
+            alt="BJP Logo"
+            width={100}
+            height={100}
+            className="h-10 w-auto"
+          />
+          <h1 className="text-xl font-[700] uppercase leading-tight">
+            {displayName} {/* Dynamic name based on language */}
+            <br />
+            <span className="text-[var(--primary-clr)]">
+              {displaySurname} {/* Dynamic surname based on language */}
+            </span>
+          </h1>
         </Link>
+        {/* --- END UPDATED SECTION --- */}
         <div className="flex xl:hidden items-center gap-2 text-black">
           <Link
             href={"https://linktr.ee/mla_narendra_bhondekar"}
@@ -206,7 +222,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href={
-                  "https://www.youtube.com/@narendrabhondekar-jr5iv/featured"
+                  "https://www.instagram.com/narendra_bhondekar/"
                 }
                 target="_blank"
                 className="bg-[#F4F4F4] p-3 rounded-lg"

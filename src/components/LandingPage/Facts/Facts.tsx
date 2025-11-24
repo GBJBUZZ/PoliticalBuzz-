@@ -22,7 +22,7 @@ export default function Facts() {
         >
           <div className="pr-4 pb-2 pl-6 pt-4 bg-[var(--primary-clr)] rounded-full w-fit aspect-square mx-auto absolute top-0 left-0 -translate-x-[30%] -translate-y-[20%]">
             <Image
-              src={"/assets/LandingPage/facts/badge.svg"}
+              src={"/assets/badge.svg"}
               width={100}
               height={100}
               alt="Constituency"
@@ -44,7 +44,7 @@ export default function Facts() {
         >
           <div className="pr-4 pb-2 pl-6 pt-4 bg-[var(--primary-clr)] rounded-full w-fit aspect-square mx-auto absolute top-0 left-0 -translate-x-[30%] -translate-y-[20%]">
             <Image
-              src={"/assets/LandingPage/facts/officer.svg"}
+              src={"/assets/officer.svg"}
               width={100}
               height={100}
               alt="Constituency"
@@ -65,7 +65,7 @@ export default function Facts() {
         >
           <div className="pr-4 pb-2 pl-6 pt-4 bg-[var(--primary-clr)] rounded-full w-fit aspect-square mx-auto absolute top-0 left-0 -translate-x-[30%] -translate-y-[20%]">
             <Image
-              src={"/assets/LandingPage/facts/daimond.svg"}
+              src={"/assets/daimond.svg"}
               width={100}
               height={100}
               alt="Constituency"
@@ -87,7 +87,7 @@ export default function Facts() {
         >
           <div className="pr-4 pb-2 pl-6 pt-4 bg-[var(--primary-clr)] rounded-full w-fit aspect-square mx-auto absolute top-0 left-0 -translate-x-[30%] -translate-y-[20%]">
             <Image
-              src={"/assets/LandingPage/facts/badge.svg"}
+              src={"/assets/badge.svg"}
               width={100}
               height={100}
               alt="Constituency"
