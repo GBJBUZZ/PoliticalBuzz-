@@ -14,14 +14,14 @@ export default function More() {
         </div>
         <div className="aspect-video bg-gray-200 rounded-xl order-1 md:order-2 relative">
           <Image
-            src={"/assets/About/more1.png"}
-            alt="Narendra Video"
+            src={"/assets/madhuritai/img1.jpg"}
+            alt="Madhuritai Video"
             width={500}
             height={500}
             className="rounded-xl object-cover object-center h-full w-full"
           />{" "}
           <Image
-            src={"/assets/LandingPage/dotted-circle.png"}
+            src={"/assets/dotted-circle.png"}
             width={200}
             height={200}
             alt="Dotted Circle"
@@ -36,14 +36,14 @@ export default function More() {
         </div>
         <div className="aspect-video bg-gray-200 rounded-xl order-1 relative">
           <Image
-            src={"/assets/About/more2.png"}
-            alt="Narendra Video"
+            src={"/assets/madhuritai/img2.jpg"}
+            alt="madhuritai Video"
             width={500}
             height={500}
             className="rounded-xl object-cover object-center h-full w-full"
           />{" "}
           <Image
-            src={"/assets/LandingPage/dotted-circle.png"}
+            src={"/assets/dotted-circle.png"}
             width={200}
             height={200}
             alt="Dotted Circle"
@@ -58,7 +58,7 @@ export default function More() {
         </div>
         <div className="aspect-video bg-gray-200 rounded-xl order-1 md:order-2 relative">
           <Image
-            src={"/assets/About/more3.png"}
+            src={"/assets/madhuritai/img3.jpg"}
             alt="Narendra Video"
             width={500}
             height={500}

@@ -6,19 +6,19 @@ export default function Hero() {
     <section className="grid grid-cols-1 md:grid-cols-2 gap-8 gradient-bg relative overflow-y-hidden">
       <div className="px-8 md:px-20 py-10 md:py-20 space-y-8 place-content-center">
         <h5 className="text-[2rem] text-white">Political Journey</h5>
-        <h1>Narendra Bhojraj Bhondekar</h1>
+        <h1>Madhuritai Milindji Mandakar</h1>
       </div>
       <div className="">
         <Image
-          src={"/assets/Political-Journey/grp-photo.png"}
-          alt="Narendra Bhojraj Bhondekar"
+          src={"/assets/madhuritai/img1.jpg"}
+          alt="madhuritai Mandakar"
           width={1000}
           height={1000}
           className="max-w-[300px] md:max-w-[600px] mx-auto"
         />
       </div>{" "}
       <Image
-        src={"/assets/LandingPage/dotted-circle.png"}
+        src={"/assets/dotted-circle.png"}
         width={200}
         height={200}
         alt="Dotted Circle"

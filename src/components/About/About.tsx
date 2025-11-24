@@ -15,7 +15,7 @@ export default function About() {
           <div className="pt-6 md:pb-20 md:px-8 relative">
             <Image
               src={"/assets/madhuritai/madhuritai1.png"}
-              alt="Narendra Profile"
+              alt="madhuritai"
               width={500}
               height={500}
               className="rounded-t-xl rounded-b-0 md:rounded-b-xl border-8 border-[var(--primary-clr)]"
@@ -38,7 +38,7 @@ export default function About() {
           <h2>A Strong Politician with great Vision</h2>
           <div className="space-y-4">
             <p>
-              Narendra Bhojraj Bhondekar is a prominent politician and dedicated
+              Madhuritai Milindji Manadakar is a prominent politician and dedicated
               public servant from Bhandara district, Maharashtra. Born on June
               28, 1979, in Bhandara, he has risen to become a significant figure
               in Maharashtra&apos;s political landscape, known for his
@@ -49,7 +49,7 @@ export default function About() {
                 Early Life and Education
               </span>
               <br />
-              Narendra Bhondekar was born into a family with a farming
+              Madhuritai Milindji Manadakar was born into a family with a farming
               background. His early life was marked by the values of hard work
               and dedication, which he carried forward into his professional
               life. He pursued his education in Bhandara, where he developed a

@@ -13,7 +13,7 @@ export default function DevelopmentWorks() {
       <>
         <section className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 relative">
           <Image
-            src={"/assets/Banner/banner2.jpg"}
+            src={"/assets/madhuritai/img2.jpg"}
             alt="Biography bg"
             width={1000}
             height={1000}
@@ -25,7 +25,7 @@ export default function DevelopmentWorks() {
           </div>
           <div className="">
             <Image
-              src={"/assets/About/विकास कामे.jpg"}
+              src={"/assets/madhuritai/madhuritai2.png"}
               alt="Narendra Bhojraj Bhondekar"
               width={1000}
               height={1000}
@@ -35,8 +35,8 @@ export default function DevelopmentWorks() {
         </section>
         <div className="md:hidden">
           <Image
-            src={"/assets/About/विकास कामे.jpg"}
-            alt="Narendra Bhojraj Bhondekar"
+            src={"/assets/madhuritai/img1.jpg"}
+            alt="madhuritai Mandakar"
             width={1000}
             height={1000}
             className="max-w-full md:max-w-[400px] mx-auto"
@@ -48,8 +48,8 @@ export default function DevelopmentWorks() {
           <div className="px-8 pb-8 md:px-20 md:pb-20">
             <div className="relative">
               <Image
-                src={"/assets/development-works/narendra3.png"}
-                alt="narendra png"
+                src={"/assets/madhuritai/madhuritai2.png"}
+                alt="madhuritai png"
                 width={1920}
                 height={1080}
                 className="h-full w-full object-cover relative z-10"
@@ -79,7 +79,7 @@ export default function DevelopmentWorks() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <div className="">
                 <Image
-                  src={"/assets/development-works/image3.png"}
+                  src={"/assets/madhuritai/img7.jpg"}
                   alt="image1"
                   width={1920}
                   height={1080}
@@ -105,7 +105,7 @@ export default function DevelopmentWorks() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <div className="">
                 <Image
-                  src={"/assets/development-works/image1.png"}
+                  src={"/assets/madhuritai/hospital.jpg"}
                   alt="image1"
                   width={1920}
                   height={1080}
@@ -125,7 +125,7 @@ export default function DevelopmentWorks() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <div className="">
                 <Image
-                  src={"/assets/development-works/image2.png"}
+                  src={"/assets/madhuritai/farm.jpg"}
                   alt="image1"
                   width={1920}
                   height={1080}

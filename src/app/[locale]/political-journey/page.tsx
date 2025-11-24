@@ -13,7 +13,7 @@ export default function Page() {
       <>
         <section className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 relative">
           <Image
-            src={"/assets/Banner/banner5.jpg"}
+            src={"/assets/Banner2.jpg"}
             alt="Biography bg"
             width={1000}
             height={1000}
@@ -25,7 +25,7 @@ export default function Page() {
           </div>
           <div className="">
             <Image
-              src={"/assets/About/राजकीय प्रवास.jpg"}
+              src={"/assets/madhuritai/madhuritai2.png"}
               alt="Narendra Bhojraj Bhondekar"
               width={1000}
               height={1000}

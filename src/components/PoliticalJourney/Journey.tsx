@@ -48,7 +48,7 @@ export default function Journey() {
   return (
     <section className="px-8 xl:px-40 py-20 relative">
       <Image
-        src={"/assets/LandingPage/dotted-circle.png"}
+        src={"/assets/dotted-circle.png"}
         width={200}
         height={200}
         alt="Dotted Circle"
@@ -74,7 +74,7 @@ export default function Journey() {
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:ml-auto md:mr-20 bg-white order-2 md:order-1">
             <div className="w-full aspect-video rounded-xl overflow-clip relative">
               <Image
-                src={"/assets/Political-Journey/2009.png"}
+                src={"/assets/madhuritai/madhuritai7.png"}
                 alt="background"
                 width={1080}
                 height={1000}
@@ -102,7 +102,7 @@ export default function Journey() {
           <div className="border-4 border-[var(--primary-clr)] w-[30%] aspect-square rounded-full bg-white my-auto mx-auto md:ml-20 order-1 md:order-2">
             <div className="relative w-full aspect-square rounded-full p-4 border-8 md:border-[1.2rem] border-[#F4F1F1] group-hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white flex flex-col items-center justify-center">
               <Image
-                src={"/assets/LandingPage/Journey/calci.svg"}
+                src={"/assets/calci.svg"}
                 width={100}
                 height={100}
                 alt="Calculator"
@@ -128,7 +128,7 @@ export default function Journey() {
           <div className="border-4 border-[var(--primary-clr)] w-[30%] aspect-square rounded-full bg-white my-auto ml-auto mx-auto md:mr-20">
             <div className="relative w-full aspect-square rounded-full p-4 border-8 md:border-[1.2rem] border-[#F4F1F1] group-hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white flex flex-col items-center justify-center">
               <Image
-                src={"/assets/LandingPage/Journey/calendar.svg"}
+                src={"/assets/calendar.svg"}
                 width={100}
                 height={100}
                 alt="Calendar"
@@ -143,7 +143,7 @@ export default function Journey() {
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:mr-auto md:ml-20 bg-white">
             <div className="w-full aspect-video rounded-xl overflow-clip relative">
               <Image
-                src={"/assets/Political-Journey/2014.png"}
+                src={"/assets/madhuritai/img2.jpg"}
                 alt="background"
                 width={1080}
                 height={1000}
@@ -182,7 +182,7 @@ export default function Journey() {
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:ml-auto md:mr-20 bg-white order-2 md:order-1">
             <div className="w-full aspect-video rounded-xl overflow-clip relative">
               <Image
-                src={"/assets/Political-Journey/2019.png"}
+                src={"/assets/madhuritai/img3.jpg"}
                 alt="background"
                 width={1080}
                 height={1000}
@@ -210,7 +210,7 @@ export default function Journey() {
           <div className="border-4 border-[var(--primary-clr)] w-[30%] aspect-square rounded-full bg-white my-auto mx-auto md:ml-20 order-1 md:order-2">
             <div className="relative w-full aspect-square rounded-full p-4 border-8 md:border-[1.2rem] border-[#F4F1F1] group-hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white flex flex-col items-center justify-center">
               <Image
-                src={"/assets/LandingPage/Journey/checklist.svg"}
+                src={"/assets/checklist.svg"}
                 width={100}
                 height={100}
                 alt="Calculator"
@@ -236,7 +236,7 @@ export default function Journey() {
           <div className="border-4 border-[var(--primary-clr)] w-[30%] aspect-square rounded-full bg-white my-auto ml-auto mx-auto md:mr-20">
             <div className="relative w-full aspect-square rounded-full p-4 border-8 md:border-[1.2rem] border-[#F4F1F1] group-hover:border-[var(--primary-clr)] transition-all duration-200 mx-auto bg-white flex flex-col items-center justify-center">
               <Image
-                src={"/assets/LandingPage/Journey/graph.svg"}
+                src={"/assets/graph.svg"}
                 width={100}
                 height={100}
                 alt="Calculator"
@@ -251,7 +251,7 @@ export default function Journey() {
           <div className="md:w-[70%] rounded-xl relative group shadow-xl md:mr-auto md:ml-20 bg-white">
             <div className="w-full aspect-video rounded-xl overflow-clip relative">
               <Image
-                src={"/assets/Political-Journey/2024.png"}
+                src={"/assets/madhuritai/Banner1.jpg"}
                 alt="background"
                 width={1080}
                 height={1000}

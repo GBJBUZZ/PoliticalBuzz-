@@ -9,7 +9,7 @@ export default function Biography() {
     <>
       <section className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 relative">
         <Image
-          src={"/assets//bg.png"}
+          src={"/assets/madhuritai/bgimgbjp1.jpg"}
           alt="Biography bg"
           width={1000}
           height={1000}
@@ -22,8 +22,8 @@ export default function Biography() {
         </div>
         <div className="">
           <Image
-            src={"/assets/About/चरित्र.jpg"}
-            alt="Narendra Bhojraj Bhondekar"
+            src={"/assets/madhuritai/madhuritai2.png"}
+            alt="Madhuritai Milindji Mandakar"
             width={1000}
             height={1000}
             className="max-w-full md:max-w-[400px] mx-auto"
@@ -32,8 +32,8 @@ export default function Biography() {
       </section>
       <div className="block md:hidden">
         <Image
-          src={"/assets/About/चरित्र.jpg"}
-          alt="Narendra Bhojraj Bhondekar"
+          src={"/assets/madhuritai/madhuritai2.png"}
+          alt="madhuritai Mandakar"
           width={1000}
           height={1000}
           className="max-w-full md:max-w-[400px] mx-auto"

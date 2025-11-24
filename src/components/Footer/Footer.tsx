@@ -156,7 +156,7 @@ export default function Footer() {
                 href={"mailto:mlabhondekaroffice@gmail.com"}
                 className="ml-8"
               >
-                mlabhondekaroffice@gmail.com
+                madhuritaimandakar@gmail.com
               </Link>
             </div>
             <br />

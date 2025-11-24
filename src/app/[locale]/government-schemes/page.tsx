@@ -13,7 +13,7 @@ export default function GovernmentSchemes() {
       <>
         <section className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 relative">
           <Image
-            src={"/assets/Banner/banner2.jpg"}
+            src={"/assets/madhuritai/bgimgbjp1.jpg"}
             alt="Biography bg"
             width={1000}
             height={1000}
@@ -25,8 +25,8 @@ export default function GovernmentSchemes() {
           </div>
           <div className="">
             <Image
-              src={"/assets/About/सरकारी योजना.jpg"}
-              alt="Narendra Bhojraj Bhondekar"
+              src={"/assets/madhuritai/madhuritai1.png"}
+              alt="Madhuritai Mandakar"
               width={1000}
               height={1000}
               className="max-w-full md:max-w-[400px] mx-auto"
@@ -35,7 +35,7 @@ export default function GovernmentSchemes() {
         </section>
         <div className="md:hidden">
           <Image
-            src={"/assets/About/सरकारी योजना.jpg"}
+            src={"/assets/madhuritai/bgimgbjp1.jpg"}
             alt="Narendra Bhojraj Bhondekar"
             width={1000}
             height={1000}
@@ -45,7 +45,7 @@ export default function GovernmentSchemes() {
       </>
       <div className="px-8 xl:px-40 pt-20 pb-20 space-y-8">
         <Image
-          src={"/assets/schemes/main-image.png"}
+          src={"/assets/madhuritai/schem.jpg"}
           alt="background"
           width={1920}
           height={1080}
@@ -97,7 +97,7 @@ export default function GovernmentSchemes() {
           </div>
           <div className="space-y-4 order-1 md:order-2">
             <Image
-              src={"/assets/schemes/image1.png"}
+              src={"/assets/madhuritai/schem3.jpg"}
               alt="scheme image"
               width={1920}
               height={1080}
