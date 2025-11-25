@@ -1,0 +1,278 @@
+"use client";
+
+import { Link, usePathname } from "@/navigation";
+import React, { useEffect } from "react";
+import { TfiFacebook } from "react-icons/tfi";
+import { RiTwitterXLine } from "react-icons/ri";
+import { IoMenu, IoClose } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
+import Image from "next/image";
+import GoogleTranslate from "../Translate/GoogleTranslate";
+import { FaArrowRight } from "react-icons/fa";
+import { useTranslations } from "next-intl";
+import LangSwitcher from "./LangSwitcher";
+import DropDown from "./DropDown";
+
+export default function Navbar() {
+  const pathname = usePathname();
+  const t = useTranslations("nav");
+  const t2 = useTranslations();
+  const t3 = useTranslations("footer");
+  
+  // --- START: Madhuritai Mandakar Name Logic ---
+  // Define names for English and Marathi.
+  const nameTranslations = {
+    english: "Rahul",
+    marathi: "राहुल", 
+  };
+  const surnameTranslations = {
+    english: "Gandhi",
+    marathi: "गांधी", 
+  };
+
+  // Get current language from translations and determine display name
+  const currentLang = t2("lang");
+  const displayName = currentLang === "English" ? nameTranslations.english : nameTranslations.marathi;
+  const displaySurname = currentLang === "English" ? surnameTranslations.english : surnameTranslations.marathi;
+  // --- END: Madhuritai Mandakar Name Logic ---
+
+  const links = [
+    {
+      name: "home",
+      link: "/",
+      more: [],
+    },
+    {
+      name: "about",
+      link: "/about",
+      more: [
+        {
+          name: "biography",
+          link: "/biography",
+        },
+        {
+          name: "political journey",
+          link: "/political-journey",
+        },
+        {
+          name: "government schemes",
+          link: "/government-schemes",
+        },
+        {
+          name: "development works",
+          link: "/development-works",
+        },
+      ],
+    },
+    {
+      name: "public services",
+      link: "/vision",
+      more: [
+        {
+          name: "sports",
+          link: "/services/sports",
+        },
+        {
+          name: "agriculture",
+          link: "/services/agriculture",
+        },
+        {
+          name: "employment",
+          link: "/services/employment",
+        },
+        {
+          name: "education",
+          link: "/services/education",
+        },
+        {
+          name: "healthcare",
+          link: "/services/healthcare",
+        },
+      ],
+    },
+    {
+      name: "media coverage",
+      link: "/media-coverage",
+      more: [
+        {
+          name: "news",
+          link: "/media-and-coverage",
+        },
+        {
+          name: "gallery",
+          link: "/gallery",
+        },
+        {
+          name: "assets",
+          link: "https://drive.google.com/drive/folders/1YjdgIuAdYp7Yvsm9N_vk5X18oHqmivVR",
+        },
+      ],
+    },
+    {
+      name: "contact",
+      link: "/contact",
+      more: [],
+    },
+  ];
+
+  const [showMenu, setShowMenu] = React.useState(false);
+
+  useEffect(() => {
+    if (showMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showMenu]);
+
+  const prefLangCookie = encodeURIComponent("/en/mr");
+
+  return (
+    <header className="sticky top-0 z-40">
+      <nav className="flex items-center justify-between bg-white py-2 px-4 md:px-16 shadow-lg">
+        {/* --- UPDATED LOGO AND NAME SECTION --- */}
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/assets/congress.png" // Static Congress logo
+            alt="Congress Logo"
+            width={100}
+            height={100}
+            className="h-10 w-auto"
+          />
+          <h1 className="text-xl font-[700] uppercase leading-tight">
+            {displayName} {/* Dynamic name based on language */}
+            <br />
+            <span className="text-[#87CEEB]">
+              {displaySurname} {/* Dynamic surname based on language */}
+            </span>
+          </h1>
+        </Link>
+        {/* --- END UPDATED SECTION --- */}
+        <div className="flex xl:hidden items-center gap-2 text-black">
+          <Link
+            href={"https://linktr.ee/mla_narendra_bhondekar"}
+            target="_blank"
+            className=" p-2 border-2 border-[#87CEEB] rounded-xl hover:bg-[#87CEEB] hover:text-white"
+          >
+            {t3("socials")}
+          </Link>
+          <button
+            className="xl:hidden z-10"
+            onClick={() => {
+              setShowMenu((x) => !x);
+            }}
+          >
+            {showMenu ? <IoClose size={28} /> : <IoMenu size={28} />}
+          </button>
+        </div>
+
+        <div
+          className={`fixed flex justify-end xl:static bg-white top-0 left-0 right-0 bottom-0  transition-all duration-200 ${
+            showMenu
+              ? "translate-x-0 bg-opacity-40 backdrop-blur"
+              : "translate-x-full bg-opacity-0 backdrop-blur-none"
+          } xl:translate-x-0`}
+        >
+          <div
+            className={`bg-white shadow-xl xl:shadow-none flex flex-col xl:flex-row xl:items-center xl:gap-6 w-fit xl:w-auto h-full xl:h-auto py-20 xl:py-0 xl:px-8 xl:px-0 items-start transition-all duration-200 overflow-y-scroll xl:overflow-y-visible divide-y-2 xl:divide-y-0 divide-white ${
+              showMenu ? "translate-x-0" : "translate-x-full"
+            } xl:translate-x-0`}
+          >
+            {links.map((link, index) =>
+              link.more.length > 0 ? (
+                <DropDown
+                  key={index}
+                  name={link.name}
+                  links={link.more}
+                  setShowMenu={setShowMenu}
+                />
+              ) : (
+                <Link
+                  key={index}
+                  href={link.link}
+                  className={`flex items-center gap-2 xl:hover:text-[#87CEEB] p-4 xl:p-0 bg-[#87CEEB] w-full xl:w-fit xl:bg-white text-white ${
+                    link.link === pathname
+                      ? "xl:text-[#87CEEB]"
+                      : "xl:text-black"
+                  }`}
+                  onClick={() => setShowMenu(false)}
+                >
+                  {t(link.name)}
+                  <FaArrowRight className="inline" />
+                </Link>
+              )
+            )}
+
+            {/* <GoogleTranslate prefLangCookie={prefLangCookie} /> */}
+            <div className="p-4 xl:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
+              <Link
+                href={"https://www.facebook.com/BhandaraShivSena/"}
+                target="_blank"
+                className="bg-[#F4F4F4] p-3 rounded-lg"
+              >
+                <TfiFacebook size={20} />
+              </Link>
+              <Link
+                href={"https://x.com/NBhondekar61"}
+                target="_blank"
+                className="bg-[#F4F4F4] p-3 rounded-lg"
+              >
+                <RiTwitterXLine size={20} />
+              </Link>
+              <Link
+                href={
+                  "https://www.instagram.com/narendra_bhondekar/"
+                }
+                target="_blank"
+                className="bg-[#F4F4F4] p-3 rounded-lg"
+              >
+                <FaInstagram size={20} />
+              </Link>
+              <Link
+                href={
+                  "https://www.youtube.com/@narendrabhondekar-jr5iv/featured"
+                }
+                target="_blank"
+                className="bg-[#F4F4F4] hover:bg-[#87CEEB] hover:text-black transition-all duration-200 p-3 rounded-lg"
+              >
+                <FaYoutube size={20} />
+              </Link>
+            </div>
+            <LangSwitcher />
+          </div>
+        </div>
+        <div className="hidden xl:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
+          <Link
+            href={"https://www.facebook.com/BhandaraShivSena/"}
+            target="_blank"
+            className="bg-[#F4F4F4] hover:bg-[#87CEEB] hover:text-black transition-all duration-200 p-3 rounded-lg"
+          >
+            <TfiFacebook size={20} />
+          </Link>
+          <Link
+            href={"https://x.com/NBhondekar61"}
+            target="_blank"
+            className="bg-[#F4F4F4] hover:bg-[#87CEEB] hover:text-black transition-all duration-200 p-3 rounded-lg"
+          >
+            <RiTwitterXLine size={20} />
+          </Link>
+          <Link
+            href={"https://www.instagram.com/narendra_bhondekar/"}
+            target="_blank"
+            className="bg-[#F4F4F4] hover:bg-[#87CEEB] hover:text-black transition-all duration-200 p-3 rounded-lg"
+          >
+            <FaInstagram size={20} />
+          </Link>
+          <Link
+            href={"https://www.youtube.com/@narendrabhondekar-jr5iv/featured"}
+            target="_blank"
+            className="bg-[#F4F4F4] hover:bg-[#87CEEB] hover:text-black transition-all duration-200 p-3 rounded-lg"
+          >
+            <FaYoutube size={20} />
+          </Link>
+        </div>
+      </nav>
+    </header>
+  );
+}
