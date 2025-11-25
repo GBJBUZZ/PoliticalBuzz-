@@ -58,7 +58,7 @@ export default function Page() {
       {" "}
       <Header
         title="contact us.title"
-        image1="/assets/Banner/banner1.jpg"
+        image1="/assets/madhuritai/Banner1.jpg"
         image2=""
       />
       <section className="px-8 md:px-20 py-20 space-y-16">
@@ -81,7 +81,7 @@ export default function Page() {
                   href={"mailto:mlabhondekaroffice@gmail.com"}
                   className="truncate"
                 >
-                  mlabhondekaroffice@gmail.com
+                  madhuritaimandakar@gmail.com
                 </Link>
               </div>{" "}
               <div className="flex gap-0 md:gap-8 items-start text-center md:text-left  gap-1">
