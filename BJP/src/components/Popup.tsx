@@ -63,7 +63,7 @@ export default function Popup() {
     >
       <figure className="relative ">
         <Image
-          src="/assets/sticker/sticker4.png"
+          src="/assets/sticker/"
           alt="Narendra Bhondekar"
           width={500}
           height={500}
