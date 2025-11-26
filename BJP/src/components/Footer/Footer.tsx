@@ -105,9 +105,6 @@ export default function Footer() {
             <Link href="/#services" className="block">
               {t1("public services")}
             </Link>
-            <Link href="/media-and-coverage" className="block">
-              {t1("media coverage")}
-            </Link>
             <Link href="/gallery" className="block">
               {t1("gallery")}
             </Link>

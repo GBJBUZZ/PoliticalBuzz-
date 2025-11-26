@@ -38,10 +38,13 @@ const khand = Khand({
 });
 
 export const metadata: Metadata = {
-  title: "Narendra Bhondekar",
-  description:
-    "Narendra Bhojraj Bhondekar is a prominent politician and dedicated public servant from Bhandara district, Maharashtra. Born on June 28, 1979, in Bhandara, he has risen to become a significant figure in Maharashtra's political landscape, known for his unwavering commitment to solving the problems of the common man.",
+  title: "Madhurita Manadakar",
+  description: ".",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
+
 
 export default async function RootLayout({
   children,

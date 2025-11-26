@@ -91,24 +91,17 @@ export default function Navbar() {
         },
       ],
     },
-    {
+   {
       name: "media coverage",
       link: "/media-coverage",
       more: [
         {
-          name: "news",
-          link: "/media-and-coverage",
-        },
-        {
           name: "gallery",
           link: "/gallery",
         },
-        {
-          name: "assets",
-          link: "https://drive.google.com/drive/folders/1YjdgIuAdYp7Yvsm9N_vk5X18oHqmivVR",
-        },
       ],
     },
+
     {
       name: "contact",
       link: "/contact",
