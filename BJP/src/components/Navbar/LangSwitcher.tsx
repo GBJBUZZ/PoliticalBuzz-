@@ -18,7 +18,7 @@ export default function LangSwitcher() {
     <>
       <button
         key={10002320}
-        className="text-[var(--primary-txt)] hover:text-[var(--primary-clr)] relative z-50 group text-left hidden xl:block"
+       className="relative z-50 group text-left hidden xl:block transition-all duration-200 text-[#000000] hover:text-[#ffffff]"
       >
         {t("lang")}
         <IoIosArrowDown size={20} className="inline" />

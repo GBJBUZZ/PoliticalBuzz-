@@ -23,12 +23,12 @@ export default function Navbar() {
   // --- START: Madhuritai Mandakar Name Logic ---
   // Define names for English and Marathi.
   const nameTranslations = {
-    english: "Madhuritai",
-    marathi: "माधुरीताई", 
+    english: "Madhuratai",
+    marathi: "मधुराताई", 
   };
   const surnameTranslations = {
-    english: "Mandakar",
-    marathi: "मंदाकार", 
+    english: "Madankar",
+    marathi: "मदनकर", 
   };
 
   // Get current language from translations and determine display name
@@ -123,11 +123,11 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40">
-      <nav className="flex items-center justify-between bg-white py-2 px-4 md:px-16 shadow-lg">
+      <nav className="flex items-center justify-between bg-[#f27115] py-2 px-4 md:px-16 shadow-lg">
         {/* --- UPDATED LOGO AND NAME SECTION --- */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/assets/bjplotuslogo.svg" // Static BJP logo as requested
+            src="/assets/bjpLogo.svg" // Static BJP logo as requested
             alt="BJP Logo"
             width={100}
             height={100}
@@ -136,7 +136,7 @@ export default function Navbar() {
           <h1 className="text-xl font-[700] uppercase leading-tight">
             {displayName} {/* Dynamic name based on language */}
             <br />
-            <span className="text-[var(--primary-clr)]">
+            <span className="text-[#ffffff]">
               {displaySurname} {/* Dynamic surname based on language */}
             </span>
           </h1>
@@ -168,7 +168,7 @@ export default function Navbar() {
           } xl:translate-x-0`}
         >
           <div
-            className={`bg-white shadow-xl xl:shadow-none flex flex-col xl:flex-row xl:items-center xl:gap-6 w-fit xl:w-auto h-full xl:h-auto py-20 xl:py-0 xl:px-8 xl:px-0 items-start transition-all duration-200 overflow-y-scroll xl:overflow-y-visible divide-y-2 xl:divide-y-0 divide-white ${
+            className={`bg-[#f27115] shadow-xl xl:shadow-none flex flex-col xl:flex-row xl:items-center xl:gap-6 w-fit xl:w-auto h-full xl:h-auto py-20 xl:py-0 xl:px-8 xl:px-0 items-start transition-all duration-200 overflow-y-scroll xl:overflow-y-visible divide-y-2 xl:divide-y-0 divide-white ${
               showMenu ? "translate-x-0" : "translate-x-full"
             } xl:translate-x-0`}
           >
@@ -184,11 +184,12 @@ export default function Navbar() {
                 <Link
                   key={index}
                   href={link.link}
-                  className={`flex items-center gap-2 xl:hover:text-[var(--primary-clr)] p-4 xl:p-0 bg-[var(--primary-clr)] w-full xl:w-fit xl:bg-white text-white ${
+                 className={`flex items-center gap-2 p-4 xl:p-0 bg-[#f27115] w-full xl:w-fit transition-all duration-200 ${
                     link.link === pathname
-                      ? "xl:text-[var(--primary-clr)]"
-                      : "xl:text-black"
+                      ? "xl:text-[#ffffff] hover:text-black"   
+                      : "xl:text-black hover:text-white"       
                   }`}
+
                   onClick={() => setShowMenu(false)}
                 >
                   {t(link.name)}
@@ -198,7 +199,7 @@ export default function Navbar() {
             )}
 
             {/* <GoogleTranslate prefLangCookie={prefLangCookie} /> */}
-            <div className="p-4 xl:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
+            {/* <div className="p-4 xl:hidden flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
               <Link
                 href={"https://www.facebook.com/BhandaraShivSena/"}
                 target="_blank"
@@ -231,11 +232,11 @@ export default function Navbar() {
               >
                 <FaYoutube size={20} />
               </Link>
-            </div>
+            </div> */}
             <LangSwitcher />
           </div>
         </div>
-        <div className="hidden xl:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
+        {/* <div className="hidden xl:flex items-center gap-2 pr-2 border-r-2 border-[#f4f4f4]">
           <Link
             href={"https://www.facebook.com/BhandaraShivSena/"}
             target="_blank"
@@ -264,7 +265,9 @@ export default function Navbar() {
           >
             <FaYoutube size={20} />
           </Link>
-        </div>
+        </div> */}
+        <div className="hidden xl:block w-[120px]"></div>
+
       </nav>
     </header>
   );

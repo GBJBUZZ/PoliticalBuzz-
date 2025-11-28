@@ -20,10 +20,10 @@ export default function DropDown({
 
   return (
     <button
-      className="text-[var(--primary-txt)] relative z-40 group xl:hover:text-[var(--primary-clr)] text-left w-full xl:w-auto"
+      className="text-[var(--primary-txt)] relative z-40 group xl:hover:text-[var(--primary-clr)] text-left w-full xl:w-auto "
       onClick={() => setHide((x) => !x)}
     >
-      <span className="p-4 xl:p-0 bg-[var(--primary-clr)] text-white xl:text-black xl:bg-white block xl:inline-block">
+      <span className="p-4 xl:p-0 bg-[var(--primary-clr)] text-white xl:text-black xl:bg-[#f27115] block xl:inline-block">
         {t(name)}
         <IoIosArrowDown size={20} className="inline" />
       </span>
