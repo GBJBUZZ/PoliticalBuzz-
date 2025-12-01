@@ -18,12 +18,12 @@ export default function Footer() {
   // --- START: Madhuritai Mandakar Name Logic (same as navbar) ---
   // Define names for English and Marathi.
   const nameTranslations = {
-    english: "Madhuritai",
-    marathi: "माधुरीताई", 
+    english: "Madhuratai",
+    marathi: "मधुराताई", 
   };
   const surnameTranslations = {
-    english: "Mandakar",
-    marathi: "मंदाकार", 
+    english: "Madankar",
+    marathi: "मदनकर", 
   };
 
   // Get current language from translations and determine display name
