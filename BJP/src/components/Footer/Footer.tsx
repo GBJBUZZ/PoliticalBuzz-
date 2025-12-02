@@ -16,7 +16,6 @@ export default function Footer() {
   const t3 = useTranslations();
   
   // --- START: Madhuritai Mandakar Name Logic (same as navbar) ---
-  // Define names for English and Marathi.
   const nameTranslations = {
     english: "Madhuratai",
     marathi: "मधुराताई", 
@@ -26,180 +25,206 @@ export default function Footer() {
     marathi: "मदनकर", 
   };
 
-  // Get current language from translations and determine display name
   const currentLang = t3("lang");
   const displayName = currentLang === "English" ? nameTranslations.english : nameTranslations.marathi;
   const displaySurname = currentLang === "English" ? surnameTranslations.english : surnameTranslations.marathi;
   // --- END: Madhuritai Mandakar Name Logic ---
 
   return (
-    <section className="px-8 xl:px-40 py-10 md:py-20 mt-20 relative bg-[var(--primary-clr)]">
-      <div className="bg-white rounded-xl w-fit mx-auto shadow-custom overflow-hidden absolute top-0 left-0 right-0 translate-y-[-50%]">
-        <div className="py-4 bg-[var(--primary-clr)] text-center ">
-          <h2 className="text-white">{t2("socials")}</h2>
-        </div>
-        <div className="px-8 md:px-40 py-10 flex items-center justify-center gap-4 md:gap-8">
-          <Link
-            href={"https://www.facebook.com/BhandaraShivSena/"}
-            target="_blank"
-            className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
-          >
-            <TfiFacebook className="text-black text-2xl md:text-6xl" />
-          </Link>{" "}
-          <Link
-            href={"https://x.com/NBhondekar61"}
-            target="_blank"
-            className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
-          >
-            <RiTwitterXLine className="text-black text-2xl md:text-6xl" />
-          </Link>
-          <Link
-            href={"https://www.instagram.com/narendra_bhondekar/"}
-            target="_blank"
-            className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
-          >
-            <FaInstagram className="text-black text-2xl md:text-6xl" />
-          </Link>
-          <Link
-            href={"https://www.youtube.com/@narendrabhondekar-jr5iv/featured"}
-            target="_blank"
-            className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
-          >
-            <FaYoutube className="text-black text-2xl md:text-6xl" />
-          </Link>
-        </div>
-      </div>
-      <footer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 text-white gap-4 py-20">
-        <div>
-          {/* --- UPDATED LOGO AND NAME SECTION (same style as navbar) --- */}
-          <Link href="/" className="flex items-center gap-2 mb-4">
-            <Image
-              src="/assets/bjplotuslogo.svg" // Same BJP logo as navbar
-              alt="BJP Logo"
-              width={100}
-              height={100}
-              className="h-10 w-auto"
-            />
-            <h1 className="text-xl font-[700] uppercase leading-tight text-white">
-              {displayName} {/* Dynamic name based on language */}
-              <br />
-              <span className="text-white">
-                {displaySurname} {/* Dynamic surname based on language */}
-              </span>
-            </h1>
-          </Link>
-          {/* --- END UPDATED SECTION --- */}
-          <p className="mt-8">{t2("text")}</p>
-        </div>
-        <div className="md:pl-8">
-          <h5 className="text-2xl my-8 font-[600] montserrat">
-            {t2("explore")}
-          </h5>
-          <div className="md:mt-12 space-y-2">
-            <Link href="/biography" className="block">
-              {t1("biography")}
+    <section 
+        // 1. Image path used: footer4.jpg
+        className="relative mt-20 bg-cover bg-center bg-no-repeat bg-[url('/assets/madhuritai/footer4.jpg')]" 
+    >
+      {/* 2. Overlay opacity set to 60% */}
+      <div className="px-8 xl:px-40 py-10 md:py-20 bg-white bg-opacity-60">
+        
+        {/* Social Icons Section (Remains unchanged in layout) */}
+        <div className="bg-white rounded-xl w-fit mx-auto shadow-custom overflow-hidden absolute top-0 left-0 right-0 translate-y-[-50%]">
+          <div className="py-4 bg-[var(--primary-clr)] text-center ">
+            <h2 className="text-white">{t2("socials")}</h2>
+          </div>
+          <div className="px-8 md:px-40 py-10 flex items-center justify-center gap-4 md:gap-8">
+            <Link
+              href={"https://www.facebook.com/madhura.madankar.50/"}
+              target="_blank"
+              className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
+            >
+              <TfiFacebook className="text-black text-2xl md:text-6xl" />
+            </Link>{" "}
+            <Link
+              href={"https://x.com/MadhuraMadankar?s=20"}
+              target="_blank"
+              className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
+            >
+              <RiTwitterXLine className="text-black text-2xl md:text-6xl" />
             </Link>
-            <Link href="/political-journey" className="block">
-              {t1("political journey")}
+            <Link
+              href={"https://www.instagram.com/madhura_madankar/"}
+              target="_blank"
+              className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
+            >
+              <FaInstagram className="text-black text-2xl md:text-6xl" />
             </Link>
-            <Link href="/#services" className="block">
-              {t1("public services")}
-            </Link>
-            <Link href="/gallery" className="block">
-              {t1("gallery")}
+            <Link
+              href={"https://www.youtube.com/@MadhuraMadankar"}
+              target="_blank"
+              className="bg-[#F4F4F4] hover:bg-[var(--primary-clr)] hover:text-black transition-all duration-200 p-3 rounded-lg"
+            >
+              <FaYoutube className="text-black text-2xl md:text-6xl" />
             </Link>
           </div>
         </div>
-        <div className="">
-          <h5 className="text-2xl my-8 font-[600] montserrat">
-            {t2("services")}
-          </h5>
-          <div className="md:mt-12 space-y-2">
-            <Link href="/services/sports" className="block">
-              {t1("sports")}
+        
+        {/* Footer Content - Refined Layout */}
+        {/* Adjusted py-20 to pt-32 pb-20 to account for the social bar translate */}
+        <footer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 py-20 text-black"> 
+          
+          {/* Column 1: Logo and Introduction */}
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/assets/bjplotuslogo.svg" 
+                alt="BJP Logo"
+                width={100}
+                height={100}
+                className="h-10 w-auto"
+              />
+              <h1 className="text-xl font-[700] uppercase leading-tight text-black"> 
+                {displayName} 
+                <br />
+                <span className="text-black">
+                  {displaySurname}
+                </span>
+              </h1>
             </Link>
-            <Link href="/services/agriculture" className="block">
-              {t1("agriculture")}
-            </Link>
-            <Link href="/services/employment" className="block">
-              {t1("employment")}
-            </Link>
-            <Link href="/services/education" className="block">
-              {t1("education")}
-            </Link>
-            <Link href="/services/healthcare" className="block">
-              {t1("healthcare")}
-            </Link>
+            <p className="pt-4 text-base leading-relaxed">{t2("text")}</p>
           </div>
-        </div>
-        <div className="">
-          <h5 className="text-2xl my-8 font-[600] montserrat">
-            {t2("contact us")}
-          </h5>
-          <div className="md:mt-12 space-y-2">
-            <div>
-              <div className="flex items-center flex-wrap gap-1">
-                <MdOutlineLocationOn size={24} className="inline" />
-                <p className="text-lg font-[600]">{t2("location")}</p>
+
+          {/* Column 2: Explore Links */}
+          <div className="xl:pl-8 mt-4 md:mt-0">
+            <h5 className="text-2xl mb-6 font-[600] montserrat border-b border-black/10 pb-2">
+              {t2("explore")}
+            </h5>
+            <div className="space-y-3 text-base">
+              <Link href="/biography" className="block hover:underline">
+                {t1("biography")}
+              </Link>
+              <Link href="/political-journey" className="block hover:underline">
+                {t1("political journey")}
+              </Link>
+              <Link href="/#services" className="block hover:underline">
+                {t1("public services")}
+              </Link>
+              <Link href="/gallery" className="block hover:underline">
+                {t1("gallery")}
+              </Link>
+            </div>
+          </div>
+
+          {/* Column 3: Services Links */}
+          <div className="mt-4 md:mt-0">
+            <h5 className="text-2xl mb-6 font-[600] montserrat border-b border-black/10 pb-2">
+              {t2("services")}
+            </h5>
+            <div className="space-y-3 text-base">
+              <Link href="/services/sports" className="block hover:underline">
+                {t1("sports")}
+              </Link>
+              <Link href="/services/agriculture" className="block hover:underline">
+                {t1("agriculture")}
+              </Link>
+              <Link href="/services/employment" className="block hover:underline">
+                {t1("employment")}
+              </Link>
+              <Link href="/services/education" className="block hover:underline">
+                {t1("education")}
+              </Link>
+              <Link href="/services/healthcare" className="block hover:underline">
+                {t1("healthcare")}
+              </Link>
+            </div>
+          </div>
+
+          {/* Column 4: Contact Us */}
+          <div className="mt-4 md:mt-0">
+            <h5 className="text-2xl mb-6 font-[600] montserrat border-b border-black/10 pb-2">
+              {t2("contact us")}
+            </h5>
+            <div className="space-y-5 text-base">
+              {/* Location */}
+              <div>
+                <div className="flex items-start gap-2 mb-1">
+                  <MdOutlineLocationOn size={24} className="flex-shrink-0 inline text-black mt-[2px]" />
+                  <p className="text-lg font-[600] leading-snug">{t2("location")}</p>
+                </div>
+                {/* Text shifted less, and size unified */}
+                <p className="pl-8 text-sm">{t2("address")}</p>
               </div>
-              <p className="ml-8">{t2("address")}</p>
-            </div>
-            <div>
-              <div className="flex items-center flex-wrap gap-1">
-                <FaRegEnvelope size={24} className="inline" />
-                <p className="text-lg font-[600]">{t2("mail us")}</p>
+
+              {/* Email */}
+              <div>
+                <div className="flex items-start gap-2 mb-1">
+                  <FaRegEnvelope size={20} className="flex-shrink-0 inline text-black mt-[2px]" />
+                  <p className="text-lg font-[600] leading-snug">{t2("mail us")}</p>
+                </div>
+                <Link
+                  href={"mailto:madhurataimadankar@gmail.com"}
+                  className="pl-8 text-sm hover:underline"
+                >
+                  madhurataimadankar@gmail.com
+                </Link>
               </div>
-              <Link
-                href={"mailto:mlabhondekaroffice@gmail.com"}
-                className="ml-8"
-              >
-                madhuritaimandakar@gmail.com
-              </Link>
-            </div>
-            <br />
-            <div className="flex items-center gap-2 w-fit pr-2 border-r-2 border-[#f4f4f4] text-[var(--primary-txt)]">
-              <Link
-                href={"https://www.facebook.com/BhandaraShivSena/"}
-                target="_blank"
-                className="bg-[#F4F4F4] p-3 rounded-lg"
-              >
-                <TfiFacebook size={20} />
-              </Link>
-              <Link
-                href={"https://x.com/NBhondekar61"}
-                target="_blank"
-                className="bg-[#F4F4F4] p-3 rounded-lg"
-              >
-                <RiTwitterXLine size={20} />
-              </Link>
-              <Link
-                href={"https://www.instagram.com/narendra_bhondekar/"}
-                target="_blank"
-                className="bg-[#F4F4F4] p-3 rounded-lg"
-              >
-                <FaInstagram size={20} />
-              </Link>
-              <Link
-                href={
-                  "https://www.youtube.com/@narendrabhondekar-jr5iv/featured"
-                }
-                target="_blank"
-                className="bg-[#F4F4F4] p-3 rounded-lg"
-              >
-                <FaYoutube size={20} />
-              </Link>
+              
+              {/* Internal Social Links */}
+              <div className="flex items-center gap-2 pt-2">
+                <Link
+                  href={"https://www.facebook.com/madhura.madankar.50/"}
+                  target="_blank"
+                  className="bg-[#F4F4F4] p-2 rounded-lg hover:bg-black/10 transition"
+                >
+                  <TfiFacebook size={20} />
+                </Link>
+                <Link
+                  href={"https://x.com/MadhuraMadankar?s=20"}
+                  target="_blank"
+                  className="bg-[#F4F4F4] p-2 rounded-lg hover:bg-black/10 transition"
+                >
+                  <RiTwitterXLine size={20} />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/madhura_madankar/"}
+                  target="_blank"
+                  className="bg-[#F4F4F4] p-2 rounded-lg hover:bg-black/10 transition"
+                >
+                  <FaInstagram size={20} />
+                </Link>
+                <Link
+                  href={
+                    "https://www.youtube.com/@MadhuraMadankar"
+                  }
+                  target="_blank"
+                  className="bg-[#F4F4F4] p-2 rounded-lg hover:bg-black/10 transition"
+                >
+                  <FaYoutube size={20} />
+                </Link>
+              </div>
             </div>
           </div>
+        </footer>
+
+        {/* Copyright Section */}
+        <div className="flex justify-center text-base pt-6 border-t border-black/10 text-black">
+          <p>
+             &copy; {new Date().getFullYear()} {displayName} {displaySurname}. All rights reserved. | Developed by {" "}
+            <a
+              href="https://www.gbjbuzz.com/"
+              className="underline font-medium"
+              target="_blank"
+            >
+              GBJ BUZZ PRIVATE LIMITED
+            </a>
+          </p>
         </div>
-      </footer>
-      <div className="flex justify-center text-xl text-white">
-        <a
-          href="https://www.gbjbuzz.com/"
-          className="underline"
-          target="_blank"
-        >
-          GBJ BUZZ PRIVATE LIMITED
-        </a>
       </div>
     </section>
   );
