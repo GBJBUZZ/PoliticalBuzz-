@@ -3,14 +3,50 @@ import React, { useState } from "react";
 import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { useTranslations } from "next-intl";
+// Assuming you have 'next-intl' configured for internationalization
+import { useTranslations } from "next-intl"; 
+
+// Custom plugin for autoplay and pause on hover
+const Autoplay: KeenSliderPlugin = (slider) => {
+  let timeout: ReturnType<typeof setTimeout>;
+  let mouseOver = false;
+  function clearNextTimeout() {
+    clearTimeout(timeout);
+  }
+  function nextTimeout() {
+    clearTimeout(timeout);
+    if (mouseOver) return;
+    timeout = setTimeout(() => {
+      slider.next();
+    }, 2000); // Autoplay interval: 2 seconds
+  }
+  slider.on("created", () => {
+    slider.container.addEventListener("mouseover", () => {
+      mouseOver = true;
+      clearNextTimeout();
+    });
+    slider.container.addEventListener("mouseout", () => {
+      mouseOver = false;
+      nextTimeout();
+    });
+    nextTimeout();
+  });
+  slider.on("dragStarted", clearNextTimeout);
+  slider.on("animationEnded", nextTimeout);
+  slider.on("updated", nextTimeout);
+};
 
 export default function VideoCarousel() {
-  const t = useTranslations();
+  // Mock useTranslations function if next-intl is not fully set up
+  // Remove this line if useTranslations is correctly imported and configured
+  const t = useTranslations ? useTranslations() : (key: string) => `T_${key}`;
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
+  
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
+      // Responsive settings for different screen sizes
       breakpoints: {
         "(min-width: 400px)": {
           slides: { perView: 1, spacing: 5, origin: "center" },
@@ -28,110 +64,98 @@ export default function VideoCarousel() {
       slides: { perView: 1, origin: "center" },
       loop: true,
     },
-    [
-      (slider) => {
-        let timeout: ReturnType<typeof setTimeout>;
-        let mouseOver = false;
-        function clearNextTimeout() {
-          clearTimeout(timeout);
-        }
-        function nextTimeout() {
-          clearTimeout(timeout);
-          if (mouseOver) return;
-          timeout = setTimeout(() => {
-            slider.next();
-          }, 2000);
-        }
-        slider.on("created", () => {
-          slider.container.addEventListener("mouseover", () => {
-            mouseOver = true;
-            clearNextTimeout();
-          });
-          slider.container.addEventListener("mouseout", () => {
-            mouseOver = false;
-            nextTimeout();
-          });
-          nextTimeout();
-        });
-        slider.on("dragStarted", clearNextTimeout);
-        slider.on("animationEnded", nextTimeout);
-        slider.on("updated", nextTimeout);
-      },
-    ]
+    [Autoplay] // Apply the custom autoplay plugin
   );
 
+  // 📹 Array of iframe elements with the corrected YouTube embed URLs
+  // The structure uses the required 'https://www.youtube.com/embed/VIDEO_ID' format.
   const arr = [
     <iframe
       key={2001}
-      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
-      title="YouTube video player"
+      // Video 1: https://www.youtube.com/watch?v=ZmXjImOM9xs
+      src="https://www.youtube.com/embed/ZmXjImOM9xs" 
+      title="YouTube video player 1"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       className="w-full h-full"
+      allowFullScreen
     ></iframe>,
     <iframe
       key={2002}
-      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
-      title="YouTube video player"
+      // Video 2: https://youtube.com/shorts/aMqj-Dp_hqk
+      src="https://www.youtube.com/embed/aMqj-Dp_hqk" 
+      title="YouTube video player 2"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       className="w-full h-full"
+      allowFullScreen
     ></iframe>,
     <iframe
       key={2003}
-      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
-      title="YouTube video player"
+      // Video 3: https://youtube.com/shorts/JgmZQcidoBc
+      src="https://www.youtube.com/embed/JgmZQcidoBc" 
+      title="YouTube video player 3"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       className="w-full h-full"
+      allowFullScreen
     ></iframe>,
     <iframe
       key={2004}
-      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
-      title="YouTube video player"
+      // Video 4: https://youtube.com/shorts/oM7pqcjv584
+      src="https://www.youtube.com/embed/oM7pqcjv584" 
+      title="YouTube video player 4"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       className="w-full h-full"
+      allowFullScreen
     ></iframe>,
     <iframe
       key={2005}
-      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
-      title="YouTube video player"
+      // Video 5: https://youtube.com/shorts/jQckMzkigxs
+      src="https://www.youtube.com/embed/jQckMzkigxs" 
+      title="YouTube video player 5"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       className="w-full h-full"
+      allowFullScreen
     ></iframe>,
+    // The following videos reuse the ID from video 1 to maintain 9 slides
     <iframe
       key={2006}
-      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
-      title="YouTube video player"
+      src="https://www.youtube.com/embed/ZmXjImOM9xs"
+      title="YouTube video player 6"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       className="w-full h-full"
+      allowFullScreen
     ></iframe>,
     <iframe
       key={2007}
-      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
-      title="YouTube video player"
+      src="https://www.youtube.com/embed/ZmXjImOM9xs"
+      title="YouTube video player 7"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       className="w-full h-full"
+      allowFullScreen
     ></iframe>,
     <iframe
       key={2008}
-      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
-      title="YouTube video player"
+      src="https://www.youtube.com/embed/ZmXjImOM9xs"
+      title="YouTube video player 8"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       className="w-full h-full"
+      allowFullScreen
     ></iframe>,
     <iframe
       key={2009}
-      src="https://www.youtube.com/embed/DeUDMBO9uKM?si=J4sYjm4sXkUbqxy5"
-      title="YouTube video player"
+      src="https://www.youtube.com/embed/ZmXjImOM9xs"
+      title="YouTube video player 9"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       className="w-full h-full"
+      allowFullScreen
     ></iframe>,
   ];
 
@@ -152,16 +176,21 @@ export default function VideoCarousel() {
               >
                 <div
                   className={`w-full h-full rounded-xl transition-all duration-300 overflow-hidden ${
+                    // Class for the previous slide (on the left)
                     index === (currentSlide - 1 < 0 ? 8 : currentSlide - 1)
                       ? "rotate-left"
                       : ""
-                  } ${index === (currentSlide + 1) % 9 ? "rotate-right" : ""}`}
+                  } ${
+                    // Class for the next slide (on the right)
+                    index === (currentSlide + 1) % 9 ? "rotate-right" : ""
+                  }`}
                 >
                   {item}
                 </div>
               </div>
             );
           })}
+          {/* Navigation Arrows */}
           {loaded && instanceRef.current && (
             <>
               <FaChevronLeft
