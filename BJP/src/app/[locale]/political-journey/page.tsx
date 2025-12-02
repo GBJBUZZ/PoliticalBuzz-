@@ -26,7 +26,7 @@ export default function Page() {
           <div className="">
             <Image
               src={"/assets/madhuritai/madhuritai2.png"}
-              alt="Narendra Bhojraj Bhondekar"
+              alt="madhuratai milindaji madanakar"
               width={1000}
               height={1000}
               className="max-w-full md:max-w-[400px] mx-auto"
@@ -36,7 +36,7 @@ export default function Page() {
         <div className="md:hidden">
           <Image
             src={"/assets/About/राजकीय प्रवास.jpg"}
-            alt="Narendra Bhojraj Bhondekar"
+            alt="madhuratai milindaji madanakar"
             width={1000}
             height={1000}
             className="max-w-full md:max-w-[400px] mx-auto"
