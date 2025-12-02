@@ -32,7 +32,7 @@ export default function Biography() {
       </section>
       <div className="block md:hidden">
         <Image
-          src={"/assets/madhuritai/madhuritai2.png"}
+          src={"/assets/madhuritai/bhavinagarsevak.jpg"}
           alt="madhuritai Mandakar"
           width={1000}
           height={1000}

@@ -23,7 +23,7 @@ export default function Video() {
         <Link
           target="_blank"
           href={
-            "https://www.instagram.com/reel/C5Vu7-oxfSv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
+            "https://www.instagram.com/reel/DRrNNf7DDDZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
           }
           className="p-4 rounded-full bg-white block w-fit mx-auto hover:scale-125 transition-all duration-200"
           data-aos="fade-in"

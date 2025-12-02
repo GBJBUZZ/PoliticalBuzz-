@@ -12,7 +12,7 @@ export default function About() {
         <div data-aos="fade-in">
           <div className="pt-6 md:pb-20 md:px-8 relative">
             <Image
-              src={"/assets/madhuritai/madhuritai7.png"}
+              src={"/assets/madhuritai/bhavinagarsevak.jpg"}
               alt="madhuritai Mandakar"
               width={500}
               height={500}
