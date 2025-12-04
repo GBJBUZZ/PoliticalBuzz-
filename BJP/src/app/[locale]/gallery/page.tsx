@@ -7,52 +7,46 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import { sanityClient } from "../../../../sanity/sanity";
-import imageUrlBuilder from "@sanity/image-url";
 
 export default function Gallery() {
-  const builder = imageUrlBuilder(sanityClient);
-  function urlFor(source: any) {
-    return builder.image(source);
-  }
-
   const [hidden, setHidden] = useState(true);
   const [images, setImages] = useState<string[]>([]);
   const [image, setImage] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const t = useTranslations("gallery");
 
   useEffect(() => {
-    const fetchImages = async () => {
-      setLoading(true);
-      const query = '*[_type == "gallery"]{title, images}';
-      const gallery = await sanityClient.fetch(query);
-      const imageUrls = gallery[0].images.map((image: any) =>
-        urlFor(image).url()
-      );
+    const localImages = [
+      "/assets/gallery/1.jpg",
+      "/assets/gallery/2.jpg",
+      "/assets/gallery/3.jpg",
+      "/assets/gallery/4.jpg",
+      "/assets/gallery/5.jpg",
+      "/assets/gallery/6.jpg",
+      "/assets/gallery/7.jpg",
+      "/assets/gallery/8.jpg",
+      "/assets/gallery/9.jpg",
+      "/assets/gallery/10.jpg",
+      "/assets/gallery/11.jpg",
+    ];
 
-      setImages(imageUrls);
-
-      setLoading(false);
-    };
-
-    fetchImages();
+    setImages(localImages);
+    setLoading(false);
   }, []);
-
-  const t = useTranslations("gallery");
 
   return (
     <main className="space-y-12">
-      {" "}
       <Header
         title="gallery.title"
-        image1="/assets/Banner/banner3.jpg"
+        image1="/assets/banner3.jpg"
         image2=""
       />
+
       <section className="px-8 xl:px-40 py-20 space-y-8 pattern1 bg-[#f3f3f0]">
         <div className="text-center w-fit mx-auto">
           <p className="montserrat text-xs px-8">{t("sub-title")}</p>
-          <h2 className="w-fit m-auto">{t("title")}</h2>{" "}
+          <h2 className="w-fit m-auto">{t("title")}</h2>
           <span className="flex w-full mt-2 gap-4 items-center">
             <span className="flex-1 border-b-2 border-[var(--primary-clr)]"></span>
             <FaStar size={16} className="text-[var(--primary-clr)]" />
@@ -83,6 +77,7 @@ export default function Gallery() {
                   loading="lazy"
                   className="w-full h-full object-cover cursor-pointer"
                 />
+
                 <div className="opacity-100 transition-all duration-200 absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-[#000000a0] flex items-end">
                   <Link
                     href={image}
@@ -98,6 +93,7 @@ export default function Gallery() {
           </div>
         )}
       </section>
+
       {!hidden && (
         <div className="fixed top-[-10%] left-0 right-0 bottom-0 bg-[#f37021] bg-opacity-50 backdrop-blur z-50 p-8 md:p-40">
           <button
@@ -106,6 +102,7 @@ export default function Gallery() {
           >
             <IoCloseCircleOutline size={40} />
           </button>
+
           <div className="w-full h-full flex items-center justify-center">
             <Image
               src={image as string}

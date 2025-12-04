@@ -1,72 +1,83 @@
+"use client";
+
 import Script from "next/script";
 import React from "react";
 
 export default function Socialfeeds() {
   return (
     <section
-      className="px-8 xl:px-40 py-20 bg-[var(--primary-clr)] mb-20 grid grid-cols-1 md:grid-cols-3 gap-8"
+      className="px-6 xl:px-40 py-20 bg-[var(--primary-clr)] mb-20"
       id="feed"
     >
-      {/* Facebook Feed */}
-      <div className="rounded-xl overflow-hidden feeds">
-        <div id="fb-root"></div>
-        <Script
-          async
-          defer
-          crossOrigin="anonymous"
-          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0"
-          nonce="41r3YJLn"
-        />
-        <div
-          className="fb-page w-full"
-          data-href="https://www.facebook.com/profile.php?id=61582629359575"
-          data-tabs="timeline"
-          data-width="600"
-          data-height="500"
-          data-small-header="false"
-          data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="true"
-        >
-          <blockquote
-            cite="https://www.facebook.com/profile.php?id=61582629359575"
-            className="fb-xfbml-parse-ignore"
-          >
-            <a href="https://www.facebook.com/profile.php?id=61582629359575">
-              Facebook posts by Madhuratai Madankar
-            </a>
-          </blockquote>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+
+        {/* ================= FACEBOOK FEED ================= */}
+        <div className="feeds bg-white rounded-2xl shadow-lg overflow-hidden p-4 flex flex-col h-[650px]">
+          <h3 className="text-lg font-semibold mb-4 text-center">
+            Facebook
+          </h3>
+
+          <div id="fb-root"></div>
+
+          <Script
+            async
+            defer
+            crossOrigin="anonymous"
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0"
+          />
+
+          <div className="flex-1 flex justify-center items-start overflow-y-auto">
+            <div
+              className="fb-page"
+              data-href="https://www.facebook.com/profile.php?id=61582629359575"
+              data-tabs="timeline"
+              data-width="500"
+              data-height="600"
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="false"
+              data-show-facepile="true"
+            />
+          </div>
         </div>
+
+        {/* ================= INSTAGRAM FEED ================= */}
+        <div className="feeds bg-white rounded-2xl shadow-lg overflow-hidden p-4 flex flex-col h-[650px]">
+          <h3 className="text-lg font-semibold mb-4 text-center">
+            Instagram
+          </h3>
+
+          <div className="flex-1 overflow-y-auto">
+            <blockquote
+              className="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/madhura_madankar/"
+              data-instgrm-version="14"
+              style={{ width: "100%", minHeight: "600px" }}
+            >
+              <a href="https://www.instagram.com/madhura_madankar/">
+                View Instagram
+              </a>
+            </blockquote>
+
+            <Script async src="https://www.instagram.com/embed.js" />
+          </div>
+        </div>
+
       </div>
 
-      {/* Instagram Feed */}
-      <div className="rounded-xl overflow-x-hidden overflow-y-scroll max-h-[500px] feeds">
-        <blockquote
-          className="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/madhura_madankar/"
-          data-instgrm-version="14"
-          style={{ width: "100%", minHeight: "500px" }}
-        >
-          <a href="https://www.instagram.com/madhura_madankar/">
-            View Madhuratai Madankar's Instagram
-          </a>
-        </blockquote>
-        <Script async src="https://www.instagram.com/embed.js" />
-      </div>
+      {/* ✅ LOCAL CSS INSIDE CLIENT COMPONENT */}
+      <style jsx>{`
+        .fb-page,
+        .fb-page span,
+        .fb-page iframe {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
 
-      {/* TagEmbed Widget (Keep your existing one or update if needed) */}
-      <div className="rounded-xl overflow-y-scroll max-h-[500px] feeds">
-        <div
-          className="tagembed-widget"
-          style={{ width: "100%", height: "100%" }}
-          data-widget-id="147169"
-          view-url="https://widget.tagembed.com/147169"
-        ></div>
-        <Script
-          src="//widget.tagembed.com/embed.min.js"
-          type="text/javascript"
-        />
-      </div>
+        .instagram-media {
+          width: 100% !important;
+        }
+      `}</style>
     </section>
   );
 }
